@@ -1,0 +1,14 @@
+{% if lstobject %}
+	{% for o in lstobject%}
+	<tr class="{% cycle 'ui-row1' 'ui-row2' %}">
+		<td align="right">{{ o.usernbr }}</td>
+		<td {% if sendmail == 0 %} style="cursor:pointer;" onclick='report.show_search_panel("topbyuser",this,event)' {% endif %}><span title="{{ o.users }}">{{ o.users }}</span></td>
+		<td align="right">{{ o.request }}</td>
+		<td align="right">{{ o.requestpercentage }}</td>
+		<td align="right">{{ o.duration }}</td>
+		<td align="right">{{ o.durationpercentage }}</td>
+		<td align="right">{{ o.traffic }}</td>
+		<td align="right">{{ o.trafficpercentage }}</td>
+	</tr>
+	{% endfor %}
+{% endif %}

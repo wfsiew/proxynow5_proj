@@ -1,0 +1,107 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{% block title %}{% trans 'ProxyNow! 5' %}{% endblock %}</title>
+<link rel="icon" href="/media/css/img/favicon.ico" type="image/x-icon" />
+{% if not release %}
+<link rel="stylesheet" href="/media/css/base.css" type="text/css" />
+{% else %}
+<link rel="stylesheet" href="/media/css/all.min.css" type="text/css" />
+{% endif %}
+<link rel="stylesheet" href="/media/css/jquery.themes.css" type="text/css" />
+<script type="text/javascript" src="/media/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/media/js/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="/media/js/jquery.themes.min.js"></script>
+<script type="text/javascript" src="/media/js/ejs.min.js"></script>
+<script type="text/javascript" src="/media/js/jquery.form.min.js"></script>
+{% if not release %}
+<script type="text/javascript" src="/media/js/csrf.js"></script>
+<script type="text/javascript" src="/media/js/utils.js"></script>
+<script type="text/javascript" src="/media/js/base.js"></script>
+<script type="text/javascript" src="/media/js/auth.js"></script>
+<script type="text/javascript" src="/media/js/menu.js"></script>
+<script type="text/javascript" src="/media/js/dashboard.js"></script>
+<script type="text/javascript" src="/media/js/defnet.js"></script>
+<script type="text/javascript" src="/media/js/defuser.js"></script>
+<script type="text/javascript" src="/media/js/defservices.js"></script>
+<script type="text/javascript" src="/media/js/defschedule.js"></script>
+<script type="text/javascript" src="/media/js/admin.js"></script>
+<script type="text/javascript" src="/media/js/adinfo.js"></script>
+<script type="text/javascript" src="/media/js/netint.js"></script>
+<script type="text/javascript" src="/media/js/netlb.js"></script>
+<script type="text/javascript" src="/media/js/netroute.js"></script>
+<script type="text/javascript" src="/media/js/netdns.js"></script>
+<script type="text/javascript" src="/media/js/netdhcp.js"></script>
+<script type="text/javascript" src="/media/js/appctrlrule.js"></script>
+<script type="text/javascript" src="/media/js/wpcat.js"></script>
+<script type="text/javascript" src="/media/js/wpwhitelist.js"></script>
+<script type="text/javascript" src="/media/js/wpblacklist.js"></script>
+<script type="text/javascript" src="/media/js/wpext.js"></script>
+<script type="text/javascript" src="/media/js/wpcontent.js"></script>
+<script type="text/javascript" src="/media/js/wpmime.js"></script>
+<script type="text/javascript" src="/media/js/wpfilter.js"></script>
+<script type="text/javascript" src="/media/js/wpadvance.js"></script>
+<script type="text/javascript" src="/media/js/wpadvanceskip.js"></script>
+<script type="text/javascript" src="/media/js/wpadvanceallow.js"></script>
+<script type="text/javascript" src="/media/js/wp.js"></script>
+<script type="text/javascript" src="/media/js/wpprofile.js"></script>
+<script type="text/javascript" src="/media/js/natpf.js"></script>
+<script type="text/javascript" src="/media/js/natmasq.js"></script>
+<script type="text/javascript" src="/media/js/natdnatsnat.js"></script>
+<script type="text/javascript" src="/media/js/nat.js"></script>
+<script type="text/javascript" src="/media/js/nettrusted.js"></script>
+<script type="text/javascript" src="/media/js/conf.js"></script>
+<script type="text/javascript" src="/media/js/lic.js"></script>
+<script type="text/javascript" src="/media/js/log.js"></script>
+<script type="text/javascript" src="/media/js/patch.js"></script>
+<script type="text/javascript" src="/media/js/patchupgrade.js"></script>
+<script type="text/javascript" src="/media/js/patchdowngrade.js"></script>
+<script type="text/javascript" src="/media/js/report.js"></script>
+<script type="text/javascript" src="/media/js/report_cache.js"></script>
+<script type="text/javascript" src="/media/js/user.js"></script>
+<script type="text/javascript" src="/media/js/nav_list.js"></script>
+<script type="text/javascript" src="/media/js/list_form.js"></script>
+<script type="text/javascript" src="/media/js/stat.js"></script>
+{% else %}
+<script type="text/javascript" src="/media/js/all.min.js"></script>
+{% endif %}
+</head>
+<body class="ui-widget-content">
+{% csrf_token %}
+<div id="maincontainer">
+	<div id="topsection" class="ui-state-default">
+		<div class="innertube">
+			<div id="section_logo">
+				<img src="../media/css/img/ProxNow5_logo_210.png" style="margin-top: 0px" />	
+			</div>
+			<div>
+			{% if user.is_authenticated and accesstype == 2 %}
+			{% include "theme_select.html" %}
+			{% endif %}
+			</div>
+			<div id="progress_status">
+				{% include "progress_panel.html" %}
+			</div>
+		</div>
+	</div>
+	<div id="contentwrapper">
+		<div id="contentcolumn">
+			<div class="innertube">
+				{% block right_content %}{% endblock %}
+			</div>
+		</div>
+	</div>
+	<div id="leftcolumn">
+		<div class="innertube">
+			{% block left_content %}{% endblock %}
+		</div>
+	</div>
+</div>
+<div id="error-dialog" title="{% trans 'Internal Server Error' %}">
+	<div id="error_dialog"></div>
+</div>
+<input id="id_accesstype_" type="hidden" value="{{ accesstype }}" />
+</body>
+</html>

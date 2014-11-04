@@ -1,0 +1,186 @@
+{% load i18n %}
+{% if level == '' %}
+{% include "save_form_title.html" %}
+{% endif %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-form{{ scope }}{{ level }}" action="/wpprofile/save/" method="post">{% csrf_token %}
+		<div class="row">
+			{{ form.name.label_tag }}
+			{{ form.name }}
+		</div>
+		<div class="row">
+			{{ form.location.label_tag }}
+			{{ form.location }}
+		</div>
+		<div class="row">
+			{{ form.safesearchon.label_tag }}
+			{{ form.safesearchon }}
+		</div>
+		<div id="wpprofile_tabs">
+			<ul>
+				<li><a href="#wpprofile_tabs_2">{% trans 'Users' %}</a></li>
+				<li><a href="#wpprofile_tabs_5">{% trans 'Hosts' %}</a></li>
+				<li><a href="#wpprofile_tabs_4">{% trans 'Filtering' %}</a></li>
+				<li><a href="#wpprofile_tabs_1">{% trans 'Schedule' %}</a></li>
+				<li><a href="#wpprofile_tabs_3">{% trans 'Quota' %}</a></li>
+				<li><a href="#wpprofile_tabs_6">{% trans 'Exceptions' %}</a></li>
+			</ul>
+			<div id="wpprofile_tabs_2">
+				{% include "wpprofile/wpprofileuser_save_form.html" %}
+			</div>
+			<div id="wpprofile_tabs_5">
+				{% include "wpprofile/wpprofilenet_save_form.html" %}
+			</div>
+			<div id="wpprofile_tabs_4">
+				<div id="wpprofile_filter_tabs">
+					<ul>
+						<li><a href="#wpprofile_filter_tabs_1">{% trans 'Category' %}</a></li>
+						<li><a href="#wpprofile_filter_tabs_2">{% trans 'Whitelist' %}</a></li>
+						<li><a href="#wpprofile_filter_tabs_3">{% trans 'Blacklist' %}</a></li>
+						<li><a href="#wpprofile_filter_tabs_4">{% trans 'Extension' %}</a></li>
+						<li><a href="#wpprofile_filter_tabs_5">{% trans 'Content' %}</a></li>
+						<li><a href="#wpprofile_filter_tabs_6">{% trans 'MIME' %}</a></li>
+					</ul>
+					<div id="wpprofile_filter_tabs_1">
+						<div class="row">
+							{{ form.catdef.label_tag }}
+							{{ form.catdef }}
+						</div>
+						{% include "wpprofile/wpprofilecat_save_form.html" %}
+					</div>
+					<div id="wpprofile_filter_tabs_2">
+						{% include "wpprofile/wpprofilewhitelist_save_form.html" %}
+					</div>
+					<div id="wpprofile_filter_tabs_3">
+						{% include "wpprofile/wpprofileblacklist_save_form.html" %}
+					</div>
+					<div id="wpprofile_filter_tabs_4">
+						{% include "wpprofile/wpprofileallowext_save_form.html" %}
+						{% include "wpprofile/wpprofileblockext_save_form.html" %}
+					</div>
+					<div id="wpprofile_filter_tabs_5">
+						{% include "wpprofile/wpprofilecontentfilter_save_form.html" %}
+					</div>
+					<div id="wpprofile_filter_tabs_6">
+						{% include "wpprofile/wpprofileallowmime_save_form.html" %}
+						{% include "wpprofile/wpprofileblockmime_save_form.html" %}
+					</div>
+				</div>
+			</div>
+			<div id="wpprofile_tabs_1">
+				<div class="row">
+					<label>{% trans 'Schedule:' %}</label>
+					{{ form.scheduleon }}
+					<span>{{ form.scheduleon.label }}</span>
+				</div>
+				{% include "wpprofile/wpprofileschd_save_form.html" %}
+			</div>
+			<div id="wpprofile_tabs_3">
+				<div class="row">
+					{{ form.timequota.label_tag }}
+					{{ form.timequota }}
+					<span>{% trans 'seconds' %}</span>
+				</div>
+				<div class="row">
+					{{ form.sizequota.label_tag }}
+					{{ form.sizequota }}
+					<span>KB</span>
+				</div>
+			</div>
+			<div id="wpprofile_tabs_6">
+				{% include "wpprofile/wpprofileexcept_save_form.html" %}
+			</div>
+		</div>
+		{% if iswizard %}
+			<input id="wpprofile_id" type="hidden" value="{{ id }}" />
+		{% endif %}
+		{% include "save_button.html" %}
+		<div id="dialog-add-schedule{{ scope }}{{ level }}" title="{{ dialog1_title }}">
+			<div id="dialog_body-schedule{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-schedule{{ scope }}{{ level }}" title="{{ dialog1_edit_title }}">
+			<div id="dialog_edit_body-schedule{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-user{{ scope }}{{ level }}" title="{{ dialog2_title }}">
+			<div id="dialog_body-user{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-user{{ scope }}{{ level }}" title="{{ dialog2_edit_title }}">
+			<div id="dialog_edit_body-user{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-allowext{{ scope }}{{ level }}" title="{{ dialog3_title }}">
+			<div id="dialog_body-allowext{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-allowext{{ scope }}{{ level }}" title="{{ dialog3_edit_title }}">
+			<div id="dialog_edit_body-allowext{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-blockext{{ scope }}{{ level }}" title="{{ dialog4_title }}">
+			<div id="dialog_body-blockext{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-blockext{{ scope }}{{ level }}" title="{{ dialog4_edit_title }}">
+			<div id="dialog_edit_body-blockext{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-allowmime{{ scope }}{{ level }}" title="{{ dialog5_title }}">
+			<div id="dialog_body-allowmime{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-allowmime{{ scope }}{{ level }}" title="{{ dialog5_edit_title }}">
+			<div id="dialog_edit_body-allowmime{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-blockmime{{ scope }}{{ level }}" title="{{ dialog6_title }}">
+			<div id="dialog_body-blockmime{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-blockmime{{ scope }}{{ level }}" title="{{ dialog6_edit_title }}">
+			<div id="dialog_edit_body-blockmime{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-cat{{ scope }}{{ level }}" title="{{ dialog7_title }}">
+			<div id="dialog_body-cat{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-cat{{ scope }}{{ level }}" title="{{ dialog7_edit_title }}">
+			<div id="dialog_edit_body-cat{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-whitelist{{ scope }}{{ level }}" title="{{ dialog8_title }}">
+			<div id="dialog_body-whitelist{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-whitelist{{ scope }}{{ level }}" title="{{ dialog8_edit_title }}">
+			<div id="dialog_edit_body-whitelist{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-blacklist{{ scope }}{{ level }}" title="{{ dialog9_title }}">
+			<div id="dialog_body-blacklist{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-blacklist{{ scope }}{{ level }}" title="{{ dialog9_edit_title }}">
+			<div id="dialog_edit_body-blacklist{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-content{{ scope }}{{ level }}" title="{{ dialog10_title }}">
+			<div id="dialog_body-content{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-content{{ scope }}{{ level }}" title="{{ dialog10_edit_title }}">
+			<div id="dialog_edit_body-content{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-net{{ scope }}{{ level }}" title="{{ dialog11_title }}">
+			<div id="dialog_body-net{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-net{{ scope }}{{ level }}" title="{{ dialog11_edit_title }}">
+			<div id="dialog_edit_body-net{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-exceptnet{{ scope }}{{ level }}" title="{{ dialog12_title }}">
+			<div id="dialog_body-exceptnet{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-exceptnet{{ scope }}{{ level }}" title="{{ dialog12_edit_title }}">
+			<div id="dialog_edit_body-exceptnet{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-add-exceptuser{{ scope }}{{ level }}" title="{{ dialog13_title }}">
+			<div id="dialog_body-exceptuser{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-exceptuser{{ scope }}{{ level }}" title="{{ dialog13_edit_title }}">
+			<div id="dialog_edit_body-exceptuser{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit-excepturl{{ scope }}{{ level }}" title="{{ dialog14_editurl_title }}">
+			<div id="dialog_edit_body-excepturl{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-import-excepturl{{ scope }}{{ level }}" title="{{ dialog14_import_title }}">
+			<div id="dialog_import_body-excepturl{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-export-excepturl{{ scope }}{{ level }}" title="{{ dialog14_export_title }}">
+			<div id="dialog_export_body-excepturl{{ scope }}{{ level }}"></div>
+		</div>
+	</form>
+</div>

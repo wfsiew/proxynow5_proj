@@ -1,0 +1,50 @@
+{% load i18n %}
+{% load defBalance_filter %}
+<div id="table_container" class="ui-widget">
+	<div class="page_title ui-widget-header">{{ title }}</div>
+	<form id="save-form"  method="post">{% csrf_token %}
+	<div id="info"></div>
+	<fieldset>
+		<legend>
+			<div class="row">
+				<div id="sw">
+				{% if value != "0" %}
+					{% include "switch_button_on.html" %}
+				{% else %}
+					{% include "switch_button_off.html" %}
+				{% endif %}
+				</div>
+			</div>
+		</legend>
+		{% trans 'Tick the public interfaces that are to be linked and load balanced:' %}
+		<table style="width:100%">
+			<tr>
+				<td style="width:8%">
+					
+				</td>
+				<td>
+					{% for o in objlist %}
+					<div>
+						<input type="checkbox" name="interface_balance" id="balance_{{ o.id }}" {% if o.gateway == "" %} disabled="disabled" {% endif %}  {{ o|get_defbalance_check }}>
+						{{ o.name }}
+						{% if o.gateway == "" %}
+							<label for="balance_{{ o.id }}" style="color:red" >{% trans '(No gateway defined)' %} </label>
+						{% endif %}
+					</div>
+					{% endfor %}
+					<p>
+						<hr/>
+						<span class="save_button save hover ui-corner-all ui-state-default">
+							<span class="proxynow saveicon">{% trans 'Save' %}</span>
+						</span>
+					</p>
+				<td>
+				<td>
+					
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	</form>
+	{% include "status_panel.html" %}
+</div>

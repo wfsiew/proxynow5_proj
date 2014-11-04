@@ -1,0 +1,13 @@
+{% load i18n %}
+<div id="table_container">
+	<div class="page_title ui-widget-header">{{ title }}</div>
+	&nbsp;
+	<div id="rpt_tabs_setting">
+		<ul>
+			<li><a href="#0">{% trans 'Email Schedules' %}</a></li>
+			<li><a href="#1">{% trans 'Mail Server' %}</a></li>
+		</ul>
+		<div id="0">{% include 'report/rpt_loading.html' %}</div>
+		<div id="1">{% include 'report/rpt_loading.html' %}</div>
+	</div>
+</div>

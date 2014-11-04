@@ -1,0 +1,32 @@
+{% load i18n %}
+<div align="left" class="wizard_frame" >
+	<div class="page_title ui-widget-header">
+		{{title}}
+	</div>
+	<div class="wizard_introduce">
+		{% trans 'Define the Domain Name Servers that'%} {% include 'proxynow_text.html' %} {% trans 'should use'%} 
+	</div>
+	<div class="wizard_legend1">
+		<table style="padding-left:20px">
+			<tr>
+				<td align="right">{% trans 'Primary DNS '%}:</td>
+				<td><input id="wizard_primarydns" type="text" maxlength="100"  /> </td>
+			</tr>
+			<tr>
+				<td align="right">{% trans 'Secondary DNS '%}:</td>
+				<td><input id="wizard_seconddns" type="text" maxlength="100" /></td>
+			</tr>
+			<tr>
+				<td align="right">{% trans 'Tertiary DNS '%}:</td>
+				<td><input id="wizard_thirddns" type="text" maxlength="100" /></td>
+			</tr>
+		</table>
+	</div>
+	{% include "wizard/error_info.html" %}
+	<div id='wizard_next' class='wizard_button170'>
+		<span id="" onclick="wizard.back_form(this)">{% include "back_button.html" %}</span>
+		<span id="" onclick="wizard.next_form(this)">{% include "next_button.html" %}</span>
+	</div>
+	<div style="margin-top:10px"></div>
+	<input id="wizard_identification_form" type="hidden" value="dns" />
+</div>

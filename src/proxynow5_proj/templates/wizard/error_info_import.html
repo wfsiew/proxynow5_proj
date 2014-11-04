@@ -1,0 +1,13 @@
+{% load i18n %}
+<div style="padding-top:5px"></div>
+<div align="left" style="width:450px;">
+	<div>{% trans 'Number of Users' %} : {{ nbruser }}</div>
+	<div>{% trans 'Number of Groups' %} : {{ nbrgroup }} </div>
+	<div>{% trans 'Number of Errors '%} : {{ nbrerror }} </div>
+</div>
+<div style="padding-top:10px">
+	{% trans 'Errors '%}
+</div>
+<div style="padding-left:30px;padding-top:10px">
+	{% include "wizard/list_errors_for_testing.html" %}
+</div>

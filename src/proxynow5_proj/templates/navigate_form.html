@@ -1,0 +1,20 @@
+{% load i18n %}
+<table class="nav_table">
+	<tr>
+		<td>
+			<span id="id_prev" class="page_button ui-state-default ui-corner-all">&lt;&lt;</span>
+		</td>
+		<td>
+			<span id="id_next" class="page_button ui-state-default ui-corner-all">&gt;&gt;</span>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="id_display">{% trans 'Display:' %}</label>
+			{{ nav_form.display }}
+		</td>
+		<td>
+			<span class="item_display"></span>
+		</td>
+	</tr>
+</table>

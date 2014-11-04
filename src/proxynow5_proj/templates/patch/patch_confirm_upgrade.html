@@ -1,0 +1,11 @@
+{% load i18n %}
+<p>
+{% blocktrans %}
+Are you sure you want to upgrade to version {{ version }} ?
+(Click <a id="id_here" href="#" class="links">here</a> to back-up your settings)
+{% endblocktrans %}
+</p>
+{% include "confirm_button.html" %}
+<div id="dialog-upgrade" title="{% trans 'Upgrading to version' %} {{ version }}">
+	<div id="dialog_upgrade_body"></div>
+</div>

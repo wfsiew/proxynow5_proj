@@ -1,0 +1,17 @@
+{% load i18n %}
+<fieldset class="ui-corner-all">
+	<legend>{% trans 'License Details' %}</legend>
+	<div class="row_lic">
+		<label>{% trans 'Base software expiry date:' %}</label>
+		<span>{{ info.PN_EXPIRY_DATE }}</span>{% if info.PN_EXPIRED %}&nbsp;<span class="alert_text">{% trans 'EXPIRED' %}</span>{% endif %}
+	</div>
+	<div class="row_lic">
+		<label>{% trans 'Web proxy expiry date:' %}</label>
+		<span>{{ info.PN_WEBPROXY_EXPIRY_DATE }}</span>{% if info.PN_WEBPROXY_EXPIRED %}&nbsp;<span class="alert_text">{% trans 'EXPIRED' %}</span>{% endif %}
+	</div>
+	<div class="row_lic">
+		<label>{% trans 'Number of users:' %}</label>
+		<span>{{ info.PN_No_of_Users }}&nbsp;{% blocktrans %}(created: {{ totalusers }}){% endblocktrans %}</span>
+	</div>
+	<input id="id_id" type="hidden" value="{{ id }}" />
+</fieldset>

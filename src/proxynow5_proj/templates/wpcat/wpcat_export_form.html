@@ -1,0 +1,20 @@
+{% load i18n %}
+<div class="ui-widget-content ui-widget ui-corner all">
+	<form id="export-form{{ scope }}{{ level }}" action="" method="post">
+		<div class="row">
+			<label for="id_delimiter">{% trans 'Delimiter' %}</label>
+			<select id="id_delimiter" class="select">
+				<option value="0">{% trans 'New Line' %}</option>
+				<option value="1">; ({% trans 'Semicolon' %})</option>
+				<option value="2">, ({% trans 'Comma' %})</option>
+			</select>
+		</div>
+		<div class="row">
+			<label for="id_exporttext">{% trans 'Exported text' %}</label>
+			<textarea id="id_exporttext" rows="6" cols="40" style="width: 180px"></textarea>
+		</div>
+		<div class="row_button">
+			{% include "cancel-button.html" %}
+		</div>
+	</form>
+</div>

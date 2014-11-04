@@ -1,0 +1,19 @@
+{% load i18n %}
+<table class="wizard_lserror ">
+	<tr class="ui-widget-header">
+		<th style="width:30px" align="center">{% trans 'Line' %}</th>
+		<th align="center">{% trans 'Errors' %}</th>
+	</tr>
+	{% if obj_error %}
+		{% for o in obj_error %}
+			<tr>
+				<td>
+					{{ o.line }}
+				</td>
+				<td>
+					{{ o.reason }}
+				</td>
+			</tr>
+		{% endfor %}
+	{% endif %}
+</table>

@@ -1,0 +1,9 @@
+<tr>
+	<td style="width:5px"><input id="wizard_check_group" type="checkbox" value="{{ key }}" checked = 'checked' /></td>
+	<td>{{ name }}</td>
+	<td>
+		<span onclick="wizard.wizard_open_dialog_edit_policy(this);" value="{{ key }}"> 
+			{% include "customise.html" %}
+		</span>
+	</td>
+</tr>

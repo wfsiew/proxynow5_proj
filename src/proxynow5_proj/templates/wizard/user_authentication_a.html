@@ -1,0 +1,41 @@
+{% load i18n %}
+<div align="left" class="wizard_frame">
+	<div class="page_title ui-widget-header">
+		{{title}}
+	</div>
+	<div class="wizard_introduce">
+		{% trans 'To authenticate with Active Directory please enter the following details:' %}
+	</div>
+	<div class="wizard_options">
+		<table>
+			<tr>
+				<td align="right">{% trans 'AD Server address' %}:</td>
+				<td>{{ form.adserver }}</td>
+			</tr>
+			<tr>
+				<td align="right">{% trans 'AD domain' %}:</td>
+				<td>{{ form.addomain }}</td>
+			</tr>
+			<tr>
+				<td align="right">{% trans 'AD administrator username' %}:</td>
+				<td>{{ form.adusername }}</td>
+			</tr>
+			<tr>
+				<td align="right">{% trans 'AD administrator password' %}:</td>
+				<td>{{ form.adpassword }}</td>
+			</tr>
+			<tr>
+				<td align="right">{% trans 'Confirm password' %}:</td>
+				<td>{{ form.confirmadpassword }}</td>
+			</tr>
+		</table>
+	</div>
+	{% include "wizard/error_info.html" %}
+	<div id='wizard_next' class="wizard_button170">
+		<span id="" onclick="wizard.back_form(this)">{% include "back_button.html" %}</span>
+		<span id="" onclick="wizard.skip_form(this)">{% include "skip_button.html" %}</span>
+		<span id="" onclick="wizard.next_form(this)">{% include "next_button.html" %}</span>
+	</div>
+	<div style="margin-top:10px"></div>
+	<input id="wizard_identification_form" type="hidden" value="userauthenticationA" />
+</div>

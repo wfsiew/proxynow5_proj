@@ -1,0 +1,69 @@
+{% load i18n %}
+<div align="left" class="wizard_frame">
+<div class="wizard_options">
+	<table>
+		<tr>
+			<td>{% trans 'Fields are separated by: ' %}<input id="wizard_import_seperate" type="text" value="," style="width:10px; padding:2px;" maxlength="1" /></td>
+		</tr>
+	</table>
+	<br><br>
+	<table>
+		<tr>
+			<td colspan="2"> 
+				<font color="red"><span id="wizard_error_import_setting"> </span></font>
+			</td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<th>Type</th><th>Column</th>
+		</tr>
+		<tr id='wizard_field1'>
+			<!-- User Name Field -->
+			<td align="right">{% trans 'Username ' %}:</td>
+			<td>{{ form.selection }}</td>
+		</tr>
+		<tr id='wizard_field2'>
+			<!-- Type Access Type -->
+			<td align="right">{% trans 'Access type ' %}:</td>
+			<td>{{ form.selection }}</td>
+		</tr>
+		<tr id='wizard_field3'>
+			<!-- Display Name -->
+			<td align="right">{% trans 'Display name ' %}:</td>
+			<td>{{ form.selection }}</td>
+		</tr>
+		<tr id='wizard_field4'>
+			<!-- PassWord -->
+			<td align="right">{% trans 'Password ' %}:</td>
+			<td>{{ form.selection }}</td>
+		</tr>
+		<tr id='wizard_field5'>
+			<!-- Comment -->
+			<td align="right">{% trans 'Comment ' %}:</td>
+			<td>{{ form.selection }}</td>
+		</tr>
+		<tr id='wizard_field6'>
+			<!-- Group -->
+			<td align="right">{% trans 'Group ' %}:</td>
+			<td>{{ form.selection }}</td>
+		</tr>
+	</table>
+	<br><br>
+	<table>
+		<tr>
+			<td>{% trans 'Default password ' %}:</td>
+			<td><input id="wizard_default_pass" type="text" style="width:100px;" value="user123"/></td>
+		</tr>
+		<tr>
+			<td colspan="2"><span align="left" style="font-size: 0.7em">{% trans '(if password field is not suplied)' %}</span></td>
+		</tr>
+	</table>
+	<br><br>
+</div>
+<div id='wizard_next' class='wizard_button100'>
+	<span id="" onclick="wizard.get_the_list_fields(this)">{% include "ok__button.html" %}</span>
+	<span id="" onclick="wizard.close_dialog('wizard_dialog')">{% include "cancel-button.html" %}</span>
+</div>
+<div style="margin-top:10px"></div>
+</div>

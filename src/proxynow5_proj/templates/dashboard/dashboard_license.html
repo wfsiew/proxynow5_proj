@@ -1,0 +1,22 @@
+{% load i18n %}
+<table class="dashboard_tbl1 ui-widget-content">
+	<thead class="ui-widget-header">
+		<tr>
+			<th colspan="2">{% trans 'License' %}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="collbl lic">{% trans 'Status:' %}</td>
+			<td><span id="id_licstatus">{{ lic.status }}</span></td>
+		</tr>
+		<tr>
+			<td class="collbl lic">{% trans 'Base software:' %}</td>
+			<td><span id="id_licbasesw">{{ lic.basesoftware }}</span></td>
+		</tr>
+		<tr>
+			<td class="collbl lic">{% trans 'Web proxy:' %}</td>
+			<td><span id="id_licwebproxy">{{ lic.webproxy }}</span></td>
+		</tr>
+	</tbody>
+</table>

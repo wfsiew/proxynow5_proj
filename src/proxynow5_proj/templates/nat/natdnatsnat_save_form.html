@@ -1,0 +1,187 @@
+{% load i18n %}
+{% include "save_form_title.html" %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-form" action="/nat/dnatsnat/save/" method="post">{% csrf_token %}
+		<div class="row">
+			{{ form.originalSource.label_tag }}
+			<div class="nat_dropzone">
+				<div id="orgsrc">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_originalsource" class="nat_box">
+					{% if o.originalSource %}
+					<div id="orgsrc_{{ o.originalSource.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return natdnatsnat.remove_originalsource(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return natdnatsnat.edit_originalsource(this)"></div>
+						<div>{{ o.originalSource.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{{ form.originalPort.label_tag }}
+			<div class="nat_dropzone">
+				<div id="orgport">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_originalport" class="nat_box">
+					{% if o.originalPort %}
+					<div id="orgport_{{ o.originalPort.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return natdnatsnat.remove_originalport(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return natdnatsnat.edit_originalport(this)"></div>
+						<div>{{ o.originalPort.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{{ form.originalDestination.label_tag }}
+			<div class="nat_dropzone">
+				<div id="orgdest">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_originaldest" class="nat_box">
+					{% if o.originalDestination %}
+					<div id="orgdest_{{ o.originalDestination.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return natdnatsnat.remove_originaldest(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return natdnatsnat.edit_originaldest(this)"></div>
+						<div>{{ o.originalDestination.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{{ form.mode.label_tag }}
+			{{ form.mode }}
+		</div>
+		<div class="row new_dest">
+			{{ form.newDestinationHost.label_tag }}
+			<div class="nat_dropzone">
+				<div id="newdesthost">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_newdesthost" class="nat_box">
+					{% if o.newDestinationHost %}
+					<div id="newdesthost_{{ o.newDestinationHost.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return natdnatsnat.remove_newdesthost(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return natdnatsnat.edit_newdesthost(this)"></div>
+						<div>{{ o.newDestinationHost.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row new_dest">
+			{{ form.newDestinationPort.label_tag }}
+			<div class="nat_dropzone">
+				<div id="newdestport">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_newdestport" class="nat_box">
+					{% if o.newDestinationPort %}
+					<div id="newdestport_{{ o.newDestinationPort.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return natdnatsnat.remove_newdestport(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return natdnatsnat.edit_newdestport(this)"></div>
+						<div>{{ o.newDestinationPort.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row new_src">
+			{{ form.newSourceAddress.label_tag }}
+			<div class="nat_dropzone">
+				<div id="newsrcaddr">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_newsrcaddr" class="nat_box">
+					{% if o.newSourceAddress %}
+					<div id="newsrcaddr_{{ o.newSourceAddress.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return natdnatsnat.remove_newsrcaddr(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return natdnatsnat.edit_newsrcaddr(this)"></div>
+						<div>{{ o.newSourceAddress.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row new_src">
+			{{ form.newSourcePort.label_tag }}
+			<div class="nat_dropzone">
+				<div id="newsrcport">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_newsrcport" class="nat_box">
+					{% if o.newSourcePort %}
+					<div id="newsrcport_{{ o.newSourcePort.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return natdnatsnat.remove_newsrcport(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return natdnatsnat.edit_newsrcport(this)"></div>
+						<div>{{ o.newSourcePort.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{{ form.autoCreatePFRule }}
+			<span>{{ form.autoCreatePFRule.label }}</span>
+		</div>
+		<div class="row">
+			{{ form.comment.label_tag }}
+			{{ form.comment }}
+		</div>
+		{% include "save_button.html" %}
+		<div id="dialog-add-orgsrc" title="{{ dialog1_title }}">
+			<div id="dialog_body-orgsrc"></div>
+		</div>
+		<div id="dialog-edit-orgsrc" title="{{ dialog1_edit_title }}">
+			<div id="dialog_edit_body-orgsrc"></div>
+		</div>
+		<div id="dialog-add-orgport" title="{{ dialog2_title }}">
+			<div id="dialog_body-orgport"></div>
+		</div>
+		<div id="dialog-edit-orgport" title="{{ dialog2_edit_title }}">
+			<div id="dialog_edit_body-orgport"></div>
+		</div>
+		<div id="dialog-add-orgdest" title="{{ dialog3_title }}">
+			<div id="dialog_body-orgdest"></div>
+		</div>
+		<div id="dialog-edit-orgdest" title="{{ dialog3_edit_title }}">
+			<div id="dialog_edit_body-orgdest"></div>
+		</div>
+		<div id="dialog-add-newdesthost" title="{{ dialog4_title }}">
+			<div id="dialog_body-newdesthost"></div>
+		</div>
+		<div id="dialog-edit-newdesthost" title="{{ dialog4_edit_title }}">
+			<div id="dialog_edit_body-newdesthost"></div>
+		</div>
+		<div id="dialog-add-newdestport" title="{{ dialog5_title }}">
+			<div id="dialog_body-newdestport"></div>
+		</div>
+		<div id="dialog-edit-newdestport" title="{{ dialog5_edit_title }}">
+			<div id="dialog_edit_body-newdestport"></div>
+		</div>
+		<div id="dialog-add-newsrcaddr" title="{{ dialog6_title }}">
+			<div id="dialog_body-newsrcaddr"></div>
+		</div>
+		<div id="dialog-edit-newsrcaddr" title="{{ dialog6_title }}">
+			<div id="dialog_edit_body-newsrcaddr"></div>
+		</div>
+		<div id="dialog-add-newsrcport" title="{{ dialog7_title }}">
+			<div id="dialog_body-newsrcport"></div>
+		</div>
+		<div id="dialog-edit-newsrcport" title="{{ dialog7_edit_title }}">
+			<div id="dialog_edit_body-newsrcport"></div>
+		</div>
+	</form>
+</div>

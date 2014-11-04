@@ -1,0 +1,6 @@
+{% if o.type == 1 %}
+	<span class="proxynow usericon spaceiconlist"></span>
+{% else %}{% if o.type == 2 %}
+	<span class="proxynow usergroupicon spaceiconlist"></span>
+{% endif %}{% endif %}
+<span title="{{ o }}">{{ o.name }}</span>

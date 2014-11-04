@@ -1,0 +1,10 @@
+{% if o.type == 1 %}
+	<span class="proxynow servericon spaceiconlist"></span>
+{% else %}{% if o.type == 2 %}
+	<span class="proxynow dnshosticon spaceiconlist"></span>
+{% else %}{% if o.type == 3 %}
+	<span class="proxynow networkicon spaceiconlist"></span>
+{% else %}{% if o.type == 4 %}
+	<span class="proxynow groupsicon spaceiconlist"></span>
+{% endif %}{% endif %}{% endif %}{% endif %}
+<span title="{{ o }}">{{ o.name }}</span>

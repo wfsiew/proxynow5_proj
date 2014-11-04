@@ -1,0 +1,23 @@
+{% load i18n %}
+<div align="left" class="wizard_frame">
+	<div class="page_title ui-widget-header">
+		{{title}}
+	</div>
+	<div class="wizard_introduce">
+		{% trans 'Do your users need to login before they can use the Internet ?' %}
+	</div>
+	<div class="wizard_options">
+		<div><label><input type="radio" name="wizard_user" value="0" checked="checked">{% trans 'No, everyone is free to use the Internet' %}</label></div>
+		<div><label><input type="radio" name="wizard_user" value="1">{% trans 'Yes, and use Active Directory for authentication' %}</label></div>
+		<div><label><input type="radio" name="wizard_user" value="2">{% trans 'Yes, and I want to have their usernames and passwords to be defined in' %} {% include 'proxynow_text.html' %}</label></div>
+	</div>
+	{% include "wizard/error_info.html" %}
+	<div id='wizard_next' class="wizard_button240">
+		<span id="" onclick="wizard.back_form(this)">{% include "back_button.html" %}</span>
+		<span id="" onclick="wizard.skip_form(this)">{% include "skip_button.html" %}</span>
+		<span id="" onclick="wizard.next_form(this)">{% include "next_button.html" %}</span>
+	</div>
+	<div style="margin-top:10px"></div>
+	<input id="wizard_identification_form" type="hidden" value="userauthentication" />
+	<input id="wizard_seperate_field" type="hidden" value="," />
+</div>

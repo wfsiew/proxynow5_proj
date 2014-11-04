@@ -1,0 +1,26 @@
+{% load i18n %}
+{% if objlist %}
+	<table class="list_table">
+		<tbody>
+		{% for o in objlist %}
+			<tr class="{% cycle 'ui-state-default' 'ui-state-hover' %} list_row">
+				<td id="{{ o.id }}" width="60px">
+					{% if o.type > 1 %}
+					{% include "list_button.html" %}
+					{% endif %}
+				</td>
+				<td valign="top">
+					<strong>{{ o.name }}</strong>
+					{% if o.comment %}
+					<br>
+					{{ o.comment }}
+					{% endif %}
+				</td>
+				<td valign="top">{{ o.get_type_name }}</td>
+				<td valign="top">{{ o.get_data }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endif %}
+<input id="id_pg" type="hidden" value="{{ has_prev }},{{ has_next }},{{ prev_page }},{{ next_page }},{{item_msg }}" />

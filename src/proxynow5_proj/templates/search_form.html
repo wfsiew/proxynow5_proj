@@ -1,0 +1,10 @@
+{% load i18n %}
+{% if not hide_search_selection %}
+{{ form.selection }}
+{% endif %}
+<div class="space">
+	{{ form.query }}
+	<span id="id_find" class="hover ui-corner-all ui-state-default">
+		<span class="proxynow searchicon"> {% trans 'Find' %} </span> 
+	</span>
+</div>

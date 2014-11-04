@@ -1,0 +1,38 @@
+{% include "save_form_title.html" %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-form" action="/netint/save/" method="post">{% csrf_token %}
+		<div class="row">
+			{{ form.netid.label_tag }}
+			{{ form.netid }}
+		</div>
+		<div class="row">
+			{{ form.start.label_tag }}
+			{{ form.start }}
+		</div>
+		<div class="row">
+			{{ form.end.label_tag }}
+			{{ form.end }}
+		</div>
+		<div class="row">
+			{{ form.dnsserver1.label_tag }}
+			{{ form.dnsserver1 }}
+		</div>
+		<div class="row">
+			{{ form.dnsserver2.label_tag }}
+			{{ form.dnsserver2 }}
+		</div>
+		<div class="row">
+			{{ form.gateway.label_tag }}
+			{{ form.gateway }}
+		</div>
+		<div class="row">
+			{{ form.domain.label_tag }}
+			{{ form.domain }}
+		</div>
+		<div class="row">
+			{{ form.leasetime.label_tag }}
+			{{ form.leasetime }}
+		</div>
+		{% include "save_button.html" %}
+	</form>
+</div>

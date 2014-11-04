@@ -1,0 +1,20 @@
+{% load i18n %}
+{% csrf_token %}
+<fieldset class="wpadvanceskip ui-corner-all">
+	<legend>{% trans 'Skip for' %}</legend>
+	<div class="wpadvanceskip_box">
+		<div class="row">
+			<div class="img_add proxynow addicon"></div>
+			<div class="img_folder proxynow foldericon"></div>
+		</div>
+		<div id="wpadvanceskiplist" class="wpadvanceskiplist_container">
+			{% for o in skiplist %}
+			<div id="skiplist_{{ o.netid.id }}" class="list_item">
+				<div class="proxynow trashicon item_delete" onclick="return wpadvanceskip.delete_skiplist(this)"></div>
+				<div class="proxynow editicon item_edit" onclick="return wpadvanceskip.edit_skiplist(this)"></div>
+				<div>{{ o.netid.get_html_repr }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</fieldset>

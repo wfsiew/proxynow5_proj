@@ -1,0 +1,22 @@
+{% load i18n %}
+<table class="dashboard_tbl1 ui-widget-content">
+	<thead class="ui-widget-header">
+		<tr>
+			<th colspan="2">{% trans 'Today statistic' %}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="collbl statistic">{% trans 'Request:' %}</td>
+			<td><span id="id_request">{{ dashboard.request }}</span></td>
+		</tr>
+		<tr>
+			<td class="collbl statistic">{% trans 'Block:' %}</td>
+			<td><span id="id_block">{{ dashboard.block }}</span></td>
+		</tr>
+		<tr>
+			<td class="collbl statistic">{% trans 'Malware:' %}</td>
+			<td><span id="id_malware">{{ dashboard.malware }}</span></td>
+		</tr>
+	</tbody>
+</table>

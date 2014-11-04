@@ -1,0 +1,7 @@
+{% load i18n %}
+<div class="row_button">
+	{% include "save-button.html" %}
+	{% if not hide_cancel %}
+	{% include "cancel-button.html" %}
+	{% endif %}
+</div>

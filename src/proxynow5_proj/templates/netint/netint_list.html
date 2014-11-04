@@ -1,0 +1,22 @@
+{% load i18n %}
+{% if objlist %}
+	<table class="list_table">
+		<tbody>
+		{% for o in objlist %}
+			<tr class="{% cycle 'ui-state-default' 'ui-state-hover' %} list_row">
+				<td id="{{ o.id }}" width="60px">
+					{% include "list_button.html" %}
+				</td>
+				<td valign="top">
+					<div>{{ o.name }} {% trans 'on' %} {{ o.hardware }} [{{ o.address }}/{{ o.netmask }}]</div>
+					<div>{% trans 'MTU' %} {{ o.mtu }}{% if o.gateway %} {% trans 'DEFAULT GW' %} {{ o.gateway }}{% endif %}</div>
+					{% if o.comment %}
+					<div>{{ o.comment }}</div>
+					{% endif %}
+				</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endif %}
+<input id="id_pg" type="hidden" value="{{ has_prev }},{{ has_next }},{{ prev_page }},{{ next_page }},{{item_msg }}" />

@@ -1,0 +1,51 @@
+{% load i18n %}
+<div id="wpadvance-form" class="ui-widget-content ui-widget ui-corner-all">
+	<div class="form_title ui-widget-header ui-corner-all">
+		<span>{% trans 'Settings' %}</span>
+	</div>
+	<form id="save-form" action="/wpadvance/save/" method="post">{% csrf_token %}
+		<div class="row_wpadvance">
+			{{ form.cache }}
+			{{ form.cache.label_tag }}
+		</div>
+		<div class="row_wpadvance">
+			{{ form.parent }}
+			{{ form.parent.label_tag }}
+		</div>
+		<div class="row_wpadvance_parent" style="display: none">
+			<div class="row">
+				{{ form.parentip.label_tag }}
+				<div class="parentip_dropzone">
+					<div id="parentip">
+						<div class="img_add proxynow addicon"></div>
+						<div class="img_folder proxynow foldericon"></div>
+					</div>
+					<div id="id_parentip" class="parentip_box">
+						{% if o.parentip %}
+						<div id="parentip_{{ o.parentip.id }}" class="list_item">
+							<div class="proxynow trashicon item_delete" onclick="return wpadvance.remove_parentip(this)"></div>
+							<div class="proxynow editicon item_edit" onclick="return wpadvance.edit_parentip(this)"></div>
+							<div>{{ o.parentip.get_html_repr }}</div>
+						</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				{{ form.parentport.label_tag }}
+				{{ form.parentport }}
+			</div>
+			<div class="row">
+				{{ form.parentusername.label_tag }}
+				{{ form.parentusername }}
+			</div>
+			<div class="row">
+				{{ form.parentpassword.label_tag }}
+				{{ form.parentpassword }}
+			</div>
+		</div>
+		<input id="id_id" type="hidden" value="{{ id }}" />
+		{% include "save_button.html" %}
+		{% include "status_panel.html" %}
+	</form>
+</div>

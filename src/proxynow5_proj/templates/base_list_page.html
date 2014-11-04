@@ -1,0 +1,28 @@
+<div id="table_container">
+	<div class="page_title ui-widget-header ui-widget">{{ title }}</div>
+	{% block topcontent %}{% endblock %}
+	<table class="page_container ui-widget">
+		<tbody>
+			<tr>
+				<td valign="top">
+					<div id="id_add" class="hover ui-state-default ui-corner-all">
+						<span class="proxynow addicon">{{ add_label }}</span>
+					</div>
+				</td>
+				<td valign="top">
+					{% include "search_form.html" %}
+				</td>
+				<td valign="top">
+					{% include "navigate_form.html" %}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="page_container ui-widget">
+		<tr>
+			<td id="left_box" valign="top" style="display: none"></td>
+			<td id="right_box" valign="top">{% block content %}{% endblock %}</td>
+		</tr>
+	</table>
+</div>
+{% include "alert_panel.html" %}

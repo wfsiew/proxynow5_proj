@@ -1,0 +1,19 @@
+{% load i18n %}
+<div id="admin-form" class="ui-widget-content ui-widget ui-corner-all">
+	<div class="form_title ui-widget-header ui-corner-all">
+		<span>{% trans 'General' %}</span>
+	</div>
+	<form id="save-form" action="/administration/general/save/" method="post">{% csrf_token %}
+		<div class="row_admin">
+			<label for="id_datetime" class="admin_lbl">{{ form.datetime.label }}</label>
+			{{ form.datetime }}
+		</div>
+		<div class="row_admin">
+			<label for="id_timezone" class="admin_lbl">{{ form.timezone.label }}</label>
+			{{ form.timezone }}
+		</div>
+		<input id="id_id" type="hidden" value="{{ id }}" />
+		{% include "save_button.html" %}
+		{% include "status_panel.html" %}
+	</form>
+</div>

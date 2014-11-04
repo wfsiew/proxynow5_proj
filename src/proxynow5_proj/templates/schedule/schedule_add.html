@@ -1,0 +1,55 @@
+{% if not level %}
+{% include "save_form_title.html" %}
+{% endif %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-form{{ scope }}{{ level }}" action="" method="post" >{% csrf_token %}
+		<div style="padding-top:5px;"></div>
+		<div class="row">
+			{{ form.name.label_tag }}
+			{{ form.name }}
+		</div>
+		<div class="row">
+			{{ form.type.label_tag }}
+			{{ form.type }}
+		</div>
+		<div class="row recuring">
+			{{ form.start_time_hour_recuring.label_tag }}
+			{{ form.start_time_hour_recuring }}:{{ form.start_time_min_recuring }}
+		</div>
+		<div class="row recuring">
+			{{ form.end_time_hour_recuring.label_tag }}
+			{{ form.end_time_hour_recuring }}:{{ form.end_time_min_recuring }}
+		</div>
+		<div class="row recuring">
+			{{ form.checkbox_day.label_tag }}
+			<div class="recuring_weekday">{{ form.checkbox_day }}</div>
+		</div>
+		<div class="row single">
+			{{ form.start_day_year_single.label_tag }}
+			{{ form.start_day_year_single }}-{{ form.start_day_month_single }}-{{ form.start_day_day_single }}<input id="start_datetime" type="hidden" />
+		</div>
+		<div class="row single">
+			{{ form.end_day_year_single.label_tag }}
+			{{ form.end_day_year_single }}-{{ form.end_day_month_single }}-{{ form.end_day_day_single }}<input id="end_datetime" type="hidden" />
+		</div>
+		<div class="row single">
+			{{ form.start_time_hour_single.label_tag }}
+			{{ form.start_time_hour_single }}:{{ form.start_time_min_single }}
+		</div>
+		<div class="row single">
+			{{ form.end_time_hour_single.label_tag }}
+			{{ form.end_time_hour_single }}:{{ form.end_time_min_single }}
+		</div>
+		<div class="row">
+			{{ form.comment.label_tag }}
+			{{ form.comment }}
+		</div>
+		<div>
+			{{ form.action }}
+			{{ form.id }}
+			{{ form.checkbox_temp }}
+			{{ form.nameexisted }}
+		</div>
+		{% include "save_button.html" %}
+	</form>
+</div>

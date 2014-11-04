@@ -1,0 +1,23 @@
+{% load i18n %}
+{% if show_msg %}
+<p>
+{% blocktrans %}
+The object <strong>{{ o }}</strong> is currently referred by:
+{% endblocktrans %}
+</p>
+<ol>
+	{% for p in o.wpprofileallowexts.all %}
+	<li><strong>{{ p.profileid }} ({% trans 'Web Proxy - Profile' %})</strong></li>
+	{% endfor %}
+	{% for p in o.wpprofileblockexts.all %}
+	<li><strong>{{ p.profileid }} ({% trans 'Web Proxy - Profile' %})</strong></li>
+	{% endfor %}
+</ol>
+<p>
+{% blocktrans %}
+Deleting <strong>{{ o }}</strong> will remove it from the reference(s) listed above.
+Do you want to proceed ?
+{% endblocktrans %}
+</p>
+{% include "confirm_button.html" %}
+{% endif %}

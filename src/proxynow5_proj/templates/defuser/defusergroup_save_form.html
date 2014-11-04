@@ -1,0 +1,19 @@
+{% load i18n %}
+<div class="row defuser_form2">
+	<label>{% trans 'Members:' %}</label>
+	<div id="members_dropzone">
+		<div>
+			<div class="img_add proxynow addicon"></div>
+			<div class="img_folder proxynow foldericon"></div>
+		</div>
+		<div id="members" class="members_container">
+			{% for o in members %}
+			<div id="item_{{ o.member.id }}" class="list_item">
+				<div class="proxynow trashicon item_delete" onclick="return defuser.remove_member(this)"></div>
+				<div class="proxynow editicon item_edit" onclick="return defuser.edit_member(this)"></div>
+				<div>{{ o.member.get_html_repr }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

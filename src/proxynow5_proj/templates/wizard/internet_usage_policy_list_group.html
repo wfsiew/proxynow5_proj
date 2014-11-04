@@ -1,0 +1,28 @@
+<!-- Note internet_usage_policy_row.html -->
+{% load i18n %}
+{% if group  %}
+	<table id="wizard_content_list_group">
+		{% for key, value in group.items %}
+			<tr>
+				<td style="width:5px" colspan="2"><label><input id="wizard_check_groupmain" value="{{ value.1 }}" type="checkbox" {% if value.0 == "1" %} checked = 'checked' {% endif %} />&nbsp;&nbsp;{{ value.1 }}</label></td>
+				<td align="right"><span value="{{ value.1 }}"  onclick="wizard.wizard_open_edit_group(this);">{% include "member_button.html" %}</span></td>
+			</tr>
+			<tr>
+				<td valign="top" width="100">
+					Policies Applied :
+				</td>
+				<td valign="top">
+					<span id="{{ value.1 }}">
+					<ul style="padding:0 0 0 1; margin:0 0 0 0; list-style-type: square;">
+					{% for l_policy in value.2 %}
+						<li>{{ l_policy }}</li>
+					{% endfor %}
+					</ul>
+					</span>
+				</td>
+				<td valign="top"><a href="#" value="{{ value.1 }}" onclick="wizard.wizard_open_dialog_policy(this)">{% trans 'Edit' %}</a></td>
+			</tr>
+			<tr><td>&nbsp;</td></tr>
+		{% endfor %}
+	</table>
+{% endif %} 

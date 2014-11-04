@@ -1,0 +1,41 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{% trans 'ProxyNow! 5' %}</title>
+{% if not release %}
+	<link rel="stylesheet" href="/media/css/base.css" type="text/css" />
+{% else %}
+	<link rel="stylesheet" href="/media/css/all.min.css" type="text/css" />
+{% endif %}
+<link rel="stylesheet" href="/media/css/dark-hive/jquery-ui-1.8.21.custom.css" type="text/css" />
+<script type="text/javascript" src="/media/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/media/js/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="/media/js/csrf.js"></script>
+<script type="text/javascript" src="/media/js/ejs.min.js"></script>
+<script type="text/javascript" src="/media/js/utils.js"></script>
+<script type="text/javascript" src="/media/js/defnet.js"></script>
+<script type="text/javascript" src="/media/js/defuser.js"></script>
+<script type="text/javascript" src="/media/js/defschedule.js"></script>
+<script type="text/javascript" src="/media/js/wpcat.js"></script>
+<script type="text/javascript" src="/media/js/wpwhitelist.js"></script>
+<script type="text/javascript" src="/media/js/wpblacklist.js"></script>
+<script type="text/javascript" src="/media/js/wpext.js"></script>
+<script type="text/javascript" src="/media/js/wpcontent.js"></script>
+<script type="text/javascript" src="/media/js/wpmime.js"></script>
+<script type="text/javascript" src="/media/js/wpfilter.js"></script>
+<script type="text/javascript" src="/media/js/wpadvance.js"></script>
+<script type="text/javascript" src="/media/js/wpadvanceskip.js"></script>
+<script type="text/javascript" src="/media/js/wpadvanceallow.js"></script>
+<script type="text/javascript" src="/media/js/wp.js"></script>
+<script type="text/javascript" src="/media/js/wpprofile.js"></script>
+<script type="text/javascript" src="/media/js/wpprofile.js"></script>
+<script type="text/javascript" src="/media/js/wizard.js"></script>
+<script type="text/javascript" src="/media/js/nettrusted.js"></script>
+</head>
+<body class="ui-widget-content" style="border:0">
+{% block content %}
+{% endblock %}
+</body>
+</html>

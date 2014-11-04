@@ -1,0 +1,48 @@
+{% if level == '' %}
+{% include "save_form_title.html" %}
+{% endif %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-form{{ scope }}{{ level }}" action="/defservices/save/" method="post">{% csrf_token %}
+		<div class="row">
+			{{ form.name.label_tag }}
+			{{ form.name }}
+		</div>
+		<div class="row">
+			{{ form.type.label_tag }}
+			{{ form.type }}
+		</div>
+		{% if type %}
+			{% if type == 1 %}
+				{% include "defservices/defservicestcp_save_form.html" %}
+			{% else %}{% if type == 2 %}
+				{% include "defservices/defservicesudp_save_form.html" %}
+			{% else %}{% if type == 3 %}
+				{% include "defservices/defservicesicmp_save_form.html" %}
+			{% else %}{% if type == 4 %}
+				{% include "defservices/defservicesip_save_form.html" %}
+			{% else %}{% if type == 5 %}
+				{% include "defservices/defservicesgroup_save_form.html" %}
+			{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}
+		{% else %}
+			{% include "defservices/defservicestcp_save_form.html" %}
+			{% include "defservices/defservicesudp_save_form.html" %}
+			{% include "defservices/defservicesicmp_save_form.html" %}
+			{% include "defservices/defservicesip_save_form.html" %}
+			{% include "defservices/defservicesgroup_save_form.html" %}
+		{% endif %}
+		<div class="row">
+			{{ form.comment.label_tag }}
+			{{ form.comment }}
+		</div>
+		{% include "save_button.html" %}
+		<div id="dialog-add{{ scope }}{{ level }}" title="{{ dialog_title }}">
+			<div id="dialog_body{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-edit{{ scope }}{{ level }}" title="{{ dialog_edit_title }}">
+			<div id="dialog_edit_body{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-icmptype{{ scope }}{{ level }}" title="{{ icmptype_title }}">
+			<div id="dialog_icmptype{{ scope }}{{ level }}"></div>
+		</div>
+	</form>
+</div>

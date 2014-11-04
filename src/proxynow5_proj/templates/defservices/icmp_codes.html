@@ -1,0 +1,17 @@
+{% load i18n %}
+<table id="tb_icmp_codes{{ level }}" class="tb_icmp">
+	<thead>
+		<tr>
+			<th>{% trans 'Code' %}</th>
+			<th>{% trans 'Description' %}</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for c, d in codes %}
+		<tr>
+			<td class="icmp_code">{{ c }}</td>
+			<td>{{ d }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

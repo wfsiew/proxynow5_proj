@@ -1,0 +1,13 @@
+{% load i18n %}
+<tr>
+	<td valign="top"><label>{% trans 'Members:' %}</label></td>
+	<td>
+		<div class="members_container">
+			{% for m in members %}
+			<div class="list_item">
+				<div>{{ m.member.get_html_repr }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</td>
+</tr>

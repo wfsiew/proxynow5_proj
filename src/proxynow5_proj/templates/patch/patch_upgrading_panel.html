@@ -1,0 +1,17 @@
+{% load i18n %}
+<div>
+	{% blocktrans %}
+	Do not close or refresh until upgrade is completed.
+	<div class="row">
+		<div id="id_content" class="log_body"></div>
+	</div>
+	{% endblocktrans %}
+</div>
+<div class="row_button">
+	{% include "close_button.html" %}
+	{% include "retry_button.html" %}
+	{% include "restart_button.html" %}
+</div>
+<div id="restart_progress" style="display: none">
+	{% include "progress_panel.html" %}
+</div>

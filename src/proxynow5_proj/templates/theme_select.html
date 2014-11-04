@@ -1,0 +1,16 @@
+{% load i18n %}
+<div id="section_option">
+	<span id="proxy_options" class="hover ui-corner-all ui-state-default">
+		<span class="proxynow enableoptionicon">{% trans 'Options' %}</span>
+	</span>
+</div>
+<div id="theme_option" class="theme_options ui-state-highlight">
+	<div class="ui-widget-header aligncenter" style="height: 17px">
+		<span>{% trans 'Select Theme' %}</span>
+		<span class="proxynow cancelicon hover" style="margin-left: 10px"></span>
+	</div>
+	<div id="theme_body" style="display: inline"></div>
+	<div id="theme_wizard_select" class="aligncenter" style="margin-top: 35px;">
+		{% include "wizard_button.html" %}
+	</div>
+</div>

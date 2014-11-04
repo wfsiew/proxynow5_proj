@@ -1,0 +1,7 @@
+<% for (e in errors) { %>
+	<% if (e != "__all__") { %>
+	<p>[<%= e %>] <%= errors[e] %></p>
+	<% } else { %>
+	<p><%= errors[e] %></p>
+	<% } %>
+<% } %>

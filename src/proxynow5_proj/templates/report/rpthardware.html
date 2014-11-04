@@ -1,0 +1,17 @@
+{% load i18n %}
+<div id="table_container">
+	<div class="page_title ui-widget-header">{{ title }}</div>
+	<br/>
+	<div id="rp_tabs">
+		<ul>
+			<li><a href="#0">{% trans 'Daily' %}</a></li>
+			<li><a href="#1">{% trans 'Weekly' %}</a></li>
+			<li><a href="#2">{% trans 'Monthly' %}</a></li>
+			<li><a href="#3">{% trans 'Yearly' %}</a></li>
+		</ul>
+		<div id="0">{% include 'report/rpt_loading.html' %}</div>
+		<div id="1">{% include 'report/rpt_loading.html' %}</div>	
+		<div id="2">{% include 'report/rpt_loading.html' %}</div>
+		<div id="3">{% include 'report/rpt_loading.html' %}</div>
+	</div>
+</div>

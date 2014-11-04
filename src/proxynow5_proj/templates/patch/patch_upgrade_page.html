@@ -1,0 +1,42 @@
+{% load i18n %}
+<div id="patch-form" class="ui-widget-content ui-widget ui-corner-all">
+	<div class="form_title ui-widget-header ui-corner-all">
+		<span>{% trans 'Upgrade' %}</span>
+	</div>
+	<div class="row_wpadvance">
+		<label>{% trans 'Current version:' %}</label>
+		<span>{{ version }}</span>
+	</div>
+	<div class="row_wpadvance">
+		<label>{% trans 'Available versions:' %}</label>
+	</div>
+	<div class="row_wpadvance">
+		<input id="id_showbeta" type="checkbox" checked="checked" />
+		<span>{% trans 'Show beta versions' %}</span>
+		{% include "refresh_button.html" %}
+	</div>
+	<table class="upgrade_tbl ui-widget-content">
+		<thead class="ui-widget-header">
+			<tr>
+				<th align="justify">{% trans 'Version' %}</th>
+				<th></th>
+				<th align="justify">{% trans 'Date' %}</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+		{% include "patch/patch_upgrade_list.html" %}
+		</tbody>
+	</table>
+	<p style="margin-left: 10px">
+	{% blocktrans %}
+	Note: You can upgrade to any versions.
+	{% endblocktrans %}
+	</p>
+</div>
+<div id="dialog-details" title="{% trans 'Details' %}">
+	<div id="dialog_details_body"></div>
+</div>
+<div id="confirm-upgrade" title="{% trans 'Upgrade' %}{% include "proxynow_text.html" %}">
+	<div id="confirm_upgrade_body"></div>
+</div>

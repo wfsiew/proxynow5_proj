@@ -1,0 +1,29 @@
+{% load i18n %}
+<div class="row" style="color: red">
+	{% blocktrans %}
+	Caution: This feature inspects the contents of whole page for keywords.
+	It can be detrimental to surfing speed. Use only if really necessary
+	{% endblocktrans %}
+</div>
+<div class="row">
+	<label>{% trans 'Content filter:' %}</label>
+	<div id="contents" class="members_dropzone">
+		<div>
+			<div class="img_add proxynow addicon"></div>
+			<div class="img_folder proxynow foldericon"></div>
+		</div>
+		<div id="id_contents" class="members_container">
+			{% for o in contentfilters %}
+			<div id="content_{{ o.contentfilter.id }}" class="list_item">
+				<div class="proxynow trashicon item_delete" onclick="return wpprofile.remove_content(this)"></div>
+				{% if iswizard %}
+					<div class="proxynow editicon item_edit" onclick="return wizard.edit_content(this)"></div>
+				{% else %}
+					<div class="proxynow editicon item_edit" onclick="return wpprofile.edit_content(this)"></div>
+				{% endif %}
+				<div>{{ o.contentfilter }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+{% load i18n %}
+<div id="admin-form" class="ui-widget-content ui-widget ui-corner-all">
+	<div class="form_title ui-widget-header ui-corner-all">
+		<span>{% trans 'Authentication' %}</span>
+	</div>
+	<form id="save-form" action="/administration/authentication/save/" method="post">{% csrf_token %}
+		<div class="row_admin">
+			<label for="id_adserver" class="admin_lbl">{{ form.adserver.label }}</label>
+			{{ form.adserver }}
+		</div>
+		<div class="row_admin">
+			<label for="id_addomain" class="admin_lbl">{{ form.addomain.label }}</label>
+			{{ form.addomain }}
+		</div>
+		<div class="row_admin">
+			<label for="id_adusername" class="admin_lbl">{{ form.adusername.label }}</label>
+			{{ form.adusername }}
+		</div>
+		<div class="row_admin">
+			<label for="id_adpassword" class="admin_lbl">{{ form.adpassword.label }}</label>
+			{{ form.adpassword }}
+		</div>
+		<div class="row_admin">
+			<p>
+			{% blocktrans %}
+			Note: Please enter a hostname at Active Directory server address field.<br>
+			The hostname must be resolvable by the machine.
+			{% endblocktrans %}
+			</p>
+		</div>
+		<input id="id_id" type="hidden" value="{{ id }}" />
+		{% include "save_button.html" %}
+		{% include "status_panel.html" %}
+	</form>
+</div>

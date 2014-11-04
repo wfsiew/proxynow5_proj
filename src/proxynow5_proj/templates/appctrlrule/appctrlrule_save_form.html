@@ -1,0 +1,87 @@
+{% load i18n %}
+{% include "save_form_title.html" %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-form" action="/appctrlrule/save/" method="post">{% csrf_token %}
+		<div class="row">
+			{{ form.name.label_tag }}
+			{{ form.name }}
+		</div>
+		<div class="row">
+			{{ form.location.label_tag }}
+			{{ form.location }}
+		</div>
+		<div class="row">
+			{{ form.action.label_tag }}
+			{{ form.action }}
+		</div>
+		<div class="row">
+			{{ form.comment.label_tag }}
+			{{ form.comment }}
+		</div>
+		<div class="row">
+			<label>{% trans 'Apply to:' %}</label>
+			<div id="applyto" class="members_dropzone">
+				<div>
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_applyto" class="members_container">
+					{% for o in applyto %}
+					<div id="applyto_{{ o.net.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return appctrlrule.remove_applyto(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return appctrlrule.edit_applyto(this)"></div>
+						<div>{{ o.net.get_html_repr }}</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<label>{% trans 'Skip for:' %}</label>
+			<div id="skiplist" class="members_dropzone">
+				<div>
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_skiplist" class="members_container">
+					{% for o in skiplist %}
+					<div id="skiplist_{{ o.net.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return appctrlrule.remove_skiplist(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return appctrlrule.edit_skiplist(this)"></div>
+						<div>{{ o.net.get_html_repr }}</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<label>{% trans 'Applications:' %}</label>
+			<div id="whichapp" class="members_dropzone">
+				<div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_whichapp" class="members_container">
+					{% for o in applist %}
+					<div id="whichapp_{{ o.app.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return appctrlrule.remove_whichapp(this)"></div>
+						<div>{{ o.app }}</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		{% include "save_button.html" %}
+		<div id="dialog-add-skiplist" title="{{ dialog1_title }}">
+			<div id="dialog_body-skiplist"></div>
+		</div>
+		<div id="dialog-edit-skiplist" title="{{ dialog1_edit_title }}">
+			<div id="dialog_edit_body-skiplist"></div>
+		</div>
+		<div id="dialog-add-applyto" title="{{ dialog2_title }}">
+			<div id="dialog_body-applyto"></div>
+		</div>
+		<div id="dialog-edit-applyto" title="{{ dialog2_edit_title }}">
+			<div id="dialog_edit_body-applyto"></div>
+		</div>
+	</form>
+</div>

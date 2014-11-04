@@ -1,0 +1,45 @@
+{% load i18n %}
+<div align="left" class="wizard_frame">
+	<div class="page_title ui-widget-header">
+		{{title}}
+	</div>
+	<div class="wizard_introduce">
+		{% trans 'Type in (or copy and paste) your users (one user per line)' %}
+	</div>
+	<div align="right" style="padding-top:4px;padding-right:40px">
+		<span id="wizard_import_setting" onclick="wizard.import_setting_field()" class="save_button save hover ui-corner-all ui-state-default">
+			<span style="padding-left:15px" class="proxynow mapfieldicon">{% trans 'Import Settings' %}</span>
+		</span>
+	</div>
+	<div class="wizard_introduce">
+		<h4><span id="wizard_content_seperate">{% trans 'Fields are seperated by comma (,)<br/> Default password (if password field is not supplied): user123'  %} </span></h4>
+	</div>
+	<div style="padding-left:30px;padding-top:10px;width:50px">
+		<input id="wizard_import_header" type="text" style="width:420px" readonly="true"></input>
+	</div>
+	<div style="padding-left:30px;padding-top:0px;">
+		<textarea id="wizard_imported_content" rows="14" cols="50">
+		</textarea>
+	</div>
+	<div style="padding-top:10px;padding-left:30px" >
+		<span class="save_button save hover ui-corner-all ui-state-default" onclick="wizard.import_test(); return true;">
+			<span style="padding-left:15px" class="proxynow viewerrorpageicon">{% trans 'Test Import' %}</span>
+		</span>	
+	</div>	
+	<div id='wizard_next' class="wizard_button240">
+		<span id="" onclick="wizard.back_form(this)">{% include "back_button.html" %}</span>
+		<span id="" onclick="wizard.skip_form(this)">{% include "skip_button.html" %}</span>
+		<span id="" onclick="wizard.next_form(this)"> {% include "next_button.html" %}</span>
+	</div>
+	<!-- This dialog is applied for setting filed -->
+	<div id="wizard_dialog" style="padding-top:10px">
+		<div id="wizard_setting"></div>
+	</div>
+	<div id="wizard_dialog_test">
+		<div id="wizard_setting_test"></div> 
+	</div>
+	<div style="margin-top:10px"></div>
+	<input id="wizard_identification_form" type="hidden" value="userauthenticationB" />
+	<input id="wizard_seperate_field" type="hidden" value="," />
+	<input id="wizard_default_pass_authb" type="hidden" value="user123" />
+</div>

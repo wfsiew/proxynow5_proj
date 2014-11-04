@@ -1,0 +1,18 @@
+{% load i18n %}
+<table class="dashboard_tbl1 ui-widget-content">
+	<thead class="ui-widget-header">
+		<tr>
+			<th colspan="2">{% trans 'Version information' %}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="collbl version">{% trans 'Firmware version:' %}</td>
+			<td><span>{{ dashboard.version }}</span></td>
+		</tr>
+		<tr>
+			<td class="collbl version">{% trans 'Antivirus pattern date:' %}</td>
+			<td><span id="id_avpattern">{{ dashboard.avpattern }}</span></td>
+		</tr>
+	</tbody>
+</table>

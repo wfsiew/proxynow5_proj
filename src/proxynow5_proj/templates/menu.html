@@ -1,0 +1,48 @@
+{% load i18n %}
+<div id="menu">
+    <h3 id="menu_dashboard"><a href="#" onclick="return dashboard.load()">{% trans 'Dashboard' %}</a></h3>
+    <div></div>
+    <h3><a href="#">{% trans 'Administration' %}</a></h3>
+    <div>
+        <div><a href="#" onclick="return admin.load()">{% trans 'General' %}</a></div>
+        <div><a href="#" onclick="return adinfo.load()">{% trans 'Authentication' %}</a></div>
+        <div><a href="#" onclick="return lic.load()">{% trans 'License' %}</a></div>
+        <div><a href="#" onclick="return conf.load()">{% trans 'Import/Export Settings' %}</a></div>
+        <div><a href="#" onclick="return log.load()">{% trans 'Logs viewer' %}</a></div>
+        <div><a href="#" onclick="return patch.load()">{% trans 'Upgrade' %}</a></div>
+    </div>
+    <h3><a href="#">{% trans 'Definition' %}</a></h3>
+    <div>
+        <div><a href="#" onclick="return defuser.load()">{% trans 'User/Group' %}</a></div>
+        <div><a href="#" onclick="return defnet.load()">{% trans 'Network' %}</a></div>
+        <div><a href="#" onclick="return defservices.load()">{% trans 'Service/Port' %}</a></div>
+        <div><a href="#" onclick="return defschedule.load()">{% trans 'Schedule' %}</a></div>
+    </div>
+    <h3><a href="%">{% trans 'Web Proxy' %}</a></h3>
+    <div>
+    	<div><a href="#" onclick="return wp.load()">{% trans 'General' %}</a></div>
+    	<div><a href="#" onclick="return wpfilter.load()">{% trans 'Filtering Definitions' %}</a></div>
+    	<div><a href="#" onclick="return wpprofile.load()">{% trans 'Access Control Profile' %}</a></div>
+    	<div><a href="#" onclick="return wpadvance.load()">{% trans 'Advanced' %}</a></div>
+    	<div><a href="#" onclick="return appctrlrule.load()">{% trans 'Application Control' %}</a></div>
+    	<div><a href="#" onclick="return nettrusted.load()">{% trans 'Trusted Network' %}</a></div>
+    </div>
+    <h3><a href="#">{% trans 'Network' %}</a></h3>
+    <div>
+        <div><a href="#" onclick="return netint.load()">{% trans 'Interfaces' %}</a></div>
+        <div><a href="#" onclick="return netlb.load()">{% trans 'Link Load Balancing' %}</a></div>
+        <div><a href="#" onclick="return nat.load()">{% trans 'NAT' %}</a></div>
+        <div><a href="#" onclick="return netroute.load()">{% trans 'Routing' %}</a></div>
+        <diV><a href="#" onclick="return netdns.load()">{% trans 'DNS' %}</a></div>
+<!--         <div><a href="#" onclick="return netdhcp.load()">{% trans 'DHCP' %}</a></div> -->
+    </div>
+    <h3><a href="#">{% trans 'Report' %}</a></h3>
+    <div>
+    	<div><a href="#" onclick="return report.load('cpu|cpu|hardware,ram|usedram|hardware,hd|swapusage*hdusage|hardware','hardware')">{% trans 'Hardware' %}</a></div>
+		<div><a href="#" onclick="return report.load('','netusage')">{% trans 'Network Usage' %}</a></div>
+		<div><a href="#" onclick="return report.load('','websecurity')">{% trans 'Web Usage' %}</a></div>
+		<div><a href="#" onclick="return report.load('','setting')">{% trans 'Scheduled Reports' %}</a></div>
+    </div>
+    <h3 id="menu_logout"><a href="#" onclick="return auth.logout()">{% trans 'Log off' %}</a></h3>
+    <div></div>
+</div>

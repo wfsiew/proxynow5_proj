@@ -1,0 +1,71 @@
+{% load i18n %}
+{% if show_msg %}
+<p>
+{% blocktrans %}
+The object <strong>{{ o }}</strong> is currently referred by:
+{% endblocktrans %}
+</p>
+<ol>
+	{% for g in o.defnetgroups.all %}
+	<li><strong>{{ g.gid }}</strong></li>
+	{% endfor %}
+	{% for x in o.netroute_set.all %}
+	<li><strong>{{ x.netid }} ({% trans 'Network - Routing' %})</strong></li>
+	{% endfor %}
+	{% for x in o.netroutegateways.all %}
+	<li><strong>{{ x.gwid }} ({% trans 'Network - Routing' %})</strong></li>
+	{% endfor %}
+	{% for x in o.wpadvance_set.all %}
+	<li><strong>{{ x.parentip }} ({% trans 'Web Proxy - Advanced' %})</strong></li>
+	{% endfor %}
+	{% for x in o.netdnsallownet_set.all %}
+	<li><strong>{{ x.id }} ({% trans 'Network - DNS' %})</strong></li>
+	{% endfor %}
+	{% for x in o.netdnsrelay_set.all %}
+	<li><strong>{{ x.id }} ({% trans 'Network DNS' %})</strong></li>
+	{% endfor %}
+	{% for x in o.appctrlskiplistnets.all %}
+	<li><strong>{{ x.net }} ({% trans 'Web Proxy - Application Control' %})</strong></li>
+	{% endfor %}
+	{% for x in o.appctrlfornets.all %}
+	<li><strong>{{ x.net }} ({% trans 'Web Proxy - Application Control' %})</strong></li>
+	{% endfor %}
+	{% for x in o.wpadvanceskip_set.all %}
+	<li><strong>{{ x.netid }} ({% trans 'Web Proxy - Advanced' %})</strong></li>
+	{% endfor %}
+	{% for x in o.wpnets.all %}
+	<li><strong>{{ x.netid }} ({% trans 'Web Proxy - Profile' %})</strong></li>
+	{% endfor %}
+	{% for x in o.wpprofileexceptnets.all %}
+	<li><strong>{{ x.netid }} ({% trans 'Web Proxy - Profile' %})</strong></li>
+	{% endfor %}
+	{% for x in o.natpfhosts.all %}
+	<li><strong>{{ x.host }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+	{% for x in o.nat_masq_set.all %}
+	<li><strong>{{ x.network }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+	{% for x in o.nat_dnat_snat_set.all %}
+	<li><strong>{{ x.originalSource }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+	{% for x in o.natdnatsnatoriginaldestinations.all %}
+	<li><strong>{{ x.originalDestination }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+	{% for x in o.natdnatsnatnewdestinationhosts.all %}
+	<li><strong>{{ x.newDestinationHost }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+	{% for x in o.natdnatsnatnewsourceaddresses.all %}
+	<li><strong>{{ x.newSourceAddress }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+	{% for x in o.nettrusted_set.all %}
+	<li><strong>{{ x.netid }} ({% trans 'Web Proxy - Trusted Network' %})</strong></li>
+	{% endfor %}
+</ol>
+<p>
+{% blocktrans %}
+Deleting <strong>{{ o }}</strong> will remove it from the reference(s) listed above.
+Do you want to proceed ?
+{% endblocktrans %}
+</p>
+{% include "confirm_button.html" %}
+{% endif %}

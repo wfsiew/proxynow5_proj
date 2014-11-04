@@ -1,0 +1,31 @@
+<!-- 
+Pls don't change the order of this element 
+bocs i use it in javascript
+
+- -> panel_body_type div input[name] : checked 
+
+. bcos , i use it in javascript 
+-->
+<div id="panel_body_type" style="overflow: auto;height:400px">
+{% for o in objlist %}
+	<div class="{% cycle 'ui-state-default' 'ui-state-hover' %} list_row" value="{{ o.1 }}">
+		<input type="checkbox" name="chklist" value="{{ o.1 }}" classify = "{{ o.0 }}" />
+		<span class="drag_zone">
+			{% if o.0 == 'users' %}
+				<span class="proxynow usericon spaceiconlist"></span>
+			{% else %}{% if o.0  ==  'schedules' %}
+				<span class="proxynow scheduleicon spaceiconlist"></span>
+			{% else %}{% if o.0 == "host" %}
+				<span class="proxynow servericon spaceiconlist"></span>
+			{% else %}{% if o.0 == "dns_host" %}
+				<span class="proxynow dnshosticon spaceiconlist"></span>
+			{% else %}{% if o.0 == "network"%}
+				<span class="proxynow networkicon spaceiconlist"></span>
+			{% else %}{% if o.0 == "network_group"%}
+				<span class="proxynow groupsicon spaceiconlist"></span>
+			{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}
+			<span title="{{ o.1 }}">{{ o.1 }}</span>
+		</span>
+	</div>
+{% endfor %}
+</div>

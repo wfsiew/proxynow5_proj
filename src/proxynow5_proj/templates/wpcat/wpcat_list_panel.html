@@ -1,0 +1,8 @@
+{% load i18n %}
+{% if objlist %}
+	<div class="panel_header">
+		{% include "filter_form.html" %}
+		{% include "add_button.html" %}
+	</div>
+	{% include "wpcat/wpcat_list_select.html" %}
+{% endif %}

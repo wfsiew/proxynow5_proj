@@ -1,0 +1,23 @@
+<table>
+	<tr>
+		<td align="right">{{ form.name.label_tag }}</td>
+		<td>{{ o.name }}</td>
+	</tr>
+	<tr>
+		<td align="right">{{ form.type.label_tag }}</td>
+		<td>{{ o.get_type_name }}</td>
+	</tr>
+	{% if o.type == 1 %}
+		{% include "defnet/defnethost_info.html" %}
+	{% else %}{% if o.type == 2 %}
+		{% include "defnet/defnetdnshost_info.html" %}
+	{% else %}{% if o.type == 3 %}
+		{% include "defnet/defnetnetwork_info.html" %}
+	{% else %}{% if o.type == 4 %}
+		{% include "defnet/defnetgroup_info.html" %}
+	{% endif %}{% endif %}{% endif %}{% endif %}
+	<tr>
+		<td align="right">{{ form.comment.label_tag }}</td>
+		<td>{{ o.comment }}</td>
+	</tr>
+</table>

@@ -1,0 +1,8 @@
+{% extends "base_list_page.html" %}
+{% load i18n %}
+{% block content %}
+<div class="page_container">
+	{% include "schedule/defschedule_list.html" %}
+	{% include "confirm_delete_panel.html" %}
+</div>
+{% endblock %}

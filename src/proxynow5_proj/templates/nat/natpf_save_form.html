@@ -1,0 +1,89 @@
+{% load i18n %}
+{% include "save_form_title.html" %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-form" action="/nat/pf/save/" method="post">{% csrf_token %}
+		<div class="row">
+			{{ form.interface.label_tag }}
+			{{ form.interface }}
+		</div>
+		<div class="row">
+			{{ form.originalPort.label_tag }}
+			<div class="nat_dropzone">
+				<div id="orgport">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_originalport" class="nat_box">
+					{% if o.originalPort %}
+					<div id="orgport_{{ o.originalPort.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return natpf.remove_originalport(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return natpf.edit_originalport(this)"></div>
+						<div>{{ o.originalPort.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			{{ form.host.label_tag }}
+			<div class="nat_dropzone">
+				<div id="host">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_host" class="nat_box">
+					{% if o.host %}
+					<div id="host_{{ o.host.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return natpf.remove_host(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return natpf.edit_host(this)"></div>
+						<div>{{ o.host.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{{ form.newService.label_tag }}
+			<div class="nat_dropzone">
+				<div id="newservice">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_newservice" class="nat_box">
+					{% if o.host %}
+					<div id="newsrv_{{ o.newService.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return natpf.remove_newservice(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return natpf.edit_newservice(this)"></div>
+						<div>{{ o.newService.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			{{ form.comment.label_tag }}
+			{{ form.comment }}
+		</div>
+		{% include "save_button.html" %}
+		<div id="dialog-add-orgport" title="{{ dialog1_title }}">
+			<div id="dialog_body-orgport"></div>
+		</div>
+		<div id="dialog-edit-orgport" title="{{ dialog1_edit_title }}">
+			<div id="dialog_edit_body-orgport"></div>
+		</div>
+		<div id="dialog-add-host" title="{{ dialog2_title }}">
+			<div id="dialog_body-host"></div>
+		</div>
+		<div id="dialog-edit-host" title="{{ dialog2_edit_title }}">
+			<div id="dialog_edit_body-host"></div>
+		</div>
+		<div id="dialog-add-newservice" title="{{ dialog3_title }}">
+			<div id="dialog_body-newservice"></div>
+		</div>
+		<div id="dialog-edit-newservice" title="{{ dialog3_edit_title }}">
+			<div id="dialog_edit_body-newservice"></div>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,9 @@
+{% load i18n %}
+<div id="rpt_search_panel" class="ui-corner-all ui-state-default" style="position: absolute;top: 450px;left: 200px;width:250px;">
+	<div id="rpt_search_info" align="center"> </div>
+	<hr/>
+	<div id="rpt_search_topsitebyuser" align="center" style="cursor:pointer;" class ="rpt_search_topuser" onclick="return report.searchtophostbyuser(this);" onmouseout="return report.rpt_menu_mouseout(this);" onmouseover="return report.rpt_menu_mouseover(this);" >{% trans 'Top Site By User' %}</div>
+	<div id="rpt_search_topmimebyuser" align="center" style="cursor:pointer;" class ="rpt_search_topuser" onclick="return report.searchtopmimebyuser(this);" onmouseout="return report.rpt_menu_mouseout(this);" onmouseover="return report.rpt_menu_mouseover(this);">{% trans 'Top Mime By User' %}</div>
+	<div id="rpt_search_topsitebymime" align="center" style="cursor:pointer;" class ="rpt_search_topmime" onclick="return report.searchtopsitebymime(this);" onmouseout="return report.rpt_menu_mouseout(this);" onmouseover="return report.rpt_menu_mouseover(this);">{% trans 'Top Site By Mime' %}</div>
+	<div id="rpt_search_topuserbymime" align="center" style="cursor:pointer;" class ="rpt_search_topmime" onclick="return report.searchtopuserbymime(this);" onmouseout="return report.rpt_menu_mouseout(this);" onmouseover="return report.rpt_menu_mouseover(this);" >{% trans 'Top User By Mime' %}</div>
+</div>

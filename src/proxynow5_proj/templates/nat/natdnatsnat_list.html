@@ -1,0 +1,63 @@
+{% load i18n %}
+{% if objlist %}
+	<table class="list_table">
+		<tbody>
+		{% for o in objlist %}
+			<tr class="{% cycle 'ui-state-default' 'ui-state-hover' %} list_row">
+				<td id="{{ o.id }}" width="60px" valign="top">
+					{% include "list_button.html" %}
+				</td>
+				<td valign="top">
+					<div class="row_dnatsnat">
+						<label><strong>{{ o.get_mode_name }}</strong></label>
+					</div>
+					<div class="row_dnatsnat">
+						<label>{% trans 'Original source:' %}</label>
+						{{ o.originalSource.get_html_repr }}
+					</div>
+					<div class="row_dnatsnat">
+						<label>{% trans 'Original port:' %}</label>
+						{{ o.originalPort.get_html_repr }}
+					</div>
+					<div class="row_dnatsnat">
+						<label>{% trans 'Original destination:' %}</label>
+						{{ o.originalDestination.get_html_repr }}
+					</div>
+					{% if o.mode == 1 or o.mode == 3 %}
+					<div class="row_dnatsnat">
+						<label>{% trans 'New destination:' %}</label>
+						{{ o.newDestinationHost.get_html_repr }}
+					</div>
+					<div class="row_dnatsnat">
+						<label>{% trans 'New destination port:' %}</label>
+						{{ o.newDestinationPort.get_html_repr }}
+					</div>
+					{% else %}{% if o.mode == 2 or o.mode == 3 %}
+					<div class="row_dnatsnat">
+						<label>{% trans 'New source:' %}</label>
+						{{ o.newSourceAddress.get_html_repr }}
+					</div>
+					<div class="row_dnatsnat">
+						<label>{% trans 'New source port:' %}</label>
+						{{ o.newSourcePort.get_html_repr }}
+					</div>
+					{% endif %}{% endif %}
+					<div class="row_dnatsnat">
+						<label>{% trans 'Automatically open on packet filter:' %}</label>
+						{% if o.autoCreatePFRule == 1 %}
+						<span class="proxynow posticon spaceiconlist"></span>
+						{% else %}
+						<span class="proxynow deleteicon spaceisonlist"></span>
+						{% endif %}
+					</div>
+					{% if o.comment %}
+					<br>
+					{{ o.comment }}
+					{% endif %}
+				</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endif %}
+<input id="id_pg" type="hidden" value="{{ has_prev }},{{ has_next }},{{ prev_page }},{{ next_page }},{{item_msg }}" />

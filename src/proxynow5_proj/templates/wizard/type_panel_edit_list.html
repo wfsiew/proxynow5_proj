@@ -1,0 +1,10 @@
+{% load i18n %}
+{% for o in objlist %}  
+	<div id="item_16" class="list_item">
+		<div class="proxynow trashicon item_delete" value="{{ o.0 }}" onclick="return wizard.remove(this);"></div>
+		<div>
+			<span class="{{ o.1 }}"></span>
+			<span id="wizard_name_user_ingroup" value="{{ o.0 }}" classify="{{ o.2 }}"  >{{ o.0 }}</span>
+		</div>
+	</div>
+{% endfor %}

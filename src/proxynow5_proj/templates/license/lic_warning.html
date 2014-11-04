@@ -1,0 +1,11 @@
+{% load i18n %}
+{% if showwarningreminder %}
+<div id="status-warningreminder-panel" class="ui-widget statuspanel">
+    <div id="status-warningreminder-panel_outer" class="ui-state-highlight ui-priority-primary ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+        <p>
+        	<span id="status-panel_inner" class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em"></span>
+			<div id="status_warningreminder_msg" style="margin-left: 20px;">{{ expirydaysmsg }}</div>
+		</p>
+    </div>
+</div>
+{% endif %}

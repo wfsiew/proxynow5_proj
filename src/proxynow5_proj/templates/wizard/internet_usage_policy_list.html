@@ -1,0 +1,33 @@
+{% load i18n %}
+<div align="left" style="width:300px;border:1px">
+	<div style="padding-left:10px;padding-top:10px;">
+		{% trans 'Group: ' %}<span id="wizard_group_name" value="{{ name }}" >{{ name }}</span> 
+	</div>
+	<div style="padding-left:10px;padding-top:30px;">
+		{% trans 'Access control profiles applied:' %}
+	</div>
+	<div style="overflow: auto;height:200px;padding-left:20px;padding-top:10px;">
+		{% if objlist %}
+			<table id="wizard_table_list_policy">
+				{% for o in objlist %}
+					<tr>
+						<td style="width:5px"><input id="wizard_check_group" type="checkbox" value="{{ o.0 }}" {% if o.2 == "1" %} checked = 'checked' {% endif %} /></td>
+						<td>{{ o.1 }}</td>
+						<td>
+							<span onclick="wizard.wizard_open_dialog_edit_policy(this);" value="{{ o.0 }}"> 
+								{% include "customise.html" %}
+							</span>
+						</td>
+					</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+	</div>
+	<span onclick ="wizard.wizard_create_profile(this);">
+		{% include "add_button.html"%}
+	</span>
+	<div id='wizard_next' class='wizard_button100'>
+		<span id="" onclick="wizard.wizard_save_policy(this)">{% include "ok__button.html" %}</span>
+		<span id="" onclick="wizard.close_dialog('wizard_list_panel_policy')">{% include "cancel-button.html" %}</span>
+	</div>	
+</div>

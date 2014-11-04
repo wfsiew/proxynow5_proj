@@ -1,0 +1,32 @@
+{% load i18n %}
+<div id="admin-form" class="ui-widget-content ui-widget ui-corner-all">
+	<div class="form_title ui-widget-header ui-corner-all">
+		<span>{% trans 'General' %}</span>
+	</div>
+	<form id="save-form" action="/wp/save/" method="post">{% csrf_token %}
+		<div class="row_admin">
+			<label for="id_av" class="admin_lbl">{{ form.av.label }}</label>
+			{{ form.av }}
+		</div>
+		<div class="row_admin">
+			<label for="id_avscansize" class="admin_lbl">{{ form.avscansize.label }}</label>
+			{{ form.avscansize }}
+			<span>KB</span>
+		</div>
+		<div class="row_admin">
+			<label for="id_mode" class="admin_lbl">{{ form.mode.label }}</label>
+			{{ form.mode }}
+		</div>
+		<div class="row_admin">
+			<label for="id_authentication" class="admin_lbl">{{ form.authentication.label }}</label>
+			{{ form.authentication }}
+		</div>
+		<div class="row_admin">
+			<label for="id_safesearchon" class="admin_lbl">{{ form.safesearchon.label }}</label>
+			{{ form.safesearchon }}
+		</div>
+		<input id="id_id" type="hidden" value="{{ id }}" />
+		{% include "save_button.html" %}
+		{% include "status_panel.html" %}
+	</form>
+</div>

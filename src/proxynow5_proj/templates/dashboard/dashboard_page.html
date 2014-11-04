@@ -1,0 +1,25 @@
+{% load i18n %}
+<div id="table_container">
+	<div class="page_title ui-widget-header ui-widget">{{ title }}
+		&nbsp;<span id="id_currdate" class="dashboard_date">{{ currdate }}</span>
+		<div class="dashboard_refresh">
+			<label for="id_refresh">{% trans 'Refresh:' %}</label>
+			{{ form.refresh }}
+		</div>
+	</div>
+	<table class="dashboard_tbl ui-widget">
+		<tbody>
+			<tr>
+				<td class="col">
+					{% include "dashboard/dashboard_version.html" %}
+					{% include "dashboard/dashboard_resource.html" %}
+					{% include "dashboard/dashboard_statistic.html" %}
+					{% include "dashboard/dashboard_license.html" %}
+				</td>
+				<td class="col">
+					{% include "dashboard/dashboard_nic.html" %}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

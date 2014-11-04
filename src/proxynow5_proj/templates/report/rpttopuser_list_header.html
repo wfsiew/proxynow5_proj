@@ -1,0 +1,23 @@
+<tr id="rpt_header_ls">
+	{% for o in lsheader %}
+	<th>
+		{% if o.value == "" %}
+	 		{{ o.name }}
+		{% else %}
+		<table style="width:100%">
+			<tr>
+				<td align="left"><div id="t" temp="{{ o.value }}" {% if sendmail == 0 %} style="cursor: pointer" onclick="report.rpt_sortdata(this)" {% endif %}>{{ o.name }}</div></td>
+				<td style="width:15px">
+					{% if o.value == 'kbyte' %}
+						<span class="ui-icon ui-icon-triangle-1-s"></span>
+					{% else %}
+						<span></span>
+					{% endif %}
+				</td> 
+			</tr>
+		</table>
+		{% endif %}
+	</th>
+	{% endfor %}
+</tr>
+<input id="id_pg" type="hidden" value="{{ hasprev }},{{ hasnext }},{{ item_msg }}" />

@@ -1,0 +1,43 @@
+{% load i18n %}
+{% include "save_form_title.html" %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-form" action="/nat/masq/save/" method="post">{% csrf_token %}
+		<div class="row">
+			{{ form.network.label_tag }}
+			<div class="nat_dropzone">
+				<div id="network">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_network" class="nat_box">
+					{% if o.network %}
+					<div id="network_{{ o.network.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return natmasq.remove_network(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return natmasq.edit_network(this)"></div>
+						<div>{{ o.network.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{{ form.interface.label_tag }}
+			{{ form.interface }}
+		</div>
+		<div class="row">
+			{{ form.location.label_tag }}
+			{{ form.location }}
+		</div>
+		<div class="row">
+			{{ form.comment.label_tag }}
+			{{ form.comment }}
+		</div>
+		{% include "save_button.html" %}
+		<div id="dialog-add-network" title="{{ dialog1_title }}">
+			<div id="dialog_body-network"></div>
+		</div>
+		<div id="dialog-edit-network" title="{{ dialog1_edit_title }}">
+			<div id="dialog_edit_body-network"></div>
+		</div>
+	</form>
+</div>

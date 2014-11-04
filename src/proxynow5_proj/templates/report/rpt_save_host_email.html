@@ -1,0 +1,45 @@
+{% load i18n %}
+<form id="save-form">{% csrf_token %}
+	<table>
+		<tr>
+			<td>{% trans 'Email Address From' %}</td>
+			<td>{{ form.fromemail }}</td>
+		</tr>
+	</table>
+	<br/>
+	<fieldset style="width:300px;margin-left:20px">
+		<legend>{% trans 'SMTP Server' %} 
+		</legend>	
+			<table style="margin-left:20px">
+				<tr>
+					<td align="right">{% trans 'Server' %}</td>
+					<td>{{ form.smtphost }}</td>
+				</tr>
+				<tr>
+					<td align="right">{% trans 'Port' %}</td>
+					<td>{{ form.smtpport }}</td>
+				</tr>
+				<tr>
+					<td align="right">{% trans 'Type Connection' %}</td>
+					<td>{{ form.smtpsecure }}</td>
+				</tr>
+				<tr>
+					<td align="right">{% trans 'User' %}</td>
+					<td>{{ form.smtpuser }}</td>
+				</tr>
+				<tr>
+					<td align="right">{% trans 'Password' %}</td>
+					<td>{{ form.smtppass }}</td>
+				</tr>
+				<tr>
+					<td align="right">{% trans 'Retype Password' %}</td>
+					<td>{{ form.smtprepass }}</td>
+				</tr>
+			</table>
+	</fieldset>
+	</br>
+	<span id="rpt_id_save_host_setting" class="save_button save hover ui-corner-all ui-state-default">
+		<span class="proxynow saveicon">{% trans 'Save' %}</span>
+	</span>
+</form>
+{% include "status_panel.html" %}

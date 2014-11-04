@@ -1,0 +1,37 @@
+{% load i18n %}
+{% if objlist %}
+	<table class="list_table">
+		<tbody>
+		{% for o in objlist %}
+			<tr class="{% cycle 'ui-state-default' 'ui-state-hover' %} list_row">
+				<td id="{{ o.id }}" width="60px">
+					{% include "list_button.html" %}
+				</td>
+				<td valign="top">
+				{% if o.netid.type == 1 %}
+					<span class="proxynow servericon spaceiconlist"></span>
+				{% else %}{% if o.netid.type == 2 %}
+					<span class="proxynow dnshosticon spaceiconlist"></span>
+				{% else %}{% if o.netid.type == 3 %}
+					<span class="proxynow networkicon spaceiconlist"></span>
+				{% else %}{% if o.netid.type == 4 %}
+					<span class="proxynow groupsicon spaceiconlist"></span>
+				{% endif %}{% endif %}{% endif %}{% endif %}
+					<strong>{{ o.netid }}&nbsp;&nbsp;&rarr;&nbsp;&nbsp;{% trans 'Gateway' %}</strong>
+				{% if o.gwid.type == 1 %}
+					<span class="proxynow servericon spaceiconlist"></span>
+				{% else %}{% if o.gwid.type == 2 %}
+					<span class="proxynow dnshosticon spaceiconlist"></span>
+				{% endif %}{% endif %}
+					<strong>{{ o.gwid }}</strong>
+					{% if o.comment %}
+					<br>
+					{{ o.comment }}
+					{% endif %}
+				</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endif %}
+<input id="id_pg" type="hidden" value="{{ has_prev }},{{ has_next }},{{ prev_page }},{{ next_page }},{{item_msg }}" />

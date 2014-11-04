@@ -1,0 +1,16 @@
+{% for o in userlist %}
+	<div id="userint_{{ o.id }}" class="{% cycle 'ui-state-default' 'ui-state-active' %} list_row">
+		<input type="checkbox" name="chklist" />
+		<span class="drag_zone">
+		{% include "defuser/defuser_list_select_repr.html" %}
+		</span>
+	</div>
+{% endfor %}
+{% for o in aduserlist %}
+	<div id="userext_{{ o.id }}" class="{% cycle 'ui-state-default' 'ui-state-active' %} list_row">
+		<input type="checkbox" name="chklist" />
+		<span class="drag_zone">
+		{% include "aduser/aduser_list_select_repr.html" %}
+		</span>
+	</div>
+{% endfor %}

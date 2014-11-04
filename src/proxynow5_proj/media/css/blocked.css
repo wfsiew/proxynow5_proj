@@ -1,0 +1,68 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	font: 8pt Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+	margin: 5px;
+	border: none !important;
+}
+
+.header {
+	width: 950px;
+	margin-left: 30px;
+	margin-top: 15px;
+	text-align: center;
+}
+
+.blocked_alert {
+	font-size: 3.0em;
+	font-weight: bold;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.blocked_icon {
+	float: left;
+	margin-right: .3em;
+}
+
+.container {
+	margin-top: 15px;
+}
+
+.table_container {
+	border-collapse: collapse;
+	border: 1px solid;
+	width: 950px;
+}
+
+.table_footer {
+	border-collapse: collapse;
+	border: 0px;
+	width: 950px;
+}
+
+.col_lbl {
+	font-weight: bold !important;
+	padding: 12px;
+	background: none !important;
+	width: 300px;
+}
+
+.col_content {
+	padding: 12px;
+}
+
+.footer {
+	margin-top: 20px;
+}
+
+.logo_lbl {
+	font-size: 1.2em;
+}
+
+.url_lbl {
+	font-size: 1.1em;
+}

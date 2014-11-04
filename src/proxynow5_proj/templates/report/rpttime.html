@@ -1,0 +1,12 @@
+<table style="padding: 20px 20px 20px 20px; width: 748px">
+{% if objpath %}
+	{% for o in objpath %}
+	<tr>
+		<td align="center">
+			<img src="{{ o }}" />
+			<hr>
+		</td>
+	</tr>
+	{% endfor %}
+{% endif %}
+</table>

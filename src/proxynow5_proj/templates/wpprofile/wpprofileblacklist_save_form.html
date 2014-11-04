@@ -1,0 +1,23 @@
+{% load i18n %}
+<div class="row">
+	<label>{% trans 'Blacklist:' %}</label>
+	<div id="blacklist" class="members_dropzone">
+		<div>
+			<div class="img_add proxynow addicon"></div>
+			<div class="img_folder proxynow foldericon"></div>
+		</div>
+		<div id="id_blacklist" class="members_container">
+			{% for o in blacklist %}
+			<div id="blacklist_{{ o.blacklist.id }}" class="list_item">
+				<div class="proxynow trashicon item_delete" onclick="return wpprofile.remove_blacklist(this)"></div>
+				{% if iswizard %}
+					<div class="proxynow editicon item_edit" onclick="return wizard.edit_blacklist(this)"></div>
+				{% else %}
+					<div class="proxynow editicon item_edit" onclick="return wpprofile.edit_blacklist(this)"></div>
+				{% endif%}
+				<div>{{ o.blacklist }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

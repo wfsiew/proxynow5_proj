@@ -1,0 +1,29 @@
+{% load i18n %}
+<div id="admin-form" class="ui-widget-content ui-widget ui-corner-all">
+	<div class="form_title ui-widget-header ui-corner-all">
+		<span>{% trans 'Import/Export Settings' %}</span>
+	</div>
+	<div>{% csrf_token %}
+		<fieldset class="ui-corner-all">
+			<legend>{% trans 'Import' %}</legend>
+			<div class="row_button">
+				{% include "conf/upload_form.html" %}
+				<span class="save_button import hover ui-corner-all ui-state-default">
+					<span class="proxynow saveicon paddicon">{% trans 'Import' %}</span>
+				</span>
+			</div>
+			<div id="status_import" style="display: none;">
+				{% include "progress_panel.html" %}
+			</div>
+			{% include "status_panel.html" %}
+		</fieldset>
+		<fieldset class="ui-corner-all">
+			<legend>{% trans 'Export' %}</legend>
+			<div class="row_button">
+				<span class="save_button export hover ui-corner-all ui-state-default">
+					<span class="proxynow saveicon paddicon">{% trans 'Export' %}</span>
+				</span>
+			</div>
+		</fieldset>
+	</div>
+</div>

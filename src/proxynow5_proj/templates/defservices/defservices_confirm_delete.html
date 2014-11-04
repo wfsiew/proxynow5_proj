@@ -1,0 +1,35 @@
+{% load i18n %}
+{% if show_msg %}
+<p>
+{% blocktrans with group_pluralize=o.defservicesgroups.count|pluralize %}
+The object <strong>{{ o }}</strong> is currently referred by:
+{% endblocktrans %}
+</p>
+<ol>
+	{% for g in o.defservicesgroups.all %}
+	<li><strong>{{ g.gid }}</strong></li>
+	{% endfor %}
+	{% for x in o.natpforiginalports.all %}
+	<li><strong>{{ x.originalPort }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+	{% for x in o.natpfnewservices.all %}
+	<li><strong>{{ x.newService }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+	{% for x in o.natdnatsnatoriginalports.all %}
+	<li><strong>{{ x.originalPort }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+	{% for x in o.natdnatsnatnewdestinationports.all %}
+	<li><strong>{{ x.newDestinationPort }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+	{% for x in o.natdnatsnatnewsourceports.all %}
+	<li><strong>{{ x.newSourcePort }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+</ol>
+<p>
+{% blocktrans with group_pluralize=o.defservicesgroups.count|pluralize %}
+Deleting <strong>{{ o }}</strong> will remove it from the reference{{ group_pluralize }} listed above.
+Do you want to proceed ?
+{% endblocktrans %}
+</p>
+{% include "confirm_button.html" %}
+{% endif %}

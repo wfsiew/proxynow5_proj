@@ -1,0 +1,23 @@
+{% load i18n %}
+<div class="row">
+	<label>{% trans 'Blocked:' %}</label>
+	<div id="blockexts" class="members_dropzone">
+		<div>
+			<div class="img_add proxynow addicon"></div>
+			<div class="img_folder proxynow foldericon"></div>
+		</div>
+		<div id="id_blockexts" class="members_container">
+			{% for o in blockextensions %}
+			<div id="blockext_{{ o.blockext.id }}" class="list_item">
+				<div class="proxynow trashicon item_delete" onclick="return wpprofile.remove_blockext(this)"></div>
+				{% if iswizard %}
+					<div class="proxynow editicon item_edit" onclick="return wizard.edit_blockext(this)"></div>
+				{% else %}
+					<div class="proxynow editicon item_edit" onclick="return wpprofile.edit_blockext(this)"></div>
+				{% endif %}
+				<div>{{ o.blockext }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,59 @@
+{% load i18n %}
+{% include "save_form_title.html" %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-form" action="/netroute/save/" method="post">{% csrf_token %}
+		<div class="row">
+			{{ form.netid.label_tag }}
+			<div class="route_dropzone">
+				<div id="netid">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_net" class="netroute_box">
+					{% if o.netid %}
+					<div id="netid_{{ o.netid.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return netroute.remove_netid(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return netroute.edit_netid(this)"></div>
+						<div>{{ o.netid.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{{ form.gwid.label_tag }}
+			<div class="route_dropzone">
+				<div id="gwid">
+					<div class="img_add proxynow addicon"></div>
+					<div class="img_folder proxynow foldericon"></div>
+				</div>
+				<div id="id_gateway" class="netroute_box">
+					{% if o.gwid %}
+					<div id="gwid_{{ o.gwid.id }}" class="list_item">
+						<div class="proxynow trashicon item_delete" onclick="return netroute.remove_gwid(this)"></div>
+						<div class="proxynow editicon item_edit" onclick="return netroute.edit_gwid(this)"></div>
+						<div>{{ o.gwid.get_html_repr }}</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{{ form.comment.label_tag }}
+			{{ form.comment }}
+		</div>
+		{% include "save_button.html" %}
+		<div id="dialog-add-netid" title="{{ dialog1_title }}">
+			<div id="dialog_body-netid"></div>
+		</div>
+		<div id="dialog-edit-netid" title="{{ dialog1_edit_title }}">
+			<div id="dialog_edit_body-netid"></div>
+		</div>
+		<div id="dialog-add-gwid" title="{{ dialog2_title }}">
+			<div id="dialog_body-gwid"></div>
+		</div>
+		<div id="dialog-edit-gwid" title="{{ dialog2_edit_title }}">
+			<div id="dialog_edit_body-gwid"></div>
+		</div>
+	</form>
+</div>

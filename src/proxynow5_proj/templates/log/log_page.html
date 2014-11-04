@@ -1,0 +1,33 @@
+{% load i18n %}
+<div id="table_container">
+	<div class="page_title ui-widget-header ui-widget">{% trans 'Log' %}</div>
+	<form id="save-form" action="" method="post">{% csrf_token %}
+		<div class="row">
+			<label for="id_type">{% trans 'Type:' %}</label>
+			<select id="id_type" class="select">
+			{% for o in types %}
+				<option value="{{ forloop.counter0 }}">{{ o }}</option>
+			{% endfor %}
+			</select>
+		</div>
+		<div class="row">
+			<label for="id_file">{% trans 'File:' %}</label>
+			<select id="id_file" style="width: 648px">
+				{% include "log/log_file_option.html" %}
+			</select>
+		</div>
+		<div class="row">
+			<label for="id_filter">{% trans 'Filter:' %}</label>
+			<input id="id_filter" type="text" style="width: 645px" />
+		</div>
+		<div class="row_log">
+			<input id="id_autoscroll" type="checkbox" checked="checked" />
+			<label for="id_autoscroll">{% trans 'Autoscroll' %}</label>
+			<input id="id_pause" type="checkbox" />
+			<label for="id_pause" style="margin-left: 10px">{% trans 'Pause' %}</label>
+		</div>
+		<div class="row">
+			<div id="id_content" class="log_body"></div>
+		</div>
+	</form>
+</div>

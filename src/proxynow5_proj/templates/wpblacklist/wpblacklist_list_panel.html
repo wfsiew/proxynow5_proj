@@ -1,0 +1,10 @@
+{% load i18n %}
+{% if objlist %}
+	<div class="panel_header">
+		<div class="panel_filter">
+			{{ form.filter_text }}
+		</div>
+		{% include "add_button.html" %}
+	</div>
+	{% include "wpcontent/wpcontent_list_select.html" %}
+{% endif %}

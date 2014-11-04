@@ -1,0 +1,12 @@
+{% load i18n %}
+<div class="ui-widget-content ui-widget ui-corner all">
+	<form id="export-form{{ scope }}{{ level }}" action="" method="post">
+		<div class="row">
+			<label for="id_exporttext">{% trans 'Exported text' %}</label>
+			<textarea id="id_exporttext" rows="6" cols="40" style="width: 180px"></textarea>
+		</div>
+		<div class="row_button">
+			{% include "cancel-button.html" %}
+		</div>
+	</form>
+</div>

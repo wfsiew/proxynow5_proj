@@ -1,0 +1,16 @@
+{% load i18n %}
+<div>
+	<div>
+		<input id="wizard_search_info" type="text" style="width:100%" onkeypress="wizard.searching_type_info(event);"></input>
+	</div>
+	<div style="padding-top:5px;padding-bottom:5px" align="right">
+		<span id="wizard_add_members_in_group" onclick="wizard.adding_type_to_profile();">
+			{% include "add_button.html" %}
+		</span>
+	</div>	       
+	{% include "wizard/type_panel_list.html" %}
+	<input type="hidden" value="{{ type }}" id="wizard_search_type" />
+	<!-- store the id of destination -->
+	<input type="hidden" value="{{ destination }}" id="wizard_destination_adding" />
+	
+</div>

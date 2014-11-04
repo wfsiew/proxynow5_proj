@@ -1,0 +1,4 @@
+{% load i18n %}
+<form id="upload-form" action="/setting/conf/import/" enctype="multipart/form-data" method="post">{% csrf_token %}
+	{{ form.filename }}
+</form>

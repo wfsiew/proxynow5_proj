@@ -1,0 +1,19 @@
+{% load i18n %}
+<div class="row">
+	<label>{% trans 'Hosts:' %}</label>
+	<div id="nets" class="members_dropzone">
+		<div>
+			<div class="img_add proxynow addicon"></div>
+			<div class="img_folder proxynow foldericon"></div>
+		</div>
+		<div id="id_nets" class="members_container">
+			{% for o in nets %}
+			<div id="net_{{ o.netid.id }}" class="list_item">
+				<div class="proxynow trashicon item_delete" onclick="return wpprofile.remove_net(this)"></div>
+				<div class="proxynow editicon item_edit" onclick="return wpprofile.edit_net(this)"></div>
+				<div>{{ o.netid.get_html_repr }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

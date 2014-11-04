@@ -1,0 +1,48 @@
+{% load i18n %}
+<div class="row wpcontent_form1">
+	<label for="id_keyword">{% trans 'Keyword:' %}</label>
+	<input id="id_keyword" type="text" class="text" />
+</div>
+<div class="row wpcontent_form1">
+	<label for="id_score">{% trans 'Score:' %}</label>
+	<input id="id_score" type="text" class="text" />
+</div>
+<div class="row wpcontent_form1">
+	<label></label>
+	{% include "add_button.html" %}
+</div>
+<div class="row wpcontent_form1">
+	<label></label>
+	<div id="members_dropzone">
+		<div>
+			<div class="img_export proxynow exporticon"></div>
+			<div class="img_import proxynow importicon"></div>
+		</div>
+		<div id="content_list" class="members_container">
+			<table class="content_list">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th>{% trans 'Keyword' %}</th>
+						<th>{% trans 'Score' %}</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for o in contents %}
+					<tr class="list_item">
+						<td>
+							<div class="proxynow trashicon item_delete" onclick="return wpcontent.remove_content(this)"></div>
+						</td>
+						<td>
+							<div class="proxynow editicon item_edit" onclick="return wpcontent.edit_content(this)"></div>
+						</td>
+						<td>{{ o.keyword }}</td>
+						<td>{{ o.score }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

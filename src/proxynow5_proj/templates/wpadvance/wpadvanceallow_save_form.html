@@ -1,0 +1,24 @@
+{% load i18n %}
+{% csrf_token %}
+<div id="port_input" class="row">
+	<input id="id_port" type="text" class="text" />
+	{% include "add_button.html" %}
+</div>
+<fieldset class="wpadvanceskip ui-corner-all">
+	<legend>{% trans 'Allowed ports' %}</legend>
+	<div class="wpadvanceskip_box">
+		<div class="row">
+			<div class="img_export proxynow exporticon"></div>
+			<div class="img_import proxynow importicon"></div>
+		</div>
+		<div id="wpadvanceallowlist" class="wpadvanceskiplist_container">
+			{% for o in ports %}
+			<div id="port_{{ o.portid }}" class="list_item">
+				<div class="proxynow trashicon item_delete" onclick="return wpadvanceallow.delete_port(this)"></div>
+				<div class="proxynow editicon item_edit" onclick="return wpadvanceallow.edit_port(this)"></div>
+				<div>{{ o.portid }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</fieldset>

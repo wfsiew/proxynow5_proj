@@ -1,0 +1,12 @@
+{% load i18n %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-mimeform{{ scope }}{{ level }}" action="" method="post">
+		<div class="row">
+			<label for="id_mime">{% trans 'Mime type:' %}</label>
+			<input id="id_mime" type="text" class="text" />
+		</div>
+		<div class="row_button">
+			{% include "save_button.html" %}
+		</div>
+	</form>
+</div>

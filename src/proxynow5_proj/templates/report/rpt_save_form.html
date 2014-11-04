@@ -1,0 +1,106 @@
+{% load i18n %}
+<form id="save-form"  method="post">{% csrf_token %}
+	<div class="row">
+		<div id="rptenable_days">
+			{% if active_days == 1 %}
+				{% include "switch_button_on.html" %}
+			{% else %}
+				{% include "switch_button_off.html" %}
+			{% endif %}
+			<b>{% trans 'Enable daily executive report' %}</b>
+		</div>
+	</div>
+	<br/>
+	{% trans 'Recipients' %}
+	<div id="rpt_days" class="members_dropzone"  style="width:250px;border:1;margin-left:40px">
+		<div align="right">
+			<div id="rptnewemail_days" class="img_add proxynow addicon"></div>
+		</div>
+		<div id="rpt_rpt_days" class="members_container">
+			{% for o in list_days %}
+				<div id="rptdays_{{ o.id }}" class="list_item" style="border-bottom:1px solid">
+					<div class="proxynow trashicon item_delete"></div>
+					<div>{{ o.emailaddress.emailaddress }}</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<br/>
+	<hr/>
+	<div class="row">
+		<div id="rptenable_weeks">
+			{% if active_weeks == 1 %}
+				{% include "switch_button_on.html" %}
+			{% else %}
+				{% include "switch_button_off.html" %}
+			{% endif %}
+			<b>{% trans 'Enable weekly executive report' %}</b>
+		</div>
+	</div>
+	<br/>
+	{% trans 'Recipients' %}
+	<div id="rpt_weeks" class="members_dropzone" style="width:250px;border:1;margin-left:40px">
+		<div align="right">
+			<div id="rptnewemail_weeks" class="img_add proxynow addicon"></div>
+		</div>
+		<div id="rpt_rpt_weeks" class="members_container">
+			{% for o in list_weeks %}
+				<div id="rptweeks_{{ o.id }}" class="list_item" style="border-bottom:1px solid">
+					<div class="proxynow trashicon item_delete"></div>
+					<div>{{ o.emailaddress.emailaddress }}</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<br/>
+	<hr/>
+	<div class="row">
+		<div id="rptenable_months">
+			{% if active_months == 1 %}
+				{% include "switch_button_on.html" %}
+			{% else %}
+				{% include "switch_button_off.html" %}
+			{% endif %}
+			<b>{% trans 'Enable monthly executive report' %}</b>
+		</div>
+	</div>
+	<br/>
+	{% trans 'Recipients' %}
+	<div id="rpt_months" class="members_dropzone" style="width:250px;border:1;margin-left:40px">
+		<div align="right">
+			<div id="rptnewemail_months" class="img_add proxynow addicon"></div>
+		</div>
+		<div id="rpt_rpt_months" class="members_container">
+			{% for o in list_months %}
+				<div id="rptmonths_{{ o.id }}" class="list_item" style="border-bottom:1px solid">
+					<div class="proxynow trashicon item_delete"></div>
+					<div>{{ o.emailaddress.emailaddress }}</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div id="rpt_dialog_setting">
+		<table>
+			<tr>
+				<td colspan="2"><div id="rpt_add_error" style="color:red"></div></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" id="rpt_type" />
+					{% trans 'Email Address :' %}
+				</td>
+				<td>
+					<input type="text" id="rpt_email_address" />
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					{% include 'save-button.html' %}
+				</td>
+			</tr>
+		</table>
+	</div>
+</form>
+
+

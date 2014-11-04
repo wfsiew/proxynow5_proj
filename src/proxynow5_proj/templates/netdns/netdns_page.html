@@ -1,0 +1,55 @@
+{% load i18n %}
+{% csrf_token %}
+<div class="dns_container ui-widget">
+	<div class="page_title ui-widget-header">{% trans 'DNS' %}</div>
+	<fieldset class="dns1 ui-corner-all">
+		<legend>{% trans 'Allowed to use DNS' %}</legend>
+		<div class="dns_box">
+			<div class="row">
+				<div class="img_add proxynow addicon"></div>
+				<div class="img_folder proxynow foldericon"></div>
+			</div>
+			<div id="dnslist1" class="dnslist_container">
+				{% for o in allow_net %}
+				<div id="item_{{ o.id.id }}" class="list_item">
+					<div class="proxynow trashicon item_delete" onclick="return netdns.delete_dns_allownet(this)"></div>
+					<div class="proxynow editicon item_edit" onclick="return netdns.edit_dns_allownet(this)"></div>
+					<div>{{ o.id.get_html_repr }}</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</fieldset>
+	<fieldset class="dns2 ui-corner-all">
+		<legend>{% trans 'DNS' %}</legend>
+		<div class="dns_box">
+			<div class="row">
+				<div class="img_add proxynow addicon"></div>
+				<div class="img_folder proxynow foldericon"></div>
+			</div>
+			<div id="dnslist2" class="dnslist_container">
+				{% for o in relay %}
+				<div id="item_{{ o.id.id }}" class="list_item">
+					<div class="proxynow trashicon item_delete" onclick="return netdns.delete_dns_relay(this)"></div>
+					<div class="proxynow editicon item_edit" onclick="return netdns.edit_dns_relay(this)"></div>
+					<div>{{ o.id.get_html_repr }}</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</fieldset>
+	{% include "alert_panel.html" %}
+	<div id="dialog-add-dnslist1" title="{{ dialog1_title }}">
+		<div id="dialog_body-dnslist1"></div>
+	</div>
+	<div id="dialog-edit-dnslist1" title="{{ dialog1_edit_title }}">
+		<div id="dialog_edit_body-dnslist1"></div>
+	</div>
+	<div id="dialog-add-dnslist2" title="{{ dialog2_title }}">
+		<div id="dialog_body-dnslist2"></div>
+	</div>
+	<div id="dialog-edit-dnslist2" title="{{ dialog2_edit_title }}">
+		<div id="dialog_edit_body-dnslist2"></div>
+	</div>
+	{% include "list_panel.html" %}
+</div>

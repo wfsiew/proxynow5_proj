@@ -1,0 +1,38 @@
+{% include "save_form_title.html" %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-form" action="/netint/save/" method="post">{% csrf_token %}
+		<div class="row">
+			{{ form.name.label_tag }}
+			{{ form.name }}
+		</div>
+		<div class="row">
+			{{ form.type.label_tag }}
+			{{ form.type }}
+		</div>
+		<div class="row">
+			{{ form.hardware.label_tag }}
+			{{ form.hardware }}
+		</div>
+		<div class="row">
+			{{ form.address.label_tag }}
+			{{ form.address }}
+		</div>
+		<div class="row">
+			{{ form.netmask.label_tag }}
+			{{ form.netmask }}
+		</div>
+		<div class="row">
+			{{ form.gateway.label_tag }}
+			{{ form.gateway }}
+		</div>
+		<div class="row">
+			{{ form.mtu.label_tag }}
+			{{ form.mtu }}
+		</div>
+		<div class="row">
+			{{ form.comment.label_tag }}
+			{{ form.comment }}
+		</div>
+		{% include "save_button.html" %}
+	</form>
+</div>

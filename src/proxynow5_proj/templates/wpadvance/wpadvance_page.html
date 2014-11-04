@@ -1,0 +1,35 @@
+{% load i18n %}
+<div class="page_title ui-widget-header ui-widget">{% trans 'Advanced' %}</div>
+<div id="wpadvance_tabs">
+	<ul>
+		<li><a href="#wpadvance_tabs_1" title="tab1">{% trans 'Settings' %}</a></li>
+		<li><a href="/wpadvanceskip/" title="tab2">{% trans 'Skip for' %}</a></li>
+		<li><a href="/wpadvanceallow/" title="tab3">{% trans 'Allowed ports' %} </a>
+	</ul>
+	<div id="wpadvance_tabs_1">
+		{% include "wpadvance/wpadvance_save_form.html" %}
+	</div>
+</div>
+{% include "alert_panel.html" %}
+<div id="dialog-add-parentip" title="{{ dialog1_title }}">
+	<div id="dialog_body-parentip"></div>
+</div>
+<div id="dialog-edit-parentip" title="{{ dialog1_edit_title }}">
+	<div id="dialog_edit_body-parentip"></div>
+</div>
+<div id="dialog-add-skiplist" title="{{ dialog2_title }}">
+	<div id="dialog_body-skiplist"></div>
+</div>
+<div id="dialog-edit-skiplist" title="{{ dialog2_edit_title }}">
+	<div id="dialog_edit_body-skiplist"></div>
+</div>
+<div id="dialog-edit-allowport" title="{{ dialog3_edit_title }}">
+	<div id="dialog_edit_body-allowport"></div>
+</div>
+<div id="dialog-import-allowport" title="{{ dialog4_import_title }}">
+	<div id="dialog_import_body-allowport"></div>
+</div>
+<div id="dialog-export-allowport" title="{{ dialog5_export_title }}">
+	<div id="dialog_export_body-allowport"></div>
+</div>
+{% include "list_panel.html" %}

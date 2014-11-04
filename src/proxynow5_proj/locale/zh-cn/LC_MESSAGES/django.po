@@ -1,0 +1,2115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-17 18:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: proxynow5/forms.py:7 proxynow5/forms.py:17
+#: proxynow5/Application_Control/forms.py:10
+#: proxynow5/Application_Control/forms.py:16
+#: proxynow5/Definition_Network/forms.py:10
+#: proxynow5/Definition_Schedule/forms.py:11
+#: proxynow5/Definition_Services/forms.py:11
+#: proxynow5/Definition_User/forms.py:12 proxynow5/Network/forms.py:12
+#: proxynow5/Network/forms.py:29 proxynow5/WebProxy/forms.py:11
+#: proxynow5/WebProxy_Filter/forms.py:10
+msgid "All"
+msgstr ""
+
+#: proxynow5/forms.py:18 proxynow5/WebProxy/models.py:94
+#: proxynow5/WebProxy/models.py:201
+msgid "Internal user"
+msgstr ""
+
+#: proxynow5/forms.py:19 proxynow5/WebProxy/models.py:103
+#: proxynow5/WebProxy/models.py:210
+msgid "External user"
+msgstr ""
+
+#: proxynow5/forms.py:37
+msgid "Display"
+msgstr ""
+
+#: proxynow5/forms.py:48 proxynow5/WebProxy/models.py:222
+msgid "Username"
+msgstr ""
+
+#: proxynow5/forms.py:50 proxynow5/Definition_User/models.py:47
+#: proxynow5/WebProxy/models.py:223
+msgid "Password"
+msgstr ""
+
+#: proxynow5/forms.py:61
+msgid ""
+"Please enter a correct username and password. Note that both fields are case-"
+"sensitive."
+msgstr ""
+
+#: proxynow5/forms.py:70
+msgid "Your Web browser doesn't appear to have cookies enabled. "
+msgstr ""
+
+#: proxynow5/utils.py:30
+#, python-format
+msgid "%(x)s to %(y)s of %(total)s"
+msgstr ""
+
+#: proxynow5/AD_User/models.py:6 proxynow5/Application_Control/forms.py:17
+#: proxynow5/Application_Control/models.py:12
+#: proxynow5/Application_Control/models.py:49
+#: proxynow5/Definition_Network/models.py:13
+#: proxynow5/Definition_Schedule/models.py:22
+#: proxynow5/Definition_Services/models.py:18
+#: proxynow5/Definition_User/models.py:16 proxynow5/NIC/models.py:6
+#: proxynow5/Network/models.py:14 proxynow5/WebProxy/models.py:40
+#: proxynow5/WebProxy_Filter/models.py:11
+#: proxynow5/WebProxy_Filter/models.py:49
+#: proxynow5/WebProxy_Filter/models.py:74
+#: proxynow5/WebProxy_Filter/models.py:99
+#: proxynow5/WebProxy_Filter/models.py:124
+#: proxynow5/WebProxy_Filter/models.py:154
+#: templates/dashboard/dashboard_nic.html:4
+#: templates/defservices/icmp_types.html:7
+msgid "Name"
+msgstr ""
+
+#: proxynow5/AD_User/models.py:7 proxynow5/Definition_User/models.py:46
+msgid "Display name"
+msgstr ""
+
+#: proxynow5/Administration/forms.py:11
+msgid "Appliance date time:"
+msgstr ""
+
+#: proxynow5/Administration/forms.py:13
+msgid "Appliance timezone:"
+msgstr ""
+
+#: proxynow5/Administration/forms.py:15
+msgid "Appliance license key:"
+msgstr ""
+
+#: proxynow5/Administration/forms.py:49 proxynow5/Administration/forms.py:100
+msgid "The Admin setting does not exist"
+msgstr ""
+
+#: proxynow5/Administration/forms.py:58
+msgid "Active Directory server address:"
+msgstr ""
+
+#: proxynow5/Administration/forms.py:60
+msgid "Active Directory domain:"
+msgstr ""
+
+#: proxynow5/Administration/forms.py:62
+msgid "Active Directory Administrator username:"
+msgstr ""
+
+#: proxynow5/Administration/forms.py:64
+msgid "Active Directory Administrator password:"
+msgstr ""
+
+#: proxynow5/Administration/models.py:5
+msgid "Appliance date time"
+msgstr ""
+
+#: proxynow5/Administration/models.py:6
+msgid "Appliance timezone"
+msgstr ""
+
+#: proxynow5/Administration/models.py:7
+msgid "Appliance license key"
+msgstr ""
+
+#: proxynow5/Administration/models.py:8
+msgid "Active Directory server address"
+msgstr ""
+
+#: proxynow5/Administration/models.py:9
+msgid "Active Directory domain"
+msgstr ""
+
+#: proxynow5/Administration/models.py:10
+msgid "Active Directory Administrator username"
+msgstr ""
+
+#: proxynow5/Administration/models.py:11
+msgid "Active Directory Administrator password"
+msgstr ""
+
+#: proxynow5/Administration/views.py:22 proxynow5/Administration/views.py:74
+msgid "The admin setting was successfully updated."
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:11
+#: proxynow5/Application_Control/models.py:6
+msgid "Allow"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:12
+#: proxynow5/Application_Control/models.py:7
+msgid "Block"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:18
+#: proxynow5/Application_Control/models.py:51 proxynow5/WebProxy/models.py:148
+#: proxynow5/WebProxy_Filter/views.py:156 templates/wpfilter_page.html:4
+#: templates/wpprofile/wpprofile_save_form.html:72
+msgid "Category"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:21
+msgid "Create new application control rule"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:22
+#: proxynow5/Application_Control/views.py:203
+msgid "Edit application control rule"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:25 proxynow5/WebProxy/forms.py:22
+msgid "Top"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:25 proxynow5/WebProxy/forms.py:22
+msgid "Bottom"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:35
+#: proxynow5/Definition_Network/forms.py:21
+#: proxynow5/Definition_Schedule/forms.py:42
+#: proxynow5/Definition_Services/forms.py:23
+#: proxynow5/Definition_User/forms.py:21 proxynow5/Network/forms.py:42
+#: proxynow5/WebProxy/forms.py:32 proxynow5/WebProxy_Filter/forms.py:29
+#: proxynow5/WebProxy_Filter/forms.py:110
+#: proxynow5/WebProxy_Filter/forms.py:174
+#: proxynow5/WebProxy_Filter/forms.py:238
+#: proxynow5/WebProxy_Filter/forms.py:302
+#: proxynow5/WebProxy_Filter/forms.py:376
+msgid "Name:"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:37 proxynow5/WebProxy/forms.py:34
+msgid "Enable:"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:39 proxynow5/WebProxy/forms.py:48
+msgid "Action:"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:41
+#: proxynow5/Definition_Network/forms.py:25
+#: proxynow5/Definition_Schedule/forms.py:35
+#: proxynow5/Definition_Services/forms.py:27
+#: proxynow5/Definition_User/forms.py:27 proxynow5/Network/forms.py:57
+#: proxynow5/Network/forms.py:206 proxynow5/WebProxy_Filter/forms.py:33
+#: proxynow5/WebProxy_Filter/forms.py:112
+#: proxynow5/WebProxy_Filter/forms.py:176
+#: proxynow5/WebProxy_Filter/forms.py:240
+#: proxynow5/WebProxy_Filter/forms.py:304
+#: proxynow5/WebProxy_Filter/forms.py:378
+msgid "Comment:"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:46
+msgid "Location:"
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:59
+#: proxynow5/Definition_Network/forms.py:43
+#: proxynow5/Definition_Services/forms.py:45
+#: proxynow5/Definition_User/forms.py:47 proxynow5/Network/forms.py:73
+#: proxynow5/WebProxy/forms.py:87 proxynow5/WebProxy_Filter/forms.py:51
+#: proxynow5/WebProxy_Filter/forms.py:120
+#: proxynow5/WebProxy_Filter/forms.py:184
+#: proxynow5/WebProxy_Filter/forms.py:248
+#: proxynow5/WebProxy_Filter/forms.py:312
+#: proxynow5/WebProxy_Filter/forms.py:386
+#, python-format
+msgid "The name %s already exist."
+msgstr ""
+
+#: proxynow5/Application_Control/forms.py:132
+msgid "The application control rule does not exist."
+msgstr ""
+
+#: proxynow5/Application_Control/models.py:13 proxynow5/WebProxy/forms.py:55
+#: proxynow5/WebProxy/models.py:41
+msgid "Location"
+msgstr ""
+
+#: proxynow5/Application_Control/models.py:14 proxynow5/WebProxy/models.py:42
+msgid "Enable"
+msgstr ""
+
+#: proxynow5/Application_Control/models.py:15 proxynow5/WebProxy/models.py:55
+msgid "Action"
+msgstr ""
+
+#: proxynow5/Application_Control/models.py:17
+#: proxynow5/Definition_Network/models.py:18
+#: proxynow5/Definition_Schedule/models.py:24
+#: proxynow5/Definition_Services/models.py:22
+#: proxynow5/Definition_User/models.py:22 proxynow5/Network/models.py:23
+#: proxynow5/Network/models.py:59 proxynow5/WebProxy_Filter/models.py:16
+#: proxynow5/WebProxy_Filter/models.py:51
+#: proxynow5/WebProxy_Filter/models.py:76
+#: proxynow5/WebProxy_Filter/models.py:101
+#: proxynow5/WebProxy_Filter/models.py:126
+#: proxynow5/WebProxy_Filter/models.py:156
+msgid "Comment"
+msgstr ""
+
+#: proxynow5/Application_Control/models.py:31
+#: proxynow5/Application_Control/models.py:40
+#: proxynow5/Application_Control/models.py:59
+#: proxynow5/Definition_Network/models.py:48
+#: proxynow5/Definition_Network/models.py:56
+#: proxynow5/Definition_Network/models.py:65
+#: proxynow5/Definition_Network/models.py:75
+#: proxynow5/Definition_Services/models.py:62
+#: proxynow5/Definition_Services/models.py:72
+#: proxynow5/Definition_Services/models.py:82
+#: proxynow5/Definition_Services/models.py:91
+#: proxynow5/Definition_Services/models.py:99
+#: proxynow5/Definition_User/models.py:44
+#: proxynow5/Definition_User/models.py:54 proxynow5/Network/models.py:65
+#: proxynow5/Network/models.py:71 proxynow5/WebProxy_Filter/models.py:41
+#: proxynow5/WebProxy_Filter/models.py:66
+#: proxynow5/WebProxy_Filter/models.py:91
+#: proxynow5/WebProxy_Filter/models.py:116
+#: proxynow5/WebProxy_Filter/models.py:145
+#: proxynow5/WebProxy_Filter/models.py:171
+msgid "Id"
+msgstr ""
+
+#: proxynow5/Application_Control/models.py:33
+#: proxynow5/Application_Control/models.py:42
+msgid "Net"
+msgstr ""
+
+#: proxynow5/Application_Control/models.py:52
+msgid "Mark"
+msgstr ""
+
+#: proxynow5/Application_Control/models.py:61
+msgid "App"
+msgstr ""
+
+#: proxynow5/Application_Control/views.py:78
+#: proxynow5/Application_Control/views.py:79
+#: proxynow5/Application_Control/views.py:90
+#: proxynow5/Application_Control/views.py:91
+#: proxynow5/Definition_Network/views.py:108
+#: proxynow5/Definition_Network/views.py:133 proxynow5/Network/views.py:243
+#: proxynow5/Network/views.py:244 proxynow5/Network/views.py:255
+#: proxynow5/Network/views.py:256 proxynow5/Network/views.py:330
+#: proxynow5/Network/views.py:453 proxynow5/Network/views.py:454
+#: proxynow5/Network/views.py:558 proxynow5/WebProxy/views.py:143
+#: proxynow5/WebProxy/views.py:144 proxynow5/WebProxy/views.py:168
+#: proxynow5/WebProxy/views.py:169 proxynow5/WebProxy/views.py:317
+#: proxynow5/WebProxy/views.py:318 proxynow5/WebProxy/views.py:347
+#: proxynow5/WebProxy/views.py:348
+msgid "Add network definition"
+msgstr ""
+
+#: proxynow5/Application_Control/views.py:198 templates/menu.html:22
+msgid "Application Control"
+msgstr ""
+
+#: proxynow5/Application_Control/views.py:202
+msgid "New application control rule ..."
+msgstr ""
+
+#: proxynow5/Dashboard/forms.py:5
+msgid "Never"
+msgstr ""
+
+#: proxynow5/Dashboard/forms.py:6
+msgid "Every 5 seconds"
+msgstr ""
+
+#: proxynow5/Dashboard/forms.py:7
+msgid "Every 10 seconds"
+msgstr ""
+
+#: proxynow5/Dashboard/forms.py:8
+msgid "Every 30 seconds"
+msgstr ""
+
+#: proxynow5/Dashboard/forms.py:9
+msgid "Every 60 seconds"
+msgstr ""
+
+#: proxynow5/Dashboard/views.py:23
+msgid "Dashboard for"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:11
+#: proxynow5/Definition_Network/models.py:5
+#: proxynow5/Definition_Network/models.py:49
+#: templates/report/rptwebusage_option.html:13
+msgid "Host"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:12
+#: proxynow5/Definition_Network/models.py:6
+msgid "DNS host"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:13
+#: proxynow5/Definition_Network/models.py:7 templates/menu.html:13
+#: templates/menu.html.py:24
+msgid "Network"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:14
+#: proxynow5/Definition_Network/models.py:8
+msgid "Network group"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:17
+msgid "Create new network definition"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:18
+#: proxynow5/Definition_Network/views.py:206
+msgid "Edit network definition"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:23
+#: proxynow5/Definition_Schedule/forms.py:37
+#: proxynow5/Definition_Services/forms.py:25
+#: proxynow5/Definition_User/forms.py:23 proxynow5/Network/forms.py:44
+#: proxynow5/WebProxy_Filter/forms.py:31
+msgid "Type:"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:32
+#: proxynow5/Definition_Services/forms.py:34
+#: proxynow5/Definition_User/forms.py:34 proxynow5/WebProxy_Filter/forms.py:40
+msgid "Invalid type"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:95
+msgid "The network definition does not exist."
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:151
+msgid "Host:"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:165
+msgid "Hostname:"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:179
+msgid "Address:"
+msgstr ""
+
+#: proxynow5/Definition_Network/forms.py:181 proxynow5/Network/forms.py:51
+msgid "Netmask:"
+msgstr ""
+
+#: proxynow5/Definition_Network/models.py:16
+#: proxynow5/Definition_Schedule/models.py:27
+#: proxynow5/Definition_Services/models.py:20
+#: proxynow5/Definition_User/models.py:18 proxynow5/Network/models.py:16
+#: proxynow5/WebProxy_Filter/models.py:14
+#: templates/defservices/icmp_types.html:6
+msgid "Type"
+msgstr ""
+
+#: proxynow5/Definition_Network/models.py:58
+msgid "Hostname"
+msgstr ""
+
+#: proxynow5/Definition_Network/models.py:66
+msgid "Address"
+msgstr ""
+
+#: proxynow5/Definition_Network/models.py:68 proxynow5/Network/models.py:19
+msgid "Netmask"
+msgstr ""
+
+#: proxynow5/Definition_Network/models.py:77
+#: proxynow5/Definition_Services/models.py:101
+#: proxynow5/Definition_User/models.py:56
+msgid "Member"
+msgstr ""
+
+#: proxynow5/Definition_Network/views.py:202
+msgid "Networks"
+msgstr ""
+
+#: proxynow5/Definition_Network/views.py:205
+msgid "New network definition ..."
+msgstr ""
+
+#: proxynow5/Definition_Schedule/forms.py:7
+msgid "Create new schedule"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/forms.py:8
+msgid "Edit schedule"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/forms.py:12
+#: templates/schedule/defschedule_list.html:16
+msgid "Recurring"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/forms.py:68
+#: proxynow5/Definition_Schedule/forms.py:74
+#: proxynow5/Definition_Schedule/forms.py:109
+#: proxynow5/Definition_Schedule/forms.py:111
+msgid "Start Time:"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/forms.py:70
+#: proxynow5/Definition_Schedule/forms.py:72
+#: proxynow5/Definition_Schedule/forms.py:113
+#: proxynow5/Definition_Schedule/forms.py:115
+msgid "End Time:"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/forms.py:78
+msgid "Week days:"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/forms.py:99
+#: proxynow5/Definition_Schedule/forms.py:103
+#: proxynow5/Definition_Schedule/forms.py:105
+#: proxynow5/Definition_Schedule/forms.py:107
+msgid "End Date:"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/forms.py:101
+#: proxynow5/Definition_Schedule/forms.py:117
+msgid "Start Date:"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:6
+msgid "single"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:7
+msgid "recurring"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:11
+msgid "mon"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:12
+msgid "tue"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:13
+msgid "wed"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:14
+msgid "thu"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:15
+msgid "fri"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:16
+msgid "sat"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:17
+msgid "sun"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:28
+msgid "Start Time"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:29
+msgid "End Time"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/models.py:31
+msgid "Week days"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/views.py:227 proxynow5/WebProxy/models.py:85
+#: templates/menu.html:15 templates/wpprofile/wpprofile_save_form.html:23
+msgid "Schedule"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/views.py:230
+msgid "New schedule definition ..."
+msgstr ""
+
+#: proxynow5/Definition_Schedule/views.py:231
+msgid "Edit schedule definition"
+msgstr ""
+
+#: proxynow5/Definition_Schedule/views.py:344
+#: proxynow5/Definition_Services/views.py:221
+msgid "New service definition ..."
+msgstr ""
+
+#: proxynow5/Definition_Schedule/views.py:345
+#: proxynow5/Definition_Services/forms.py:20
+#: proxynow5/Definition_Services/views.py:222
+msgid "Edit service definition"
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:12
+#: proxynow5/Definition_Services/models.py:6
+msgid "TCP"
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:13
+#: proxynow5/Definition_Services/models.py:7
+msgid "UDP"
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:14
+#: proxynow5/Definition_Services/models.py:8
+msgid "ICMP"
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:15
+#: proxynow5/Definition_Services/models.py:9
+msgid "IP"
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:16
+#: proxynow5/Definition_Services/models.py:10
+msgid "Service group"
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:19
+msgid "Create new service definition"
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:107
+msgid "The service definition does not exist."
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:169
+#: proxynow5/Definition_Services/forms.py:190
+msgid "Destination port:"
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:171
+#: proxynow5/Definition_Services/forms.py:192
+msgid "Source port:"
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:211
+msgid "ICMP type:"
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:213
+msgid "ICMP code:"
+msgstr ""
+
+#: proxynow5/Definition_Services/forms.py:234
+msgid "IP protocol no.:"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:63
+#: proxynow5/Definition_Services/models.py:73
+msgid "Destination port"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:65
+#: proxynow5/Definition_Services/models.py:75
+msgid "Source port"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:83
+msgid "ICMP type"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:84
+msgid "ICMP code"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:92
+msgid "IP protocol no."
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:111
+msgid "Echo Reply"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:112
+#: proxynow5/Definition_Services/models.py:113
+#: proxynow5/Definition_Services/models.py:118
+msgid "Unassigned"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:114
+msgid "Destination Unreachable"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:115
+msgid "Source Quench"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:116
+msgid "Redirect"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:117
+msgid "Alternate Host Address"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:119
+msgid "Echo"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:120
+msgid "Router Advertisement"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:121
+msgid "Router Selection"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:122
+msgid "Time Exceeded"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:123
+msgid "Parameter Problem"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:124
+msgid "Timestamp"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:125
+msgid "Timestamp Reply"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:126
+msgid "Information Request"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:127
+msgid "Information Reply"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:128
+msgid "Address Mask Request"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:129
+msgid "Address Mask Reply"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:130
+msgid "Reserved (for Security)"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:131
+msgid "Traceroute"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:132
+msgid "Datagram Conversion Error"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:133
+msgid "Mobile Host Redirect"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:134
+msgid "IPv6 Where-Are-You"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:135
+msgid "IPv6 I-Am-Here"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:136
+msgid "Mobile Registration Request"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:137
+msgid "Mobile Registration Reply"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:138
+msgid "SKIP"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:139
+msgid "Photuris"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:146
+#: proxynow5/Definition_Services/models.py:169
+#: proxynow5/Definition_Services/models.py:184
+#: proxynow5/Definition_Services/models.py:193
+#: proxynow5/Definition_Services/models.py:208
+#: proxynow5/Definition_Services/models.py:212
+#: proxynow5/Definition_Services/models.py:216
+#: proxynow5/Definition_Services/models.py:220
+#: proxynow5/Definition_Services/models.py:224
+#: proxynow5/Definition_Services/models.py:228
+msgid "No Code"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:150
+msgid "Unreachable"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:151
+msgid "Host Unreachable"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:152
+msgid "Protocol Unreachable"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:153
+msgid "Port Unreachable"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:154
+msgid "Fragmentation Needed and Don't Fragment was Set"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:155
+msgid "Source Route Failed"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:156
+msgid "Destination Network Unknown"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:157
+msgid "Destination Host Unknown"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:158
+msgid "Source Host Isolated"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:159
+msgid "Communication with Destination Network is Administratively Prohibited"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:160
+msgid "Communication with Destination Host is Administratively Prohibited"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:161
+msgid "Destination Network Unreachable for Type of Service"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:162
+msgid "Destination Host Unreachable for Type of Service"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:163
+msgid "Communication Administratively Prohibited"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:164
+msgid "Host Precedence Violation"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:165
+msgid "Precedence cutoff in effect"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:173
+msgid "Redirect Datagram for the Network (or subnet)"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:174
+msgid "Redirect Datagram for the Host"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:175
+msgid "Redirect Datagram for the Type of Service and Network"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:176
+msgid "Redirect Datagram for the Type of Service and Host"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:180
+msgid "Alternate Address for Host"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:188
+msgid "Normal router advertisement"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:189
+msgid "Does not route common traffic"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:197
+msgid "Time to Live exceeded in Transit"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:198
+msgid "Fragment Reassembly Time Exceeded"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:202
+msgid "Pointer indicates the error"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:203
+msgid "Missing a Required Option"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:204
+msgid "Bad Length"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:232
+msgid "Bad SPI"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:233
+msgid "Authentication Failed"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:234
+msgid "Decompression Failed"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:235
+msgid "Decryption Failed"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:236
+msgid "Need Authentication"
+msgstr ""
+
+#: proxynow5/Definition_Services/models.py:237
+msgid "Need Authorization"
+msgstr ""
+
+#: proxynow5/Definition_Services/views.py:102
+#: proxynow5/Definition_Services/views.py:146
+msgid "ICMP Types"
+msgstr ""
+
+#: proxynow5/Definition_Services/views.py:103
+#: proxynow5/Definition_Services/views.py:147
+msgid "ICMP_Codes"
+msgstr ""
+
+#: proxynow5/Definition_Services/views.py:122
+#: proxynow5/Definition_Services/views.py:145
+msgid "Add service definition"
+msgstr ""
+
+#: proxynow5/Definition_Services/views.py:218
+msgid "Services"
+msgstr ""
+
+#: proxynow5/Definition_User/forms.py:13
+#: templates/report/rptwebusage_option.html:12
+msgid "User"
+msgstr ""
+
+#: proxynow5/Definition_User/forms.py:14
+msgid "User group"
+msgstr ""
+
+#: proxynow5/Definition_User/forms.py:17
+msgid "Create new user"
+msgstr ""
+
+#: proxynow5/Definition_User/forms.py:18
+#: proxynow5/Definition_User/views.py:196
+msgid "Edit user"
+msgstr ""
+
+#: proxynow5/Definition_User/forms.py:25
+msgid "Access Type:"
+msgstr ""
+
+#: proxynow5/Definition_User/forms.py:57
+msgid "Confirm passwrd is required."
+msgstr ""
+
+#: proxynow5/Definition_User/forms.py:61
+msgid "Password does not match."
+msgstr ""
+
+#: proxynow5/Definition_User/forms.py:91
+msgid "The user does not exist"
+msgstr ""
+
+#: proxynow5/Definition_User/forms.py:121
+msgid "Display name:"
+msgstr ""
+
+#: proxynow5/Definition_User/forms.py:123 proxynow5/WebProxy/forms.py:720
+msgid "Password:"
+msgstr ""
+
+#: proxynow5/Definition_User/models.py:5
+msgid "username"
+msgstr ""
+
+#: proxynow5/Definition_User/models.py:6
+msgid "user group"
+msgstr ""
+
+#: proxynow5/Definition_User/models.py:10
+msgid "Normal User"
+msgstr ""
+
+#: proxynow5/Definition_User/models.py:11
+msgid "Administrator"
+msgstr ""
+
+#: proxynow5/Definition_User/models.py:20
+msgid "Access Type"
+msgstr ""
+
+#: proxynow5/Definition_User/views.py:93
+#: proxynow5/Definition_User/views.py:115 proxynow5/WebProxy/views.py:134
+#: proxynow5/WebProxy/views.py:145 proxynow5/WebProxy/views.py:159
+#: proxynow5/WebProxy/views.py:170
+msgid "Add user definition"
+msgstr ""
+
+#: proxynow5/Definition_User/views.py:192
+msgid "Users"
+msgstr ""
+
+#: proxynow5/Definition_User/views.py:195
+msgid "New user ..."
+msgstr ""
+
+#: proxynow5/Network/forms.py:13
+msgid "Ethernet Standard"
+msgstr ""
+
+#: proxynow5/Network/forms.py:34
+msgid "Create new interface"
+msgstr ""
+
+#: proxynow5/Network/forms.py:35 proxynow5/Network/views.py:135
+msgid "Edit interface"
+msgstr ""
+
+#: proxynow5/Network/forms.py:36
+msgid "Create new route"
+msgstr ""
+
+#: proxynow5/Network/forms.py:37 proxynow5/Network/views.py:307
+msgid "Edit route"
+msgstr ""
+
+#: proxynow5/Network/forms.py:38
+msgid "Create new DHCP server"
+msgstr ""
+
+#: proxynow5/Network/forms.py:39 proxynow5/Network/views.py:439
+msgid "Edit DHCP server"
+msgstr ""
+
+#: proxynow5/Network/forms.py:47
+msgid "Hardware:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:49
+msgid "IP address:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:53
+msgid "Default GW:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:55
+msgid "MTU:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:98
+msgid "The interface does not exist."
+msgstr ""
+
+#: proxynow5/Network/forms.py:115 proxynow5/Network/models.py:37
+#: proxynow5/Network/models.py:43
+msgid "Interface"
+msgstr ""
+
+#: proxynow5/Network/forms.py:133
+msgid "The link load balancing does not exist."
+msgstr ""
+
+#: proxynow5/Network/forms.py:142
+msgid "Interface:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:144
+msgid "Range start:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:146
+msgid "Range end:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:148
+msgid "DNS Server 1:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:150
+msgid "DNS Server 2:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:152
+msgid "Default gateway:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:154
+msgid "Domain:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:156
+msgid "Lease Time (sec):"
+msgstr ""
+
+#: proxynow5/Network/forms.py:190
+msgid "The DHCP server does not exist."
+msgstr ""
+
+#: proxynow5/Network/forms.py:203
+msgid "Destination:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:205
+msgid "Gateway:"
+msgstr ""
+
+#: proxynow5/Network/forms.py:226
+msgid "The route does not exist."
+msgstr ""
+
+#: proxynow5/Network/models.py:7
+msgid "ethernet standard"
+msgstr ""
+
+#: proxynow5/Network/models.py:17 templates/menu.html:35
+msgid "Hardware"
+msgstr ""
+
+#: proxynow5/Network/models.py:18
+msgid "IP address"
+msgstr ""
+
+#: proxynow5/Network/models.py:20
+msgid "Default GW"
+msgstr ""
+
+#: proxynow5/Network/models.py:21 templates/netint/netint_list.html:12
+msgid "MTU"
+msgstr ""
+
+#: proxynow5/Network/models.py:44
+msgid "Range start"
+msgstr ""
+
+#: proxynow5/Network/models.py:45
+msgid "Range end"
+msgstr ""
+
+#: proxynow5/Network/models.py:46
+msgid "DNS Server 1"
+msgstr ""
+
+#: proxynow5/Network/models.py:47
+msgid "DNS Server 2"
+msgstr ""
+
+#: proxynow5/Network/models.py:48
+msgid "Default gateway"
+msgstr ""
+
+#: proxynow5/Network/models.py:49
+msgid "Domain"
+msgstr ""
+
+#: proxynow5/Network/models.py:50
+msgid "Lease Time (sec)"
+msgstr ""
+
+#: proxynow5/Network/models.py:56
+msgid "Destination"
+msgstr ""
+
+#: proxynow5/Network/models.py:57 templates/netroute/netroute_list.html:20
+msgid "Gateway"
+msgstr ""
+
+#: proxynow5/Network/views.py:131 templates/menu.html:26
+msgid "Interfaces"
+msgstr ""
+
+#: proxynow5/Network/views.py:134
+msgid "New interface ..."
+msgstr ""
+
+#: proxynow5/Network/views.py:155 templates/menu.html:27
+msgid "Link Load Balancing"
+msgstr ""
+
+#: proxynow5/Network/views.py:303 templates/menu.html:29
+msgid "Routing"
+msgstr ""
+
+#: proxynow5/Network/views.py:306
+msgid "New route ..."
+msgstr ""
+
+#: proxynow5/Network/views.py:434 templates/menu.html:31
+msgid "DHCP"
+msgstr ""
+
+#: proxynow5/Network/views.py:438
+msgid "New DHCP server ..."
+msgstr ""
+
+#: proxynow5/Network/views.py:452 templates/menu.html:30
+#: templates/netdns/netdns_page.html:4 templates/netdns/netdns_page.html:23
+msgid "DNS"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:12 proxynow5/WebProxy/models.py:11
+msgid "Standard"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:13 proxynow5/WebProxy/models.py:12
+msgid "Transparent"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:16
+msgid "Create new profile"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:17
+msgid "Edit profile"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:18
+msgid "Create new exception"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:19
+msgid "Edit exception"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:36
+msgid "Mode:"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:38
+msgid "Authentication method:"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:40 proxynow5/WebProxy/models.py:49
+msgid "Enable antivirus"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:42
+msgid "Maximum file size to be scanned:"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:44
+msgid "Daily time quota:"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:46
+msgid "Daily size quota:"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:50
+msgid "On all the time"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:62
+msgid "Invalid authentication selection for transparent mode."
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:301
+msgid "The webproxy profile does not exist."
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:539 proxynow5/WebProxy/models.py:27
+msgid "Skip authentication"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:541 proxynow5/WebProxy/models.py:28
+msgid "Skip cache"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:543 proxynow5/WebProxy/models.py:29
+msgid "Skip AV"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:545 proxynow5/WebProxy/models.py:30
+msgid "Skip extension filter"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:547 proxynow5/WebProxy/models.py:31
+msgid "Skip mime filter"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:549 proxynow5/WebProxy/models.py:32
+msgid "Skip URL filter"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:551 proxynow5/WebProxy/models.py:33
+msgid "Skip content filter"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:644
+msgid "The profile exception does not exist."
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:709 proxynow5/WebProxy/models.py:216
+msgid "Bypass filtering for streaming traffic"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:711 proxynow5/WebProxy/models.py:217
+msgid "Enable caching"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:713 proxynow5/WebProxy/models.py:218
+msgid "Enable parent proxy"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:715
+msgid "Parent proxy:"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:716
+msgid "Port:"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:718
+msgid "Username:"
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:734
+msgid "Please enter parent proxy, port, username, and password."
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:741 proxynow5/WebProxy/forms.py:773
+#: proxynow5/WebProxy/forms.py:814
+msgid "Invalid parent proxy."
+msgstr ""
+
+#: proxynow5/WebProxy/forms.py:798
+msgid "The Advance setting does not exist"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:16
+msgid "Disable"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:17
+msgid "Active Directory SSO"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:18
+msgid "Basic authentication"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:22
+msgid "Allow matched categories"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:23
+msgid "Block matched categories"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:45
+msgid "Mode"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:48
+msgid "Authentication method"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:50
+msgid "Maximum file size to be scanned"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:51
+msgid "Daily time quota"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:52
+msgid "Daily size quota"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:57 proxynow5/WebProxy/models.py:182
+#: proxynow5/WebProxy/models.py:191 proxynow5/WebProxy/models.py:199
+#: proxynow5/WebProxy/models.py:208
+msgid "Except Id"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:74 proxynow5/WebProxy/models.py:83
+#: proxynow5/WebProxy/models.py:92 proxynow5/WebProxy/models.py:101
+#: proxynow5/WebProxy/models.py:110 proxynow5/WebProxy/models.py:119
+#: proxynow5/WebProxy/models.py:128 proxynow5/WebProxy/models.py:137
+#: proxynow5/WebProxy/models.py:146 proxynow5/WebProxy/models.py:155
+#: proxynow5/WebProxy/models.py:164 proxynow5/WebProxy/models.py:173
+msgid "Profile Id"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:76 proxynow5/WebProxy/models.py:230
+msgid "Net Id"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:112
+msgid "Allowed extension"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:121
+msgid "Blocked extension"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:130
+msgid "Allowed MIME type"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:139
+msgid "Blocked MIME type"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:157 proxynow5/WebProxy_Filter/views.py:312
+#: templates/wpfilter_page.html:5
+#: templates/wpprofile/wpprofile_save_form.html:73
+msgid "Whitelist"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:166 proxynow5/WebProxy_Filter/views.py:468
+#: templates/wpfilter_page.html:6
+#: templates/wpprofile/wpprofile_save_form.html:74
+msgid "Blacklist"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:175
+msgid "Content filter"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:184
+msgid "Except network"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:192 proxynow5/WebProxy_Filter/models.py:42
+#: proxynow5/WebProxy_Filter/models.py:67
+#: proxynow5/WebProxy_Filter/models.py:92
+msgid "Url"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:220
+msgid "Parent proxy"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:221
+msgid "Port"
+msgstr ""
+
+#: proxynow5/WebProxy/models.py:237
+msgid "Port Id"
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:133 proxynow5/WebProxy/views.py:158
+msgid "Add schedule definition"
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:135 proxynow5/WebProxy/views.py:136
+#: proxynow5/WebProxy/views.py:160 proxynow5/WebProxy/views.py:161
+msgid "Add extension"
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:137 proxynow5/WebProxy/views.py:138
+#: proxynow5/WebProxy/views.py:162 proxynow5/WebProxy/views.py:163
+msgid "Add MIME"
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:139 proxynow5/WebProxy/views.py:164
+msgid "Add category"
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:140 proxynow5/WebProxy/views.py:165
+msgid "Add whitelist"
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:141 proxynow5/WebProxy/views.py:166
+msgid "Add blacklist"
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:142 proxynow5/WebProxy/views.py:167
+msgid "Add content"
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:269 templates/menu.html:20
+msgid "Profile"
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:272
+msgid "New webproxy profile ..."
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:273
+msgid "Edit webproxy profile"
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:289
+msgid "The advanced setting was successfully updated."
+msgstr ""
+
+#: proxynow5/WebProxy/views.py:316 proxynow5/WebProxy/views.py:346
+#: templates/menu.html:21 templates/wpadvance/wpadvance_page.html:2
+msgid "Advanced"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:11
+msgid "Prebuild"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:12
+msgid "Custom"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:15
+msgid "Create new category"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:16
+#: proxynow5/WebProxy_Filter/views.py:161
+msgid "Edit category"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:17
+msgid "Create new whitelist"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:18
+#: proxynow5/WebProxy_Filter/views.py:317
+msgid "Edit whitelist"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:19
+msgid "Create new blacklist"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:20
+#: proxynow5/WebProxy_Filter/views.py:473
+msgid "Edit blacklist"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:21
+msgid "Create new extension"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:22
+#: proxynow5/WebProxy_Filter/views.py:630
+msgid "Edit extension"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:23
+msgid "Create new content"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:24
+#: proxynow5/WebProxy_Filter/views.py:788
+msgid "Edit content"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:25
+msgid "Create new MIME"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:26
+#: proxynow5/WebProxy_Filter/views.py:945
+msgid "Edit MIME"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:72
+msgid "The category does not exist."
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:139
+msgid "The whitelist does not exist."
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:203
+msgid "The blacklist does not exist."
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:267
+msgid "The extension does not exist."
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:331
+msgid "The content does not exist."
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/forms.py:405
+msgid "The mime does not exist."
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/models.py:5
+msgid "prebuild"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/models.py:6
+msgid "custom"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/models.py:117
+#: proxynow5/WebProxy_Filter/views.py:625 templates/wpfilter_page.html:7
+#: templates/wpprofile/wpprofile_save_form.html:75
+msgid "Extension"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/models.py:146
+#: templates/wpcontent/wpcontentvalue_save_form.html:20
+msgid "Keyword"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/models.py:147
+#: templates/wpcontent/wpcontentvalue_save_form.html:21
+msgid "Score"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/models.py:172
+msgid "Mime"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/views.py:160
+msgid "New category ..."
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/views.py:316
+msgid "New whitelist ..."
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/views.py:472
+msgid "New blacklist ..."
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/views.py:629
+msgid "New extension ..."
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/views.py:783
+#: proxynow5/WebProxy_Filter/views.py:940 templates/wpfilter_page.html:8
+#: templates/wpprofile/wpprofile_save_form.html:76
+msgid "Content"
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/views.py:787
+msgid "New content ..."
+msgstr ""
+
+#: proxynow5/WebProxy_Filter/views.py:944
+msgid "New MIME ..."
+msgstr ""
+
+#: templates/404.html:9
+msgid "Page not found."
+msgstr ""
+
+#: templates/500.html:9 templates/base.html:83
+msgid "Internal Server Error"
+msgstr ""
+
+#: templates/add_button.html:3
+msgid "Add"
+msgstr ""
+
+#: templates/base.html:6 templates/base.html.py:62
+msgid "ProxyNow! 5"
+msgstr "Proxy title"
+
+#: templates/cancel-button.html:3 templates/confirm_button.html:7
+#: templates/ok_button.html:7
+msgid "Cancel"
+msgstr ""
+
+#: templates/confirm_button.html:4
+msgid "Yes"
+msgstr ""
+
+#: templates/list_button.html:3
+msgid "Edit"
+msgstr ""
+
+#: templates/list_button.html:6
+msgid "Delete"
+msgstr ""
+
+#: templates/list_button.html:9
+msgid "Clone"
+msgstr ""
+
+#: templates/menu.html:3
+msgid "Dashboard"
+msgstr ""
+
+#: templates/menu.html:5
+msgid "Administration"
+msgstr ""
+
+#: templates/menu.html:7 templates/admin/admin_general_save_form.html:4
+msgid "General"
+msgstr ""
+
+#: templates/menu.html:8 templates/admin/admin_authentication_save_form.html:4
+#: templates/wpprofile/wpprofile_save_form.html:24
+msgid "Authentication"
+msgstr ""
+
+#: templates/menu.html:10
+msgid "Definition"
+msgstr ""
+
+#: templates/menu.html:12
+msgid "User/Group"
+msgstr ""
+
+#: templates/menu.html:14
+msgid "Service/Port"
+msgstr ""
+
+#: templates/menu.html:17
+msgid "Web Proxy"
+msgstr ""
+
+#: templates/menu.html:19
+msgid "Filtering Definitions"
+msgstr ""
+
+#: templates/menu.html:28
+msgid "NAT"
+msgstr ""
+
+#: templates/menu.html:33
+msgid "Report"
+msgstr ""
+
+#: templates/menu.html:36
+msgid "Network Usage"
+msgstr ""
+
+#: templates/menu.html:37
+msgid "Web Security"
+msgstr ""
+
+#: templates/menu.html:39
+msgid "Log off"
+msgstr ""
+
+#: templates/navigate_form.html:13
+msgid "Display:"
+msgstr ""
+
+#: templates/ok_button.html:4
+msgid "OK"
+msgstr ""
+
+#: templates/save-button.html:3 templates/netlb/netlb_page.html:38
+msgid "Save"
+msgstr ""
+
+#: templates/search_form.html:8
+msgid "Find"
+msgstr ""
+
+#: templates/theme_select.html:3
+msgid "Select theme"
+msgstr ""
+
+#: templates/wpfilter_page.html:9
+#: templates/wpprofile/wpprofile_save_form.html:77
+msgid "MIME"
+msgstr ""
+
+#: templates/appctrlrule/appctrlrule_save_form.html:26
+msgid "Apply to:"
+msgstr ""
+
+#: templates/appctrlrule/appctrlrule_save_form.html:43
+msgid "Skip for:"
+msgstr ""
+
+#: templates/appctrlrule/appctrlrule_save_form.html:60
+msgid "Applications:"
+msgstr ""
+
+#: templates/dashboard/dashboard_nic.html:5
+msgid "Status"
+msgstr ""
+
+#: templates/dashboard/dashboard_nic.html:6
+msgid "In"
+msgstr ""
+
+#: templates/dashboard/dashboard_nic.html:7
+msgid "Out"
+msgstr ""
+
+#: templates/dashboard/dashboard_page.html:6
+msgid "Refresh:"
+msgstr ""
+
+#: templates/dashboard/dashboard_resource.html:5
+msgid "Resource usage"
+msgstr ""
+
+#: templates/dashboard/dashboard_resource.html:10
+msgid "CPU"
+msgstr ""
+
+#: templates/dashboard/dashboard_resource.html:20
+msgid "RAM"
+msgstr ""
+
+#: templates/dashboard/dashboard_resource.html:24
+#: templates/dashboard/dashboard_resource.html:44
+msgid "of"
+msgstr ""
+
+#: templates/dashboard/dashboard_resource.html:30
+msgid "Swap"
+msgstr ""
+
+#: templates/dashboard/dashboard_resource.html:40
+msgid "HD"
+msgstr ""
+
+#: templates/dashboard/dashboard_statistic.html:5
+msgid "Today statistic"
+msgstr ""
+
+#: templates/dashboard/dashboard_statistic.html:10
+msgid "Request:"
+msgstr ""
+
+#: templates/dashboard/dashboard_statistic.html:14
+msgid "Block:"
+msgstr ""
+
+#: templates/dashboard/dashboard_statistic.html:18
+msgid "Malware:"
+msgstr ""
+
+#: templates/dashboard/dashboard_version.html:5
+msgid "Version information"
+msgstr ""
+
+#: templates/dashboard/dashboard_version.html:10
+msgid "Firmware version:"
+msgstr ""
+
+#: templates/dashboard/dashboard_version.html:14
+msgid "Antivirus pattern date:"
+msgstr ""
+
+#: templates/defnet/defnet_confirm_delete.html:4
+#: templates/defservices/defservices_confirm_delete.html:4
+#: templates/defuser/defuser_confirm_delete.html:4
+#: templates/netint/netint_confirm_delete.html:4
+#: templates/schedule/defschedule_confirm_delete.html:4
+#: templates/wpblacklist/wpblacklist_confirm_delete.html:4
+#: templates/wpcat/wpcat_confirm_delete.html:4
+#: templates/wpcontent/wpcontent_confirm_delete.html:4
+#: templates/wpext/wpext_confirm_delete.html:4
+#: templates/wpmime/wpmime_confirm_delete.html:4
+#: templates/wpwhitelist/wpwhitelist_confirm_delete.html:4
+#, python-format
+msgid ""
+"\n"
+"The object <strong>%(o)s</strong> is currently referred by:\n"
+msgstr ""
+
+#: templates/defnet/defnet_confirm_delete.html:44
+#: templates/defuser/defuser_confirm_delete.html:20
+#: templates/schedule/defschedule_confirm_delete.html:14
+#: templates/wpext/wpext_confirm_delete.html:17
+#: templates/wpmime/wpmime_confirm_delete.html:17
+#, python-format
+msgid ""
+"\n"
+"Deleting <strong>%(o)s</strong> will remove it from the group(s) listed "
+"above.\n"
+"Do you want to proceed ?\n"
+msgstr ""
+
+#: templates/defnet/defnetgroup_save_form.html:3
+#: templates/defservices/defservicesgroup_save_form.html:3
+#: templates/defuser/defusergroup_save_form.html:3
+msgid "Members:"
+msgstr ""
+
+#: templates/defservices/defservices_confirm_delete.html:14
+#: templates/netint/netint_confirm_delete.html:14
+#, python-format
+msgid ""
+"\n"
+"Deleting <strong>%(o)s</strong> will remove it from the group"
+"%(group_pluralize)s listed above.\n"
+"Do you want to proceed ?\n"
+msgstr ""
+
+#: templates/defservices/icmp_codes.html:5
+msgid "Code"
+msgstr ""
+
+#: templates/defservices/icmp_codes.html:6
+msgid "Description"
+msgstr ""
+
+#: templates/defuser/defusername_save_form.html:12
+msgid "Confirm password:"
+msgstr ""
+
+#: templates/netdhcp/netdhcp_list.html:11
+msgid "Range"
+msgstr ""
+
+#: templates/netdhcp/netdhcp_list.html:11
+msgid "through"
+msgstr ""
+
+#: templates/netdns/netdns_page.html:6
+msgid "Allowed to use DNS"
+msgstr ""
+
+#: templates/netint/netint_list.html:11
+msgid "on"
+msgstr ""
+
+#: templates/netint/netint_list.html:12
+msgid "DEFAULT GW"
+msgstr ""
+
+#: templates/netlb/netlb_page.html:19
+msgid "Tick the public interfaces that are to be linked and load balanced:"
+msgstr ""
+
+#: templates/netlb/netlb_page.html:31
+msgid "(No geteway defined)"
+msgstr ""
+
+#: templates/registration/login.html:4
+msgid "Login to WebAdmin"
+msgstr ""
+
+#: templates/registration/login.html:15
+msgid "Login"
+msgstr ""
+
+#: templates/report/rpt_loading.html:2
+msgid "Loading "
+msgstr ""
+
+#: templates/report/rpthardware.html:7
+msgid "Daily"
+msgstr ""
+
+#: templates/report/rpthardware.html:8
+msgid "Weekly"
+msgstr ""
+
+#: templates/report/rpthardware.html:9
+msgid "Monthly"
+msgstr ""
+
+#: templates/report/rpthardware.html:10
+msgid "Yearly"
+msgstr ""
+
+#: templates/report/rptsearchtime.html:7
+msgid "from"
+msgstr ""
+
+#: templates/report/rptsearchtime.html:8
+msgid "to"
+msgstr ""
+
+#: templates/report/rptupdatebutton.html:3
+msgid "Update"
+msgstr ""
+
+#: templates/report/rptwebsecurity.html:7
+msgid "Web Usage"
+msgstr ""
+
+#: templates/report/rptwebsecurity.html:40
+msgid "Down Load"
+msgstr ""
+
+#: templates/report/rptwebusage_option.html:4
+msgid "Top Users"
+msgstr ""
+
+#: templates/report/rptwebusage_option.html:5
+msgid "Top Users By Site"
+msgstr ""
+
+#: templates/report/rptwebusage_option.html:8
+msgid "Top Site"
+msgstr ""
+
+#: templates/report/rptwebusage_option.html:9
+msgid "Top Site By Users"
+msgstr ""
+
+#: templates/schedule/defschedule_list.html:13
+msgid "Single"
+msgstr ""
+
+#: templates/wpadvance/wpadvance_page.html:5
+#: templates/wpadvance/wpadvance_save_form.html:4
+msgid "Settings"
+msgstr ""
+
+#: templates/wpadvance/wpadvance_page.html:6
+#: templates/wpadvance/wpadvanceskip_save_form.html:4
+msgid "Skip for"
+msgstr ""
+
+#: templates/wpadvance/wpadvance_page.html:7
+#: templates/wpadvance/wpadvanceallow_save_form.html:8
+msgid "Allowed ports"
+msgstr ""
+
+#: templates/wpblacklist/wpblacklist_confirm_delete.html:14
+#: templates/wpcat/wpcat_confirm_delete.html:14
+#: templates/wpcontent/wpcontent_confirm_delete.html:14
+#: templates/wpwhitelist/wpwhitelist_confirm_delete.html:14
+#, python-format
+msgid ""
+"\n"
+"Deleting <strong>%(o)s</strong> will remove it from the group"
+"%(profile_pluralize)s listed above.\n"
+"Do you want to proceed ?\n"
+msgstr ""
+
+#: templates/wpblacklist/wpblacklistvalue_save_form.html:3
+#: templates/wpcat/wpcatvalue_save_form.html:3
+#: templates/wpwhitelist/wpwhitelistvalue_save_form.html:3
+msgid "Url:"
+msgstr ""
+
+#: templates/wpcontent/wpcontentvalue_save_form.html:3
+msgid "Keyword:"
+msgstr ""
+
+#: templates/wpcontent/wpcontentvalue_save_form.html:7
+msgid "Score:"
+msgstr ""
+
+#: templates/wpext/wpextvalue_save_form.html:3
+msgid "Extension:"
+msgstr ""
+
+#: templates/wpmime/wpmimevalue_save_form.html:3
+msgid "Mime type:"
+msgstr ""
+
+#: templates/wpprofile/wpprofile_save_form.html:25
+msgid "Antivirus"
+msgstr ""
+
+#: templates/wpprofile/wpprofile_save_form.html:26
+msgid "Quota"
+msgstr ""
+
+#: templates/wpprofile/wpprofile_save_form.html:27
+msgid "Filtering"
+msgstr ""
+
+#: templates/wpprofile/wpprofile_save_form.html:28
+msgid "Hosts"
+msgstr ""
+
+#: templates/wpprofile/wpprofile_save_form.html:29
+msgid "Exceptions"
+msgstr ""
+
+#: templates/wpprofile/wpprofile_save_form.html:33
+msgid "Schedule:"
+msgstr ""
+
+#: templates/wpprofile/wpprofile_save_form.html:61
+msgid "seconds"
+msgstr ""
+
+#: templates/wpprofile/wpprofileallowext_save_form.html:3
+#: templates/wpprofile/wpprofileallowmime_save_form.html:3
+msgid "Allowed:"
+msgstr ""
+
+#: templates/wpprofile/wpprofileblacklist_save_form.html:3
+msgid "Blacklist:"
+msgstr ""
+
+#: templates/wpprofile/wpprofileblockext_save_form.html:3
+#: templates/wpprofile/wpprofileblockmime_save_form.html:3
+msgid "Blocked:"
+msgstr ""
+
+#: templates/wpprofile/wpprofilecat_save_form.html:3
+msgid "Categories:"
+msgstr ""
+
+#: templates/wpprofile/wpprofilecontentfilter_save_form.html:3
+msgid "Content filter:"
+msgstr ""
+
+#: templates/wpprofile/wpprofileexcept_save_form.html:33
+msgid "Exempted hosts:"
+msgstr ""
+
+#: templates/wpprofile/wpprofileexcept_save_form.html:50
+msgid "Exempted urls:"
+msgstr ""
+
+#: templates/wpprofile/wpprofileexcept_save_form.html:69
+msgid "Exempted users"
+msgstr ""
+
+#: templates/wpprofile/wpprofilenet_save_form.html:3
+msgid "Hosts:"
+msgstr ""
+
+#: templates/wpprofile/wpprofileuser_save_form.html:3
+msgid "Users:"
+msgstr ""
+
+#: templates/wpprofile/wpprofilewhitelist_save_form.html:3
+msgid "Whitelist:"
+msgstr ""

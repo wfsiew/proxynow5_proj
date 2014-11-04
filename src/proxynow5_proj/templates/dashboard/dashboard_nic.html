@@ -1,0 +1,14 @@
+{% load i18n %}
+<table class="dashboard_tbl2 ui-widget-content">
+	<thead class="ui-widget-header">
+		<th align="justify">{% trans 'Port' %}</th>
+		<th align="justify">{% trans 'Name' %}</th>
+		<th align="justify">{% trans 'Type' %}</th>
+		<th align="justify">{% trans 'Status' %}</th>
+		<th align="right" width="100px">{% trans 'In' %}</th>
+		<th align="right" width=100px">{% trans 'Out' %}</th>
+	</thead>
+	<tbody>
+	{% include "dashboard/dashboard_nic_list.html" %}
+	</tbody>
+</table>

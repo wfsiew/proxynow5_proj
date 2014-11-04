@@ -1,0 +1,23 @@
+{% load i18n %}
+<div class="icmp_types">
+	<table id="tb_icmp_types{{ level }}" class="tb_icmp">
+		<thead>
+			<tr>
+				<th>{% trans 'Type' %}</th>
+				<th>{% trans 'Name' %}</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for t, n in types %}
+		<tr>
+			<td class="icmp_type">{{ t }}</td>
+			<td>{{ n }}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+</div>
+<div id="codes{{ level }}" class="icmp_codes"></div>
+<div id="icmp_btn{{ level }}">
+	{% include "ok_button.html" %}
+</div>

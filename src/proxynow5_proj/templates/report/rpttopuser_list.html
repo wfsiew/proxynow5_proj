@@ -1,0 +1,25 @@
+{% load i18n %}
+<table class="ui-widget-content" style="width:98%" id="rpt_topuser" border="1" cellpadding="0" cellspacing="0" >
+	<thead {% if sendmail == 0 %} class="ui-widget-header" {% else %} style="background-color:#0972A5;color:white;" {% endif %} >
+		{% include 'report/rpttopuser_list_header.html' %}
+	</thead>
+	<tbody id="rpt_data_body">
+		{% if typeofinfo == "topuser"  %} 
+			{% include "report/rpttopuser_list_detail.html" %}
+		{% else %}{% if typeofinfo == "tophost" %}
+			{% include "report/rpttophost_list_detail.html" %}
+		{% else %}{% if typeofinfo == "topusersbyhost" %}
+			{% include "report/rpttopuserbyhost_list_detail.html" %}
+		{% else %}{% if typeofinfo == "tophostbyuser" %}
+			{% include "report/rpttophostbyuser_list_detail.html" %}
+		{% else %}{% if typeofinfo == "topuserbymime"%}
+			{% include "report/rpttopuserbymime_list_detail.html" %}
+		{% else %}{% if typeofinfo == "topmimebyuser" %}
+			{% include "report/rpttopmimebyuser_list_detail.html" %}
+		{% else %}{% if typeofinfo == "topmime" %} 
+			{% include "report/rpttopmime_list_detail.html" %} 
+		{% else %}{% if typeofinfo == "topdestinationbymime"%}
+			{% include "report/rpttopdestinationbymime_list_detail.html" %} 
+		{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}
+	</tbody>
+</table>

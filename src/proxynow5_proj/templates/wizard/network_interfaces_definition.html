@@ -1,0 +1,30 @@
+{% load i18n %}
+<div align="left" class="wizard_frame">
+	<div class="page_title ui-widget-header">
+		{{title}}
+	</div>
+	<div class="wizard_introduce">
+	{% trans 'Choose the configuration that closest matches your ' %} {% include 'proxynow_text.html' %} {% trans ' set up' %}
+	</div>
+	<div class="wizard_options">
+		<table>
+			<tr>
+				<td>
+					<label><input type="radio" name="options" value="0" checked="checked">{% trans 'My' %} {% include 'proxynow_text.html' %} {% trans 'has 2 network interfaces : 1 local and 1 external ' %}</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label><input type="radio" name="options" value="1">{% trans 'My' %} {% include 'proxynow_text.html' %} {% trans 'has only 1 network interface' %}</label> 
+				</td>
+			</tr>
+		</table>
+	</div>
+	{% include "wizard/error_info.html" %}
+	<div id='wizard_next' class="wizard_button240">
+		<span id="wizard_back_btt" onclick="wizard.back_form(this)">{% include "back_button.html" %}</span>
+		<span id="wizard_next_btt" onclick="wizard.next_form(this)">{% include "next_button.html" %}</span> 
+	</div>
+	<div style="margin-top:10px"></div>
+	<input id="wizard_identification_form" type="hidden" value="networkinterfacesdefinition" />
+</div>

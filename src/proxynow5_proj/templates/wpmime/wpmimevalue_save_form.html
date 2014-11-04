@@ -1,0 +1,27 @@
+{% load i18n %}
+<div class="row wpmime_form1">
+	<label for="id_mime">{% trans 'Mime type:' %}</label>
+	<input id="id_mime" type="text" class="text" />
+</div>
+<div class="row wpmime_form1">
+	<label></label>
+	{% include "add_button.html" %}
+</div>
+<div class="row wpmime_form1">
+	<label></label>
+	<div id="members_dropzone">
+		<div>
+			<div class="img_export proxynow exporticon"></div>
+			<div class="img_import proxynow importicon"></div>
+		</div>
+		<div id="mime_list" class="members_container">
+			{% for o in mimes %}
+			<div id="mime_item" class="list_item">
+				<div class="proxynow trashicon item_delete" onclick="return wpmime.remove_mime(this)"></div>
+				<div class="proxynow editicon item_edit" onclick="return wpmime.edit_mime(this)"></div>
+				<div>{{ o.mime }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

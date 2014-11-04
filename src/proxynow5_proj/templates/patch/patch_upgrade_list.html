@@ -1,0 +1,13 @@
+{% load i18n %}
+{% for o in upgradelist %}
+	<tr class="{% cycle 'ui-state-default' 'ui-state-hover' %} list_row {{ o.get_beta_class }}">
+		<td>
+			<span>{{ o.version }}</span>&nbsp;&nbsp;
+		</td>
+		<td>
+			<a href="#" title="{{ o.version }}" class="version_details link">{% trans 'Details' %}</a>
+		</td>
+		<td>{{ o.releaseDate }}</td>
+		<td>{% include "upgrade_button.html" %}</td>
+	</tr>
+{% endfor %}

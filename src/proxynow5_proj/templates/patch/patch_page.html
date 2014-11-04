@@ -1,0 +1,11 @@
+{% load i18n %}
+<div class="page_title ui-widget-header ui-widget">{% trans 'Upgrade' %}</div>
+<div id="patch_tabs">
+	<ul>
+		<li><a href="#patch_tabs_1" title="tab1">{% trans 'Upgrade' %}</a></li>
+<!-- 		<li><a href="#patch_tabs_1" title="tab2">{% trans 'Downgrade' %}</a></li> -->
+	</ul>
+	<div id="patch_tabs_1">
+		{% include "patch/patch_upgrade_page.html" %}
+	</div>
+</div>

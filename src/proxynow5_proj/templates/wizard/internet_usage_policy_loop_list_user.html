@@ -1,0 +1,9 @@
+{% for o in objlist %}
+	<div id="item_16" class="list_item">
+		<div class="proxynow trashicon item_delete" value="{{ o }}" onclick="return wizard.wizard_delete_tempuser(this)"></div>
+		<div>
+			<span class="proxynow usericon spaceiconlist"></span>
+			<span id="wizard_name_user_ingroup" value="{{ o }}">{{ o }}</span>
+		</div>
+	</div>
+{% endfor %}

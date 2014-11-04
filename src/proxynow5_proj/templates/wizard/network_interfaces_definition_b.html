@@ -1,0 +1,36 @@
+{% load i18n %}
+<div align="left" class="wizard_frame">
+	<div class="page_title ui-widget-header">
+		{{title}}
+	</div>
+	<div class="wizard_introduce">
+		{% trans 'Define the single network interface' %}
+	</div>
+	<div class="wizard_legend1">
+		<table style="padding-left:40px">
+				<tr>
+					<td align="right">{% trans 'IP address '%}:</td>
+					<td>{{ form.ipaddresslocal }}</td>
+				</tr>
+				<tr>
+					<td align="right">{% trans 'Netmask '%}:</td>
+					<td>{{ form.netmaskaddresslocal }}</td>
+				</tr>
+				<tr>
+					<td align="right">{% trans 'Default gateway '%}:</td>
+					<td>{{ form.defaultgateway }}</td>
+				</tr>
+				<tr>
+					<td align="right">{% trans 'Hardware '%}:</td>
+					<td>{{ form.hardware }}</td>
+				</tr>
+			</table>
+	</div>
+	{% include "wizard/error_info.html" %}
+	<div id='wizard_next' class='wizard_button170'>
+		<span id="wizard_back_btt" onclick="wizard.back_form(this);">{% include "back_button.html" %}</span>
+		<span id="wizard_next_btt" onclick="wizard.next_form(this)">{% include "next_button.html" %}</span>
+	</div>
+	<div style="margin-top:10px"></div>
+	<input id="wizard_identification_form" type="hidden" value="networkinterfacesdefinitionB" />
+</div>

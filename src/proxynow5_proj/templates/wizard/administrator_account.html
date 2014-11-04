@@ -1,0 +1,42 @@
+{% load i18n %}
+<div align="left" class="wizard_frame">
+	<div class="page_title ui-widget-header">
+		{{title}}
+	</div>
+	<div class="wizard_introduce">
+		{% trans 'Please key in the "admin" password.' %}
+		<br/>
+		{% trans 'This account will be the super administrator account so please keep it safe.' %}
+	</div>
+	<form method="post">{% csrf_token %}
+	<div class="wizard_options">
+		<table>
+			<tr>
+				<td align="right">{% trans 'Username '%}:</td>
+				<td><input type="text" value="admin" readonly="true" style="width:50px"/></td>
+			</tr>
+			<tr>
+				<td align="right">{% trans 'Password '%}:</td>
+				<td>{{ form.adpassword }}</td>
+			</tr>
+			<tr>
+				<td align="right">{% trans 'Confirm Password ' %}:</td>
+				<td>{{ form.readpassword }}</td>
+			</tr>
+			<tr>
+				<td align="right">{% trans 'Email Address ' %}:</td>
+				<td>{{ form.emailnotifier }}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="wizard_note">
+		{% trans 'Note : Username and password are case-sensitive ' %}
+	</div>
+	{% include "wizard/error_info.html" %}
+	<div id='wizard_next' style="padding-top:15px;padding-left:260px" value="" >
+		<span id='wizard_next_btt' onclick="wizard.next_form(this);">{% include "next_button.html" %}</span>
+	</div>
+	</form>
+	<div style="margin-top:10px"></div>
+	<input id="wizard_identification_form" type="hidden" value="administratoraccount" />
+</div>

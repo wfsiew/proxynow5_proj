@@ -1,0 +1,10 @@
+{% load i18n %}
+{% if userlist or aduserlist %}
+	<div class="panel_header">
+		{% include "filter_form.html" %}
+		{% include "add_button.html" %}
+	</div>
+	<div id="panel_body">
+		{% include "user_list_select.html" %}
+	</div>
+{% endif %}

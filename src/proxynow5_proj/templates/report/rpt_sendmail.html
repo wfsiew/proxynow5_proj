@@ -1,0 +1,81 @@
+<style>
+		
+		.ui-row1
+		{
+			background-color:#4F4F4F;
+			color:white;	
+		}
+		
+		.ui-row2
+		{
+			background-color:#494949;	
+			color:white;
+		}		
+</style>
+<div style="background: #000;margin: 0px;padding: 0px"> 
+	<div style="margin-bottom: auto;margin-left: auto;margin-right: auto;margin-top: auto;padding-top: 50px;width: 90%;background: #000">
+	        <div style="margin-bottom:10px">
+	            <b style="display:block;font-size:1px;background: none transparent scroll repeat 0% 0%"> 
+	                <b style="display: block; overflow: hidden; height: 1px;margin: 0px 3px;background: #666;"></b>
+	                <b style="display: block; overflow: hidden; height: 1px;margin: 0px 2px;border-right: #666 1px solid;border-left: #666 1px solid;background: #666;"></b>
+	                <b style="display: block; overflow: hidden; height: 1px;margin: 0px 1px;border-right: #666 1px solid;border-left: #666 1px solid;background: #666;"></b>
+	            </b>
+				<div style="border-right: #666 1px solid; border-top: #666 0px solid; display: block; background: #1E1E1E; border-left: #666 1px solid; border-bottom: #666 0px solid; padding:10px">
+					<div style="list-style-type:none;margin :0;padding:0;color:#fff">
+						<table style="border:0px solid;width:500px">
+							<tr>
+								<td colspan="2">{{ titlereport }}</td>
+							</tr>
+							<tr>
+								<td style="width:100px">Type</td>
+								<td>{{ typereport }}</td>
+							</tr>
+							<tr>
+								<td>Time Frame </td>
+								<td>{{ timeframe }}</td>
+							</tr>
+						</table>
+						<font color="#0972A5"><h4>{{ titlehardware }}</h4></font>  
+						<div align="center">{{ graph|safe }}</div>
+						<font color="#0972A5"><h4>{{ titlehttptraffic }}</h4></font>
+						<br/>
+						<b>{{ titletopuser }}</b>
+						<br/>
+						<br/>
+						<div style="width:100%">
+							<div align="center">
+								{{ httptraffic_htmltopuser|safe }} 
+							</div>
+						</div>
+						<br/>
+						<b>{{ titletophost }}</b>
+						<br/>	
+						<br/>
+						<div style="width:100%"> 
+							<div align="center">
+								{{ httptraffic_htmltophost|safe }} 
+							</div>
+						</div>
+						<br/>
+						<b>{{ titletopmime }}</b>
+						<br/>
+						<br/>
+						<div style="width:100%">
+							<div align="center">
+								{{ httptraffic_htmltopmime|safe }} 
+							</div> 
+						</div>
+					</div>	
+				</div>
+				<b style = "display: block;font-size: 1px;background: none transparent scroll repeat 0% 0%">
+	                <b style="display: block; overflow: hidden; height: 1px;margin: 0px 1px;border-right: #666 1px solid;border-left: #666 1px solid;background:#666"></b>
+	                <b style="display: block; overflow: hidden; height: 1px;margin: 0px 2px;border-right: #666 1px solid;border-left: #666 1px solid;background:#666" ></b>
+	                <b style="display: block; overflow: hidden; height: 1px;margin: 0px 3px;background: #666;"></b>
+	            </b>
+			</div>
+	</div>
+</div>			
+            
+	
+	
+

@@ -1,0 +1,22 @@
+
+{{ titlereport }}
+Type       : {{ typereport }}
+Time Frame : {{ timeframe }}
+
+************************************
+
+{{ titiletopuser  }}
+
+{{ listuser|safe }}
+
+{{ titletophost }}
+
+{{ listhost|safe }}
+
+{{ titilemime }}
+
+{{ listmime|safe }}
+
+
+
+

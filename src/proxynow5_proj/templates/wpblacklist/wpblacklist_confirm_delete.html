@@ -1,0 +1,20 @@
+{% load i18n %}
+{% if o.wpprofileblacklists.count > 0 %}
+<p>
+{% blocktrans %}
+The object <strong>{{ o }}</strong> is currently referred by:
+{% endblocktrans %}
+</p>
+<ol>
+	{% for p in o.wpprofileblacklists.all %}
+	<li><strong>{{ p.profileid }} ({% trans 'Web Proxy - Profile' %})</strong></li>
+	{% endfor %}
+</ol>
+<p>
+{% blocktrans with profile_pluralize=o.wpprofileblacklists.count|pluralize %}
+Deleting <strong>{{ o }}</strong> will remove it from the reference{{ profile_pluralize }} listed above.
+Do you want to proceed ?
+{% endblocktrans %}
+</p>
+{% include "confirm_button.html" %}
+{% endif %}

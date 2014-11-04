@@ -1,0 +1,11 @@
+{% load i18n %}
+<tr>
+	<td style="width:5px" ><input id="wizard_check_groupmain" value="{{ name }}" type="checkbox" checked = 'checked'/></td>
+	<td>{{ name }}</td>
+	<td align="right"><span value="{{ name }}"  onclick="wizard.wizard_open_edit_group(this);">{% include "member_button.html" %}</span></td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left:25px"><span id="{{ name }}"></span> 
+	<a href="#" value="{{ name }}" onclick="wizard.wizard_open_dialog_policy(this)">{% trans 'Edit' %}</a></td>
+</tr>
+

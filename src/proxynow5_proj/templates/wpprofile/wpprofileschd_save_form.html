@@ -1,0 +1,22 @@
+{% load i18n %}
+<div class="row wpprofileschd" style="display: none">
+	<div id="schedules" class="members_dropzone">
+		<div>
+			<div class="img_add proxynow addicon"></div>
+			<div class="img_folder proxynow foldericon"></div>
+		</div>
+		<div id="id_schedules" class="members_container">
+			{% for o in schedules %}
+			<div id="schedule_{{ o.schedule.id }}" class="list_item">
+				<div class="proxynow trashicon item_delete" onclick="return wpprofile.remove_schedule(this)"></div>
+				{% if iswizard %}
+					<div class="proxynow editicon item_edit" onclick="return wizard.edit_schedule(this)"></div>
+				{% else %}
+					<div class="proxynow editicon item_edit" onclick="return wpprofile.edit_schedule(this)"></div>
+				{% endif %}
+				<div>{{ o.schedule }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

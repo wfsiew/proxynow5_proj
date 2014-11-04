@@ -1,0 +1,12 @@
+{% load i18n %}
+<div>
+	<div>
+		<input id="wizard_search_user" type="text" style="width:100%" onkeypress="wizard.searching_user(event);"></input>
+	</div>
+	<div style="padding-top:5px;padding-bottom:5px" align="right">
+		<span id="wizard_add_members_in_group" onclick="wizard.wizard_add_listuser_in_group();">
+			{% include "add_button.html" %}
+		</span>
+	</div>	       
+	{% include "wizard/internet_usage_policy_panel_list_user.html" %}
+</div>

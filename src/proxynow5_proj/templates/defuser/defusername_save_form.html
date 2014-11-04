@@ -1,0 +1,15 @@
+{% load i18n %}
+<div class="row defuser_form1">
+	{{ form1.displayname.label_tag }}
+	{{ form1.displayname }}
+</div>
+<div class="row defuser_form1">
+	{{ form1.password.label_tag }}
+	{{ form1.password }}
+</div>
+{% if show_confirm_password %}
+<div class="row defuser_form1">
+	<label for="id_confirm_password">{% trans 'Confirm password:' %}</label>
+	<input id="id_confirm_password" type="password" class="text" />
+</div>
+{% endif %}

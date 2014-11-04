@@ -1,0 +1,13 @@
+<div align="center" id="wizard_content_iprange" style="display:none;">
+	<div style="padding-top:10px">
+		<font color="red"><span id="err_info_trustednetwork"></span></font>
+	</div>	
+	<div style="padding-top:10px">
+		<input type="text" id="wizard_txt_trusted_network" style="width:200px" /> 
+	</div>
+	<div style="padding-top:10px"></div>
+	<div>
+		<span onclick="wizard.check_each_structed()">{% include  "ok__button.html" %}</span>
+		<span onclick="wizard.close_dialog('wizard_dialog_trusted_network')">{% include  "cancel-button.html" %}</span> 
+	</div>
+</div>

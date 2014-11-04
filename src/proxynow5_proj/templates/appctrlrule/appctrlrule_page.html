@@ -1,0 +1,17 @@
+{% extends "base_list_page.html" %}
+{% load i18n %}
+{% block topcontent %}
+	<div class="row">
+		<div id="sw">
+		{% if custom_data %}
+			{% include "switch_button_on.html" %}
+		{% else %}
+			{% include "switch_button_off.html" %}
+		{% endif %}
+		</div>
+	</div>
+{% endblock %}
+{% block content %}
+	{% include "appctrlrule/appctrlrule_list.html" %}
+	{% include "list_panel.html" %}
+{% endblock %}

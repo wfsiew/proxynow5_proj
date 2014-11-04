@@ -1,0 +1,50 @@
+{% load i18n %}
+<table class="dashboard_tbl1 ui-widget-content">
+	<thead class="ui-widget-header">
+		<tr>
+			<th colspan="2">{% trans 'Resource usage' %}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="collbl resource">{% trans 'CPU' %}<span class="proxynow cpuicon spaceiconlist"></span></td>
+			<td>
+				<div id="id_pgbarcpu" class="ui-progressbar ui-widget ui-widget-content dashboard_pgbar_outer">
+					<div class="ui-progressbar-value ui-state-hover" style="width: {{ dashboard.cpu }}%">
+						<div class="dashboard_pgbar_text">{{ dashboard.cpu }}%</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="collbl resource">{% trans 'RAM' %}<span class="proxynow ramicon spaceiconlist"></span></td>
+			<td>
+				<div id="id_pgbarram" class="ui-progressbar ui-widget ui-widget-content dashboard_pgbar_outer">
+					<div class="ui-progressbar-value ui-state-hover" style="width: {{ dashboard.ram }}%">
+						<div class="dashboard_pgbar_text"><span class="ram_val">{{ dashboard.ram }}%</span>&nbsp;{% trans 'of' %}&nbsp;<span class="ram_total">{{ ram_total }}</span></div>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="collbl resource">{% trans 'Swap' %}<span class="proxynow swapicon spaceiconlist"></span></td>
+			<td>
+				<div id="id_pgbarswap" class="ui-progressbar ui-widget ui-widget-content dashboard_pgbar_outer">
+					<div class="ui-progressbar-value ui-state-hover" style="width: {{ dashboard.swap }}%">
+						<div class="dashboard_pgbar_text"><span class="swap_val">{{ dashboard.swap }}%</span>&nbsp;{% trans 'of' %}&nbsp;<span class="swap_total">{{ swap_total }}</span></div>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="collbl resource">{% trans 'HD' %}<span class="proxynow hdicon spaceiconlist"></span></td>
+			<td>
+				<div id="id_pgbarhd" class="ui-progressbar ui-widget ui-widget-content dashboard_pgbar_outer">
+					<div class="ui-progressbar-value ui-state-hover" style="width: {{ dashboard.hd }}%">
+						<div class="dashboard_pgbar_text"><span class="hd_val">{{ dashboard.hd }}%</span>&nbsp;{% trans 'of' %}&nbsp;<span class="hd_total">{{ hd_total }}</span></div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>

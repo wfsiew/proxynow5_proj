@@ -1,0 +1,10 @@
+<div id="panel_body">
+{% for o in objlist %}
+	<div id="{{ o.id }}" class="{% cycle 'ui-state-default' 'ui-state-hover' %} list_row">
+		<input type="checkbox" name="chklist" />
+		<span class="drag_zone">
+			{% include "schedule/defschedule_list_select_repr.html"%}
+		</span>
+	</div>
+{% endfor %}
+</div>

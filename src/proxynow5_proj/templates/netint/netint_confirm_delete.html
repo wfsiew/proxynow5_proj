@@ -1,0 +1,26 @@
+{% load i18n %}
+{% if show_msg %}
+<p>
+{% blocktrans %}
+The object <strong>{{ o }}</strong> is currently referred by:
+{% endblocktrans %}
+</p>
+<ol>
+	{% for g in o.netdhcp_set.all %}
+	<li><strong>{{ g.domain }} ({% trans 'Network - DHCP' %})</strong></li>
+	{% endfor %}
+	{% for x in o.nat_pf_set.all %}
+	<li><strong>{{ x.host }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+	{% for x in o.natmasqinterfaces.all %}
+	<li><strong>{{ x.network }} ({% trans 'Network - NAT' %})</strong></li>
+	{% endfor %}
+</ol>
+<p>
+{% blocktrans with group_pluralize=o.netdhcp_set.count|pluralize %}
+Deleting <strong>{{ o }}</strong> will remove it from the reference{{ group_pluralize }} listed above.
+Do you want to proceed ?
+{% endblocktrans %}
+</p>
+{% include "confirm_button.html" %}
+{% endif %}

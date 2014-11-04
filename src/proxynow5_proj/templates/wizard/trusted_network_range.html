@@ -1,0 +1,36 @@
+{% load i18n %}
+{% csrf_token %}
+<div class="wizard_frame">
+	<div class="page_title ui-widget-header">{% trans 'Trusted Network' %}</div>
+		<div class="dns_box" align="center">
+			<div class="row">
+				<div class="img_add proxynow addicon" ></div>
+				<div class="img_folder proxynow foldericon"></div>
+			</div>
+			<div id="netlist" class="dnslist_container" align="left">
+				{% for o in net %}
+				<div id="item_{{ o.id }}" class="list_item">
+					<div class="proxynow trashicon item_delete" onclick="return wizard.remove_net(this)"></div>
+					<div class="proxynow editicon item_edit" onclick="return wizard.edit_net(this)"></div>
+					<div>{{ o.get_html_repr }}</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	<div id='wizard_next' class="wizard_button240">
+		<span id="wizard_back_btt" onclick="wizard.back_form(this)">{% include "back_button.html" %}</span>
+		<span id="wizard_next_btt" onclick="wizard.next_form(this)">{% include "next_button.html" %}</span>
+	</div>
+	<input id="wizard_identification_form" type="hidden" value="trusted_network_range" />
+	<div id="menu"></div>
+	{% include "wizard/error_info.html" %}
+	{% include "alert_panel.html" %}
+	<div id="dialog-add-netlist" title="{{ dialog1_title }}">
+		<div id="dialog_body-netlist"></div>
+	</div>
+	<div id="dialog-edit-netlist" title="{{ dialog1_edit_title }}">
+		<div id="dialog_edit_body-netlist"></div>
+	</div>
+	<div style="margin-top:10px"></div>
+	{% include "list_panel.html" %}
+</div>

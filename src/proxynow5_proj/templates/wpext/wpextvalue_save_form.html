@@ -1,0 +1,27 @@
+{% load i18n %}
+<div class="row wpext_form1">
+	<label for="id_ext">{% trans 'Extension:' %}</label>
+	<input id="id_ext" type="text" class="text" />
+</div>
+<div class="row wpext_form1">
+	<label></label>
+	{% include "add_button.html" %}
+</div>
+<div class="row wpext_form1">
+	<label></label>
+	<div id="members_dropzone">
+		<div>
+			<div class="img_export proxynow exporticon"></div>
+			<div class="img_import proxynow importicon"></div>
+		</div>
+		<div id="ext_list" class="members_container">
+			{% for o in extensions %}
+			<div id="ext_item" class="list_item">
+				<div class="proxynow trashicon item_delete" onclick="return wpext.remove_ext(this)"></div>
+				<div class="proxynow editicon item_edit" onclick="return wpext.edit_ext(this)"></div>
+				<div>{{ o.extension }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

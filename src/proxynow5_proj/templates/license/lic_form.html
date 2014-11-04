@@ -1,0 +1,27 @@
+{% load i18n %}
+<div id="lic-form" class="ui-widget-content ui-widget ui-corner-all">
+	<div class="form_title ui-widget-header ui-corner-all">
+		<span>{% trans 'License' %}</span>
+	</div>
+	<form id="save-form" action="." method="post">{% csrf_token %}
+		<div class="row_lic">
+			<label for="id_activationkey" class="lic_lbl">{{ form.licensekey.label }}</label>
+			{{ form.licensekey }}
+		</div>
+		<div class="row_button">
+			<span class="save_button activate hover ui-corner-all ui-state-default">
+				<span class="proxynow greenicon paddicon">{% trans 'Activate' %}</span>
+			</span>
+			&nbsp;&nbsp;
+			<span class="save_button deactivate hover ui-corner-all ui-state-default">
+				<span class="proxynow redicon paddicon">{% trans 'Deactivate' %}</span>
+			</span>
+		</div>
+		<div id="info">
+			{% include "license/lic_info.html" %}
+			{% include "license/lic_warning.html" %}
+			{% include "license/lic_userlimit.html" %}
+		</div>
+		{% include "status_panel.html" %}
+	</form>
+</div>

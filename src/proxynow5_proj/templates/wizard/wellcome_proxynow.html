@@ -1,0 +1,26 @@
+{% load i18n %}
+<div align="left" class="wizard_frame" >
+	<div class="page_title ui-widget-header">
+		{{title}}
+	</div>
+	<div class="wizard_introduce">
+		
+	</div>
+	<div align="center">
+		<table style="padding-left:20px;padding-right:20px">
+			<tr>
+				<td align="left">
+					The Configuration is now completed.<br />
+					Please wait for a few seconds for {% include 'proxynow_text.html' %} to reinitialize with your new configurations.<br /><br />
+				</td>
+			</tr>
+			<tr>
+				<td align="left"><a href="#" value="{{ homepage }}" onclick="wizard.homepage(this);">Proceed</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	{% include "wizard/error_info.html" %}
+	<div style="margin-top:10px"></div>
+	<input id="wizard_identification_form" type="hidden" value="finished" />
+</div>

@@ -1,0 +1,37 @@
+{% load i18n %}
+{% if objlist %}
+	<table class="list_table">
+		<tbody>
+		{% for o in objlist %}
+			<tr class="{% cycle 'ui-state-default' 'ui-state-hover' %} list_row">
+				<td id="{{ o.id }}" width="60px">
+					{% include "list_button.html" %}
+				</td>
+				<td valign="top" width="60px">
+					<div class="switch_button">
+						{% if o.enable == 1 %}
+							{% include "switch_button_on.html" %}
+						{% else %}
+							{% include "switch_button_off.html" %}
+						{% endif %}
+					</div>
+				</td>
+				<td valign="top">
+					<strong>{{ o.location }}</strong>
+				</td>
+				<td valign="top">
+					<strong>{{ o.name }}</strong>
+					{% if o.comment %}
+					<br>
+					{{ o.comment }}
+					{% endif %}
+				</td>
+				<td valign="top">
+					{{ o.get_data }}
+				</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endif %}
+<input id="id_pg" type="hidden" value="{{ has_prev }},{{ has_next }},{{ prev_page }},{{ next_page }},{{item_msg }}" />

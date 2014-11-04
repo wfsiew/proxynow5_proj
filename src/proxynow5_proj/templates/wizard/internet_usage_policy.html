@@ -1,0 +1,62 @@
+{% load i18n %}
+<div align="left" class="wizard_frame">
+	<div class="page_title ui-widget-header">
+		{{title}}
+	</div>
+	<div class="wizard_introduce">
+		{% trans 'Choose the user groups that you would like to create and the Internet Usage Policy you would like to apply on them:' %}
+	</div>
+	<div style="padding-top:20px"></div>
+	<div id="wizard_list_group_internetusage" style="overflow: auto;height:300px;padding-left:30px;padding-top:10px;width:450px">
+		{% include "wizard/internet_usage_policy_list_group.html" %}
+	</div>
+	<br/>
+	<div style="padding-left:30px" >
+		<span onclick="wizard.open_group_adding();">{% include "add_button.html" %}</span>
+	</div>
+	<div id='wizard_next' class="wizard_button240">
+		<span id="" onclick="wizard.back_form(this);">{% include "back_button.html" %}</span>
+		<span id="wizard_finished_button" onclick="wizard.next_form(this);">{% include "finish_button.html" %}</span> 
+	</div>
+	<div style="margin-top:10px"></div>
+	<input id="wizard_identification_form" type="hidden" value="internet_usage_policy" />
+	<!--Dialog add group -->
+	<div id="wizard_add_group">
+		<div id="wizard_content_add_group">
+		</div>
+	</div>
+	<!--Dialog create member -->
+	<div id="wizard_add_member">
+		<div id="wizard_content_add_member"></div>
+	</div>
+	<!--Dialog Error Info -->
+	<div id="wizard_error_info">
+		<div id="wizard_error_content_info"></div>
+	</div> 
+	<!-- Dialog List panel user.-->
+	<div id="wizard_list_panel_user">
+		<div id="wizard_list_panel_content_user"> </div>
+	</div>
+	<!-- Dialog for list policy name of policy Unrestricted,OfficeHoursResitricted-->
+	<div id="wizard_list_panel_policy">
+		<div id="wizard_list_content_policy"></div>
+	</div>
+	<div id="wizard_dialog_profile">
+		<div id="wizard_dialog_content_profile"></div>	
+	</div>
+	<!-- -->
+	<div id="wizard_profile_search">
+		<div id="wizard_profile_list_search"></div>
+	</div>  
+	<div id="dialog-add-profile">
+		<div id="dialog_body-profile"> </div>
+	</div>
+	<!-- -->
+	<div id="list-panel"> 
+		<div id="list_body"></div>
+	<div>	
+	<!-- -->
+	{% include "alert_panel.html" %}
+		
+</div>
+</div>

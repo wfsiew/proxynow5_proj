@@ -1,0 +1,19 @@
+{% load i18n %}
+{% if objlist %}
+	<table class="list_table">
+		<tbody>
+		{% for o in objlist %}
+			<tr class="{% cycle 'ui-state-default' 'ui-state-hover' %} list_row">
+				<td id="{{ o.netid.id }}" width="60px">
+					{% include "list_button.html" %}
+				</td>
+				<td valign="top">
+					<div><strong>{{ o.netid.name }}</strong> [{% trans 'Range' %}{{ o.start }} {% trans 'through' %} {{ o.end }}]</div>
+					<div><strong>DNS 1: </strong>{{ o.dnsserver1 }} <strong>DNS 2: </strong>{{ o.dnsserver2 }} <strong>Default Gateway: </strong>{{ o.gateway }}</div>
+				</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endif %}
+<input id="id_pg" type="hidden" value="{{ has_prev }},{{ has_next }},{{ prev_page }},{{ next_page }},{{item_msg }}" />

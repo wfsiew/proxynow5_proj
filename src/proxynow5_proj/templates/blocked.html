@@ -1,0 +1,72 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>{% trans 'ProxyNow! 5' %}</title>
+<link rel="shortcut icon" href="/media/css/img/favicon.ico" />
+<link rel="icon" href="/media/css/img/favicon.ico" type="image/x-icon" />
+{% if not release %}
+<link rel="stylesheet" href="/media/css/blocked.css" type="text/css" />
+{% else %}
+<link rel="stylesheet" href="/media/css/blocked.min.css" type="text/css" />
+{% endif %}
+<link rel="stylesheet" href="/media/css/jquery.themes.css" type="text/css" />
+<script type="text/javascript" src="/media/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/media/js/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="/media/js/jquery.themes.min.js"></script>
+{% if not release %}
+<script type="text/javascript" src="/media/js/utils.js"></script>
+<script type="text/javascript" src="/media/js/base.js"></script>
+{% else %}
+<script type="text/javascript" src="/media/js/blocked.min.js"></script>
+{% endif %}
+</head>
+<body class="ui-widget-content">
+	<div align="center">
+		<div class="header">
+			<div><img src="/media/css/img/ProxyNow5_logo.png" alt="logo" style="width: 500px; height: 100px;" /></div>
+			<div><span class="logo_lbl">{% trans 'ProxyNow!' %}&nbsp;{{ version }}&nbsp;</span><span class="url_lbl">{{ product_url }}</span></div>
+			<div class="blocked_alert"><span>{% trans 'Content blocked' %}</span></div>
+		</div>
+		<div class="container">
+			<table class="table_container ui-widget-content">
+				<tr>
+					<td class="col_lbl ui-state-default">
+						{% trans 'While trying to retrieve the URL:' %}
+					</td>
+					<td class="col_content">
+						<a href="{{ url }}" target="_blank">{{ url }}</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="col_lbl ui-state-default">
+						{% trans 'The content is blocked due to the  following condition:' %}
+					</td>
+					<td class="col_content">
+						{{ reason }}
+					</td>
+				</tr>
+				<tr>
+					<td class="col_lbl ui-state-default">
+						{% trans 'Your cache administrator is:' %}
+					</td>
+					<td class="col_content">
+						{{ admin_email }}
+					</td>
+				</tr>
+			</table>
+			<table class="table_footer">
+				<tr>
+					<td>
+						<div class="footer" align="left">
+							<img src="/media/css/img/inow.logoWhite-highRes.png" alt="logo" style="width: 40%; height: 40%;" />
+						</div>
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+	</div>
+</body>
+</html>

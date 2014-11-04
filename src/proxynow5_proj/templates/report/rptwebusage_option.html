@@ -1,0 +1,23 @@
+{% load i18n %}
+<select id="rptwebusage_type" size="1" style="width:150px">
+	<optgroup label="Users">
+		<option value="topuser">{% trans 'Top Users' %}</option>
+       	<option value="topusersbyhost">{% trans 'Top Users By Site' %}</option>
+		<option value="topuserbymime">{% trans 'Top Users By MIME' %}</option>
+   	</optgroup>    
+   	<optgroup label="Site">
+       	<option value="tophost">{% trans 'Top Site' %}</option>
+       	<option value="tophostbyuser">{% trans 'Top Site By Users' %}</option>
+		<option value="topdestinationbymime">{% trans 'Top Site By MIME' %}</option>
+   	</optgroup>
+	<optgroup label="MIME">
+		<option value="topmime">{% trans 'Top MIME' %}</option>
+		<option value="topmimebyuser">{% trans 'Top MIME By User' %}</option>
+	</optgroup>
+</select>
+<span id="rptwebusage_user_row" style="display: none">{% trans 'User' %} <input type="text" id="rptwebusage_user" /></span>
+<span id="rptwebusage_host_row" style="display: none">{% trans 'Site' %} <input type="text" id="rptwebusage_host" /></span>
+<span id="rptwebusage_userbymime_row" style="display: none">{% trans 'MIME' %} <input type="text" id="rptwebusage_userbymime" /></span>
+<span id="rptwebusage_mimebyuser_row" style="display: none">{% trans 'User' %} <input type="text" id="rptwebusage_mimebyuser" /></span>
+<span id="rptwebusage_destinationbymime_row" style="display: none">{% trans 'MIME' %} <input type="text" id="rptwebusage_destinationbymime" /></span>
+

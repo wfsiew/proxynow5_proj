@@ -1,0 +1,26 @@
+{% if level == '' %}
+{% include "save_form_title.html" %}
+{% endif %}
+<div class="ui-widget-content ui-widget ui-corner-all">
+	<form id="save-form{{ scope }}{{ level }}" action="/wpext/save/" method="post">{% csrf_token %}
+		<div class="row">
+			{{ form.name.label_tag }}
+			{{ form.name }}
+		</div>
+		{% include "wpext/wpextvalue_save_form.html" %}
+		<div class="row">
+			{{ form.comment.label_tag }}
+			{{ form.comment }}
+		</div>
+		{% include "save_button.html" %}
+		<div id="dialog-editext{{ scope }}{{ level }}" title="{{ dialog_editext_title }}">
+			<div id="dialog_editext_body{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-import{{ scope }}{{ level }}" title="{{ dialog_import_title }}">
+			<div id="dialog_import_body{{ scope }}{{ level }}"></div>
+		</div>
+		<div id="dialog-export{{ scope }}{{ level }}" title="{{ dialog_export_title }}">
+			<div id="dialog_export_body{{ scope }}{{ level }}"></div>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,116 @@
+{% load i18n %}
+<div id="except">
+	<div class="row">
+		{{ formexcept.exceptname.label_tag }}
+		{{ formexcept.exceptname }}
+	</div>
+	<div class="row">
+		<label></label>
+		{{ formexcept.skipauth }}
+		<span>{{ formexcept.skipauth.label }}</span>
+	</div>
+	<div class="row">
+		<label></label>
+		{{ formexcept.skipcache }}
+		<span>{{ formexcept.skipcache.label }}</span>
+	</div>
+	<div class="row">
+		<label></label>
+		{{ formexcept.skipav }}
+		<span>{{ formexcept.skipav.label }}</span>
+	</div>
+	<div class="row">
+		<label></label>
+		{{ formexcept.skipext }}
+		<span>{{ formexcept.skipext.label }}</span>
+	</div>
+	<div class="row">
+		<label></label>
+		{{ formexcept.skipmime }}
+		<span>{{ formexcept.skipmime.label }}</span>
+	</div>
+	<div class="row">
+		<label></label>
+		{{ formexcept.skipurl }}
+		<span>{{ formexcept.skipurl.label }}</span>
+	</div>
+	<div class="row">
+		<label></label>
+		{{ formexcept.skipcontentfilter }}
+		<span>{{ formexcept.skipcontentfilter.label }}</span>
+	</div>
+	<hr>
+	<div class="row">
+		<label>{% trans 'Exempted hosts:' %}</label>
+		<div id="exceptnets" class="members_dropzone">
+			<div>
+				<div class="img_add proxynow addicon"></div>
+				<div class="img_folder proxynow foldericon"></div>
+			</div>
+			<div id="id_exceptnets" class="members_container">
+				{% for o in exceptnets %}
+				<div id="exceptnet_{{o.netid.id }}" class="list_item">
+					<div class="proxynow trashicon item_delete" onclick="return wpprofile.remove_exceptnet(this)"></div>
+					{% if iswizard %}
+						<div class="proxynow editicon item_edit" onclick="return wizard.edit_exceptnet(this)"></div>
+					{% else %}
+						<div class="proxynow editicon item_edit" onclick="return wpprofile.edit_exceptnet(this)"></div>
+					{% endif %}
+					
+					<div>{{ o.netid.get_html_repr }}</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<label for="id_url">{% trans 'Exempted urls:' %}</label>
+		<input id="id_url" type="text" class="text" />
+	</div>
+	<div class="row">
+		<label></label>
+		{% include "add_button.html" %}
+	</div>
+	<div class="row">
+		<label></label>
+		<div id="excepturls" class="members_dropzone">
+			<div>
+				<div class="img_export proxynow exporticon"></div>
+				<div class="img_import proxynow importicon"></div>
+			</div>
+			<div id="id_excepturls" class="members_container">
+				{% for o in excepturls %}
+				<div id="excepturl_item" class="list_item">
+					<div class="proxynow trashicon item_delete" onclick="return wpprofile.remove_excepturl(this)"></div>
+					<div class="proxynow editicon item_edit" onclick="return wpprofile.edit_excepturl(this)"></div>
+					<div>{{ o.url }}</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<label>{% trans 'Exempted users' %}</label>
+		<div id="exceptusers" class="members_dropzone">
+			<div>
+				<div class="img_add proxynow addicon"></div>
+				<div class="img_folder proxynow foldericon"></div>
+			</div>
+			<div id="id_exceptusers" class="members_container">
+				{% for o in exceptuserinternals %}
+				<div id="exceptuserint_{{ o.userinternal.id }}" class="list_item">
+					<div class="proxynow trashicon item_delete" onclick="return wpprofile.remove_exceptuserinternal(this)"></div>
+					<div class="proxynow editicon item_edit" onclick="return wpprofile.edit_exceptuserinternal(this)"></div>
+					<div>{{ o.userinternal.get_html_repr }}</div>
+				</div>
+				{% endfor %}
+				{% for o in exceptuserexternals %}
+				<div id="exceptuserext_{{ o.userexternal.id }}" class="list_item">
+					<div class="proxynow trashicon item_delete" onclick="return wpprofile.remove_exceptuserexternal(this)"></div>
+					<div>{{ o.userexternal.get_html_repr }}</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+{% load i18n %}
+<div class="row wpcat_form1">
+	<label for="id_url">{% trans 'URL:' %}</label>
+	<input id="id_url" type="text" class="text" />
+</div>
+<div class="row wpcat_form1">
+	<label></label>
+	{% include "add_button.html" %}
+</div>
+<div class="row wpcat_form1">
+	<label></label>
+	<div id="members_dropzone">
+		<div>
+			<div class="img_export proxynow exporticon"></div>
+			<div class="img_import proxynow importicon"></div>
+		</div>
+		<div id="url_list" class="members_container">
+			{% for o in urls %}
+			<div id="url_item" class="list_item">
+				<div class="proxynow trashicon item_delete" onclick="return wpcat.remove_url(this)"></div>
+				<div class="proxynow editicon item_edit" onclick="return wpcat.edit_url(this)"></div>
+				<div>{{ o.url }}</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
